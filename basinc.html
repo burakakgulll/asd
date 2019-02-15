@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="tr">
+    
+    
+    
+    
+    
+    
+    
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+        
+        <link rel="stylesheet" type="text/css" href="fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        
+<script src="jquery-3.3.1.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      
+        <style>.container {font-size:14px;}
+            .btn-xs {padding:2px; font-size:12px;}</style>
+        
+        
+    </head>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <title>
+        Birim Çevirme - Gerilme
+    </title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <body>
+        
+        <!-- NAVIGATION BAR -->
+        
+                  <nav id="bg-light" class="mt-0 asdnav navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+                       
+                                  <a class="navbar-brand" id="navbar-brand" href="#" style="font-size:12px;">Birim Çevirme - Gerilme</a>
+                       
+                                  <button class="navbar-toggler float-right white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span id="log" style="color:white;">&#9776</span>
+                                  </button>
+                       
+                                  <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
+                                      
+                                            <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Rüzgar Yükleri (TS EN 1991-1-4)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="index.html">Yapı Yüzeyine Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="tekegimruzgar.html">Tek Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="ciftegimruzgar.html">Çift Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Kar Yükleri (TS EN 1991-1-3)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item active" href="#">---</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Birim Çevirme
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="birim.html">Kuvvet</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item active" href="basinc.html">Gerilme</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="uzunluk.html">Uzunluk</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="alan.html">Alan</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="hacim.html">Hacim</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="yogunluk.html">Yoğunluk</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Teknik Bilgiler
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog.html">Yapı Malzemelerinin Birim Hacim Ağırlıkları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog2.html">Başlıca Malzeme Yoğunlukları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="beton.html">Beton</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Profil Tabloları
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="h.html">H Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="i.html">I Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="u.html">U Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="dikdortgen.html">Dikdörtgen Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="kare.html">Kare Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="boru.html">Boru Profiller</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                  </div>
+</nav>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--MAIN PAGE CONTENTS -->
+        
+        
+        
+         <div class="container" style="margin-top:65px" id="asikform">
+             <table class="table align-middle text-center">
+                                                                <tbody>
+                                                          
+             <tr><td colspan="2">
+                 
+                 <div class="input-group">
+  <input type="number" min="0" class="form-control" id="degerr" aria-label="Text input with dropdown button" style="color:black; border-radius:0px; border:solid 2px darkred;">
+  <div class="input-group-append">
+     <select id="secim" class="custom-select custom-select-sm" id="mi" style="width:150px; color:black; border-radius:0px; border:solid 2px darkred;">
+                    <option value="0">MPa (N/mm<sup>2</sup>)</option>
+                    <option value="1">Pa (N/m<sup>2</sup>)</option>
+                    <option value="12">kN/m<sup>2</sup></option>
+                    <option value="2">kg/m<sup>2</sup></option>
+                    <option value="3">kg/cm<sup>2</sup></option>
+                    <option value="4">kg/mm<sup>2</sup></option>
+                    <option value="5">ton/m<sup>2</sup></option>
+                    <option value="6">ton/cm<sup>2</sup></option>
+                    <option value="7">ton/mm<sup>2</sup></option>
+                    <option value="8">Kilopund/inch<sup>2</sup> (ksi)</option>
+                    <option value="9">Pound/inch<sup>2</sup> (psi)</option>
+                    <option value="10">atm</option>
+                    <option value="11">bar</option>
+                    </select>
+  </div>
+</div>
+                                                                    
+                                          
+                                                                    </td></tr>
+                                                                                                                 
+             <tr><td colspan="2">
+                 
+                 <div class="input-group">
+                     <output type="number" min="0" class="form-control"  aria-label="Text input with dropdown button" style="color:black; border:none;">Hassasiyet</output>
+  <div class="input-group-append">
+     <select id="hass" class="custom-select custom-select-sm" id="mi" style="width:150px; color:black; border-radius:0px; border:solid 2px darkred;">
+                    <option value="0">0</option>
+                    <option value="1">0.1</option>
+                    <option value="2">0.01</option>
+                    <option value="3">0.001</option>
+                    <option value="4">0.0001</option>
+                    <option value="5">0.00001</option>
+                    <option value="6">0.000001</option>
+                    <option value="7">0.0000001</option>
+                    <option value="8">0.00000001</option>
+                    </select>
+  </div>
+</div>
+                                                                    
+                                          
+                                                                    </td></tr>
+             
+             
+             
+
+           
+             
+                 </tbody></table>
+        
+         </div>
+        
+        
+        
+        
+        
+        
+        <!-- BUTTON -->
+        
+        <div class="container">
+            <div style="text-align:center;" class="row">
+                <div class="col mt-3 mb-4">
+                    <button onclick="hesaplar()" class="btn btn-outline-danger" id="butonasik">Hesapla</button>
+                    </div>
+            </div>
+        </div>
+
+
+        
+        
+         
+        
+        
+        
+        
+        <script language="javascript">
+                function hesaplar(){
+
+
+    
+
+                
+               
+                    
+                    //Deger atamalari	
+                
+                var degerkontrol = document.getElementById('degerr');     
+                var deger=parseFloat(document.getElementById("degerr").value);
+                var secim=parseFloat(document.getElementById("secim").value);
+                var has=parseFloat(document.getElementById("hass").value);
+               
+                
+                    if (degerkontrol.value.length == 0) {
+                        
+                document.getElementById("mpa").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("pa").value="Lütfen Bir Değer Giriniz!";  
+                document.getElementById("kgm").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("kgcm").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("kgmm").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("tm").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("tcm").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("tmm").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("ksi").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("psi").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("atm").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("bar").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("knm").value="Lütfen Bir Değer Giriniz!";
+         
+                    }
+                    
+                    
+                    else {
+                        
+                        if (secim==0) {
+                            
+                            var mpa=deger;
+                            var pa=mpa*1000000;
+                            var kgm=mpa*101971.6213;
+                            var kgcm=mpa*10.19716;
+                            var kgmm=mpa*0.10197;
+                            var tm=mpa*101.97162129779;
+                            var tcm=mpa*0.01019716;
+                            var tmm=mpa*0.00010197;
+                            var ksi=mpa*0.1450377;
+                            var psi=mpa*145.0377;
+                            var atm=mpa*9.8692316931427;
+                            var bar=mpa*10;
+                            var knm=mpa*1000;
+                            
+                            document.getElementById("mpa").value=mpa.toFixed(has);
+                            document.getElementById("pa").value=pa.toFixed(has); 
+                            document.getElementById("kgm").value=kgm.toFixed(has);
+                            document.getElementById("kgcm").value=kgcm.toFixed(has);
+                            document.getElementById("kgmm").value=kgmm.toFixed(has);
+                            document.getElementById("tm").value=tm.toFixed(has);
+                            document.getElementById("tcm").value=tcm.toFixed(has);
+                            document.getElementById("tmm").value=tmm.toFixed(has);
+                            document.getElementById("ksi").value=ksi.toFixed(has);
+                            document.getElementById("psi").value=psi.toFixed(has);
+                            document.getElementById("atm").value=atm.toFixed(has);
+                            document.getElementById("bar").value=bar.toFixed(has);
+                            document.getElementById("knm").value=knm.toFixed(has);
+                            
+                        }
+                        
+                        else if (secim==1) {
+                            
+                            var mpa=deger/1000000;
+                            var pa=mpa*1000000;
+                            var kgm=mpa*101971.6213;
+                            var kgcm=mpa*10.19716;
+                            var kgmm=mpa*0.10197;
+                            var tm=mpa*101.97162129779;
+                            var tcm=mpa*0.01019716;
+                            var tmm=mpa*0.00010197;
+                            var ksi=mpa*0.1450377;
+                            var psi=mpa*145.0377;
+                            var atm=mpa*9.8692316931427;
+                            var bar=mpa*10;
+                            var knm=mpa*1000;
+                            
+                            document.getElementById("mpa").value=mpa.toFixed(has);
+                            document.getElementById("pa").value=pa.toFixed(has); 
+                            document.getElementById("kgm").value=kgm.toFixed(has);
+                            document.getElementById("kgcm").value=kgcm.toFixed(has);
+                            document.getElementById("kgmm").value=kgmm.toFixed(has);
+                            document.getElementById("tm").value=tm.toFixed(has);
+                            document.getElementById("tcm").value=tcm.toFixed(has);
+                            document.getElementById("tmm").value=tmm.toFixed(has);
+                            document.getElementById("ksi").value=ksi.toFixed(has);
+                            document.getElementById("psi").value=psi.toFixed(has);
+                            document.getElementById("atm").value=atm.toFixed(has);
+                            document.getElementById("bar").value=bar.toFixed(has);
+                            document.getElementById("knm").value=knm.toFixed(has);
+                            
+                        }
+                        
+                        
+                        else if (secim==2) {
+                            
+                            var mpa=deger/101971.6213;
+                            var pa=mpa*1000000;
+                            var kgm=mpa*101971.6213;
+                            var kgcm=mpa*10.19716;
+                            var kgmm=mpa*0.10197;
+                            var tm=mpa*101.97162129779;
+                            var tcm=mpa*0.01019716;
+                            var tmm=mpa*0.00010197;
+                            var ksi=mpa*0.1450377;
+                            var psi=mpa*145.0377;
+                            var atm=mpa*9.8692316931427;
+                            var bar=mpa*10;
+                            var knm=mpa*1000;
+                            
+                            document.getElementById("mpa").value=mpa.toFixed(has);
+                            document.getElementById("pa").value=pa.toFixed(has); 
+                            document.getElementById("kgm").value=kgm.toFixed(has);
+                            document.getElementById("kgcm").value=kgcm.toFixed(has);
+                            document.getElementById("kgmm").value=kgmm.toFixed(has);
+                            document.getElementById("tm").value=tm.toFixed(has);
+                            document.getElementById("tcm").value=tcm.toFixed(has);
+                            document.getElementById("tmm").value=tmm.toFixed(has);
+                            document.getElementById("ksi").value=ksi.toFixed(has);
+                            document.getElementById("psi").value=psi.toFixed(has);
+                            document.getElementById("atm").value=atm.toFixed(has);
+                            document.getElementById("bar").value=bar.toFixed(has);
+                            document.getElementById("knm").value=knm.toFixed(has);
+                            
+                        }
+                        
+                        
+                        else if (secim==3) {
+                            
+                            var mpa=deger/10.19716;
+                            var pa=mpa*1000000;
+                            var kgm=mpa*101971.6213;
+                            var kgcm=mpa*10.19716;
+                            var kgmm=mpa*0.10197;
+                            var tm=mpa*101.97162129779;
+                            var tcm=mpa*0.01019716;
+                            var tmm=mpa*0.00010197;
+                            var ksi=mpa*0.1450377;
+                            var psi=mpa*145.0377;
+                            var atm=mpa*9.8692316931427;
+                            var bar=mpa*10;
+                            var knm=mpa*1000;
+                            
+                            document.getElementById("mpa").value=mpa.toFixed(has);
+                            document.getElementById("pa").value=pa.toFixed(has); 
+                            document.getElementById("kgm").value=kgm.toFixed(has);
+                            document.getElementById("kgcm").value=kgcm.toFixed(has);
+                            document.getElementById("kgmm").value=kgmm.toFixed(has);
+                            document.getElementById("tm").value=tm.toFixed(has);
+                            document.getElementById("tcm").value=tcm.toFixed(has);
+                            document.getElementById("tmm").value=tmm.toFixed(has);
+                            document.getElementById("ksi").value=ksi.toFixed(has);
+                            document.getElementById("psi").value=psi.toFixed(has);
+                            document.getElementById("atm").value=atm.toFixed(has);
+                            document.getElementById("bar").value=bar.toFixed(has);
+                            document.getElementById("knm").value=knm.toFixed(has);
+                            
+                        }
+                        
+                        
+                        else if (secim==4) {
+                            
+                            var mpa=deger/0.10197;
+                            var pa=mpa*1000000;
+                            var kgm=mpa*101971.6213;
+                            var kgcm=mpa*10.19716;
+                            var kgmm=mpa*0.10197;
+                            var tm=mpa*101.97162129779;
+                            var tcm=mpa*0.01019716;
+                            var tmm=mpa*0.00010197;
+                            var ksi=mpa*0.1450377;
+                            var psi=mpa*145.0377;
+                            var atm=mpa*9.8692316931427;
+                            var bar=mpa*10;
+                            var knm=mpa*1000;
+                            
+                            document.getElementById("mpa").value=mpa.toFixed(has);
+                            document.getElementById("pa").value=pa.toFixed(has); 
+                            document.getElementById("kgm").value=kgm.toFixed(has);
+                            document.getElementById("kgcm").value=kgcm.toFixed(has);
+                            document.getElementById("kgmm").value=kgmm.toFixed(has);
+                            document.getElementById("tm").value=tm.toFixed(has);
+                            document.getElementById("tcm").value=tcm.toFixed(has);
+                            document.getElementById("tmm").value=tmm.toFixed(has);
+                            document.getElementById("ksi").value=ksi.toFixed(has);
+                            document.getElementById("psi").value=psi.toFixed(has);
+                            document.getElementById("atm").value=atm.toFixed(has);
+                            document.getElementById("bar").value=bar.toFixed(has);
+                            document.getElementById("knm").value=knm.toFixed(has);
+                            
+                        }
+                        
+                        
+                        else if (secim==5) {
+                            
+                            var mpa=deger/101.97162129779;
+                            var pa=mpa*1000000;
+                            var kgm=mpa*101971.6213;
+                            var kgcm=mpa*10.19716;
+                            var kgmm=mpa*0.10197;
+                            var tm=mpa*101.97162129779;
+                            var tcm=mpa*0.01019716;
+                            var tmm=mpa*0.00010197;
+                            var ksi=mpa*0.1450377;
+                            var psi=mpa*145.0377;
+                            var atm=mpa*9.8692316931427;
+                            var bar=mpa*10;
+                            var knm=mpa*1000;
+                            
+                            document.getElementById("mpa").value=mpa.toFixed(has);
+                            document.getElementById("pa").value=pa.toFixed(has); 
+                            document.getElementById("kgm").value=kgm.toFixed(has);
+                            document.getElementById("kgcm").value=kgcm.toFixed(has);
+                            document.getElementById("kgmm").value=kgmm.toFixed(has);
+                            document.getElementById("tm").value=tm.toFixed(has);
+                            document.getElementById("tcm").value=tcm.toFixed(has);
+                            document.getElementById("tmm").value=tmm.toFixed(has);
+                            document.getElementById("ksi").value=ksi.toFixed(has);
+                            document.getElementById("psi").value=psi.toFixed(has);
+                            document.getElementById("atm").value=atm.toFixed(has);
+                            document.getElementById("bar").value=bar.toFixed(has);
+                            document.getElementById("knm").value=knm.toFixed(has);
+                            
+                        }
+                        
+                        else if (secim==6) {
+                            
+                            var mpa=deger/0.01019716;
+                            var pa=mpa*1000000;
+                            var kgm=mpa*101971.6213;
+                            var kgcm=mpa*10.19716;
+                            var kgmm=mpa*0.10197;
+                            var tm=mpa*101.97162129779;
+                            var tcm=mpa*0.01019716;
+                            var tmm=mpa*0.00010197;
+                            var ksi=mpa*0.1450377;
+                            var psi=mpa*145.0377;
+                            var atm=mpa*9.8692316931427;
+                            var bar=mpa*10;
+                            var knm=mpa*1000;
+                            
+                            document.getElementById("mpa").value=mpa.toFixed(has);
+                            document.getElementById("pa").value=pa.toFixed(has); 
+                            document.getElementById("kgm").value=kgm.toFixed(has);
+                            document.getElementById("kgcm").value=kgcm.toFixed(has);
+                            document.getElementById("kgmm").value=kgmm.toFixed(has);
+                            document.getElementById("tm").value=tm.toFixed(has);
+                            document.getElementById("tcm").value=tcm.toFixed(has);
+                            document.getElementById("tmm").value=tmm.toFixed(has);
+                            document.getElementById("ksi").value=ksi.toFixed(has);
+                            document.getElementById("psi").value=psi.toFixed(has);
+                            document.getElementById("atm").value=atm.toFixed(has);
+                            document.getElementById("bar").value=bar.toFixed(has);
+                            document.getElementById("knm").value=knm.toFixed(has);
+                            
+                        }
+                        
+                        else if (secim==7) {
+                            
+                            var mpa=deger/0.00010197;
+                            var pa=mpa*1000000;
+                            var kgm=mpa*101971.6213;
+                            var kgcm=mpa*10.19716;
+                            var kgmm=mpa*0.10197;
+                            var tm=mpa*101.97162129779;
+                            var tcm=mpa*0.01019716;
+                            var tmm=mpa*0.00010197;
+                            var ksi=mpa*0.1450377;
+                            var psi=mpa*145.0377;
+                            var atm=mpa*9.8692316931427;
+                            var bar=mpa*10;
+                            var knm=mpa*1000;
+                            
+                            document.getElementById("mpa").value=mpa.toFixed(has);
+                            document.getElementById("pa").value=pa.toFixed(has); 
+                            document.getElementById("kgm").value=kgm.toFixed(has);
+                            document.getElementById("kgcm").value=kgcm.toFixed(has);
+                            document.getElementById("kgmm").value=kgmm.toFixed(has);
+                            document.getElementById("tm").value=tm.toFixed(has);
+                            document.getElementById("tcm").value=tcm.toFixed(has);
+                            document.getElementById("tmm").value=tmm.toFixed(has);
+                            document.getElementById("ksi").value=ksi.toFixed(has);
+                            document.getElementById("psi").value=psi.toFixed(has);
+                            document.getElementById("atm").value=atm.toFixed(has);
+                            document.getElementById("bar").value=bar.toFixed(has);
+                            document.getElementById("knm").value=knm.toFixed(has);
+                            
+                        }
+                        
+                        else if (secim==8) {
+                            
+                            var mpa=deger/0.1450377;
+                            var pa=mpa*1000000;
+                            var kgm=mpa*101971.6213;
+                            var kgcm=mpa*10.19716;
+                            var kgmm=mpa*0.10197;
+                            var tm=mpa*101.97162129779;
+                            var tcm=mpa*0.01019716;
+                            var tmm=mpa*0.00010197;
+                            var ksi=mpa*0.1450377;
+                            var psi=mpa*145.0377;
+                            var atm=mpa*9.8692316931427;
+                            var bar=mpa*10;
+                            var knm=mpa*1000;
+                            
+                            document.getElementById("mpa").value=mpa.toFixed(has);
+                            document.getElementById("pa").value=pa.toFixed(has); 
+                            document.getElementById("kgm").value=kgm.toFixed(has);
+                            document.getElementById("kgcm").value=kgcm.toFixed(has);
+                            document.getElementById("kgmm").value=kgmm.toFixed(has);
+                            document.getElementById("tm").value=tm.toFixed(has);
+                            document.getElementById("tcm").value=tcm.toFixed(has);
+                            document.getElementById("tmm").value=tmm.toFixed(has);
+                            document.getElementById("ksi").value=ksi.toFixed(has);
+                            document.getElementById("psi").value=psi.toFixed(has);
+                            document.getElementById("atm").value=atm.toFixed(has);
+                            document.getElementById("bar").value=bar.toFixed(has);
+                            document.getElementById("knm").value=knm.toFixed(has);
+                            
+                        }
+                        
+                        else if (secim==9) {
+                            
+                            var mpa=deger/145.0377;
+                            var pa=mpa*1000000;
+                            var kgm=mpa*101971.6213;
+                            var kgcm=mpa*10.19716;
+                            var kgmm=mpa*0.10197;
+                            var tm=mpa*101.97162129779;
+                            var tcm=mpa*0.01019716;
+                            var tmm=mpa*0.00010197;
+                            var ksi=mpa*0.1450377;
+                            var psi=mpa*145.0377;
+                            var atm=mpa*9.8692316931427;
+                            var bar=mpa*10;
+                            var knm=mpa*1000;
+                            
+                            document.getElementById("mpa").value=mpa.toFixed(has);
+                            document.getElementById("pa").value=pa.toFixed(has); 
+                            document.getElementById("kgm").value=kgm.toFixed(has);
+                            document.getElementById("kgcm").value=kgcm.toFixed(has);
+                            document.getElementById("kgmm").value=kgmm.toFixed(has);
+                            document.getElementById("tm").value=tm.toFixed(has);
+                            document.getElementById("tcm").value=tcm.toFixed(has);
+                            document.getElementById("tmm").value=tmm.toFixed(has);
+                            document.getElementById("ksi").value=ksi.toFixed(has);
+                            document.getElementById("psi").value=psi.toFixed(has);
+                            document.getElementById("atm").value=atm.toFixed(has);
+                            document.getElementById("bar").value=bar.toFixed(has);
+                            document.getElementById("knm").value=knm.toFixed(has);
+                            
+                        }
+                        
+                         else if (secim==10) {
+                            
+                            var mpa=deger/9.8692316931427;
+                            var pa=mpa*1000000;
+                            var kgm=mpa*101971.6213;
+                            var kgcm=mpa*10.19716;
+                            var kgmm=mpa*0.10197;
+                            var tm=mpa*101.97162129779;
+                            var tcm=mpa*0.01019716;
+                            var tmm=mpa*0.00010197;
+                            var ksi=mpa*0.1450377;
+                            var psi=mpa*145.0377;
+                            var atm=mpa*9.8692316931427;
+                            var bar=mpa*10;
+                            var knm=mpa*1000;
+                            
+                            document.getElementById("mpa").value=mpa.toFixed(has);
+                            document.getElementById("pa").value=pa.toFixed(has); 
+                            document.getElementById("kgm").value=kgm.toFixed(has);
+                            document.getElementById("kgcm").value=kgcm.toFixed(has);
+                            document.getElementById("kgmm").value=kgmm.toFixed(has);
+                            document.getElementById("tm").value=tm.toFixed(has);
+                            document.getElementById("tcm").value=tcm.toFixed(has);
+                            document.getElementById("tmm").value=tmm.toFixed(has);
+                            document.getElementById("ksi").value=ksi.toFixed(has);
+                            document.getElementById("psi").value=psi.toFixed(has);
+                            document.getElementById("atm").value=atm.toFixed(has);
+                            document.getElementById("bar").value=bar.toFixed(has);
+                            document.getElementById("knm").value=knm.toFixed(has);
+                            
+                        }
+                        
+                        else if (secim==11) {
+                            
+                            var mpa=deger/10;
+                            var pa=mpa*1000000;
+                            var kgm=mpa*101971.6213;
+                            var kgcm=mpa*10.19716;
+                            var kgmm=mpa*0.10197;
+                            var tm=mpa*101.97162129779;
+                            var tcm=mpa*0.01019716;
+                            var tmm=mpa*0.00010197;
+                            var ksi=mpa*0.1450377;
+                            var psi=mpa*145.0377;
+                            var atm=mpa*9.8692316931427;
+                            var bar=mpa*10;
+                            var knm=mpa*1000;
+                            
+                            document.getElementById("mpa").value=mpa.toFixed(has);
+                            document.getElementById("pa").value=pa.toFixed(has); 
+                            document.getElementById("kgm").value=kgm.toFixed(has);
+                            document.getElementById("kgcm").value=kgcm.toFixed(has);
+                            document.getElementById("kgmm").value=kgmm.toFixed(has);
+                            document.getElementById("tm").value=tm.toFixed(has);
+                            document.getElementById("tcm").value=tcm.toFixed(has);
+                            document.getElementById("tmm").value=tmm.toFixed(has);
+                            document.getElementById("ksi").value=ksi.toFixed(has);
+                            document.getElementById("psi").value=psi.toFixed(has);
+                            document.getElementById("atm").value=atm.toFixed(has);
+                            document.getElementById("bar").value=bar.toFixed(has);
+                            document.getElementById("knm").value=knm.toFixed(has);
+                            
+                        }
+                        
+                        else if (secim==12) {
+                            
+                            var mpa=deger/1000;
+                            var pa=mpa*1000000;
+                            var kgm=mpa*101971.6213;
+                            var kgcm=mpa*10.19716;
+                            var kgmm=mpa*0.10197;
+                            var tm=mpa*101.97162129779;
+                            var tcm=mpa*0.01019716;
+                            var tmm=mpa*0.00010197;
+                            var ksi=mpa*0.1450377;
+                            var psi=mpa*145.0377;
+                            var atm=mpa*9.8692316931427;
+                            var bar=mpa*10;
+                            var knm=mpa*1000;
+                            
+                            document.getElementById("mpa").value=mpa.toFixed(has);
+                            document.getElementById("pa").value=pa.toFixed(has); 
+                            document.getElementById("kgm").value=kgm.toFixed(has);
+                            document.getElementById("kgcm").value=kgcm.toFixed(has);
+                            document.getElementById("kgmm").value=kgmm.toFixed(has);
+                            document.getElementById("tm").value=tm.toFixed(has);
+                            document.getElementById("tcm").value=tcm.toFixed(has);
+                            document.getElementById("tmm").value=tmm.toFixed(has);
+                            document.getElementById("ksi").value=ksi.toFixed(has);
+                            document.getElementById("psi").value=psi.toFixed(has);
+                            document.getElementById("atm").value=atm.toFixed(has);
+                            document.getElementById("bar").value=bar.toFixed(has);
+                            document.getElementById("knm").value=knm.toFixed(has);
+                            
+                        }
+                    
+                        
+                        
+                        
+                        
+                        
+                    }}
+
+                </script>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--RESULTS-->
+        <br>
+        <br>
+        
+      
+        
+        <div class="container">
+            <table class="table  table-striped table-bordered">
+            <tbody>
+                
+                <tr>
+                        <td id="on" style="width:150px;">MPa (N/mm<sup>2</sup>)</td>
+                        <td id="off2"><output id="mpa" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">Pa (N/m<sup>2</sup>)</td>
+                        <td id="off2"><output id="pa" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">kN/m<sup>2</sup></td>
+                        <td id="off2"><output id="knm" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">kg/m<sup>2</sup></td>
+                        <td id="off2"><output id="kgm" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">kg/cm<sup>2</sup></td>
+                        <td id="off2"><output id="kgcm" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">kg/mm<sup>2</sup></td>
+                        <td id="off2"><output id="kgmm" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">ton/m<sup>2</sup></td>
+                        <td id="off2"><output id="tm" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">ton/cm<sup>2</sup></td>
+                        <td id="off2"><output id="tcm" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">ton/mm<sup>2</sup></td>
+                        <td id="off2"><output id="tmm" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">Kilopund/inch<sup>2</sup> (ksi)</td>
+                        <td id="off2"><output id="ksi" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">Pound/inch<sup>2</sup> (psi)</td>
+                        <td id="off2"><output id="psi" readonly=""></output></td>
+                </tr>
+                
+                 <tr>
+                        <td id="on" style="width:150px;">atm</td>
+                        <td id="off2"><output id="atm" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">bar</td>
+                        <td id="off2"><output id="bar" readonly=""></output></td>
+                </tr>
+                
+                
+         
+                
+           
+                </tbody></table>
+             <br>
+            <br>
+            <br>
+            
+            
+            <script src="popper.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        
+        <script src="bootstrap-tooltip.js"></script>
+        <script src="fontawesome.min.js"></script>
+            
+        </div>
+        
+
+        
+        
+                
+        
+    </body>
+</html>

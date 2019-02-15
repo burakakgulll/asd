@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="tr">
+    
+    
+    
+    
+    
+    
+    
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+        
+        <link rel="stylesheet" type="text/css" href="fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        
+<script src="jquery-3.3.1.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      
+        <style>.container {font-size:14px;}
+            .btn-xs {padding:2px; font-size:12px;}</style>
+        
+        
+    </head>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <title>
+        Profil Tabloları - Kare Kutu Profiller
+    </title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <body>
+        
+        <!-- NAVIGATION BAR -->
+        
+                  <nav id="bg-light" class="mt-0 asdnav navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+                       
+                                  <a class="navbar-brand" id="navbar-brand" href="#" style="font-size:12px;">Profil Tabloları - Kare Kutu Profiller</a>
+                       
+                                  <button class="navbar-toggler float-right white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span id="log" style="color:white;">&#9776</span>
+                                  </button>
+                       
+                                  <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
+                                      
+                                            <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Rüzgar Yükleri (TS EN 1991-1-4)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="index.html">Yapı Yüzeyine Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="tekegimruzgar.html">Tek Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="ciftegimruzgar.html">Çift Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Kar Yükleri (TS EN 1991-1-3)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Birim Çevirme
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="birim.html">Kuvvet</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="basinc.html">Gerilme</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="uzunluk.html">Uzunluk</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="alan.html">Alan</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="hacim.html">Hacim</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="yogunluk.html">Yoğunluk</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Teknik Bilgiler
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog.html">Yapı Malzemelerinin Birim Hacim Ağırlıkları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog2.html">Başlıca Malzeme Yoğunlukları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="beton.html">Beton</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Profil Tabloları
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="h.html">H Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="i.html">I Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="u.html">U Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="dikdortgen.html">Dikdörtgen Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item active" href="#">Kare Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="boru.html">Boru Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="kosebent.html">Köşebentler</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                  </div>
+</nav>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--MAIN PAGE CONTENTS -->
+        
+        
+        
+        
+        
+         <div class="container" style="margin-top:20px" id="asikform">
+             <div class="card sticky-top"  style="position: sticky; top:45px;"><table style="table-layout: fixed;" class="table table-fixed table-striped table-bordered text-center mb-0">
+             <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                <tr><img class="img-fluid mx-auto" src="k.png" style="height: 50%; width: 50%;"></tr>
+                                                <tr>
+                                                        <td id="on">b (mm)</td>
+                                                        <td id="on">t (mm)</td>
+                                                        <td id="off2"><output id="kgm" readonly="">G (kg/m)</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">r<sub>o</sub> (mm)</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">r<sub>i</sub> (mm)</output></td>
+                                                </tr>
+                                                    
+                                                </thead></table></div>
+             
+             
+             <table style="table-layout: fixed;" class="table table-fixed table-striped table-bordered text-center">
+                                   <tbody>         
+                                                
+                                               
+                                                
+                                                
+                                                
+                                                
+                                                <tr>
+                                                        <td id="on">20</td>
+                                                        <td id="on">2</td>
+                                                        <td id="off2"><output id="kgm" readonly="">1.05</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">2</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">20</td>
+                                                        <td id="on">2.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">1.25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">2.5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">25</td>
+                                                        <td id="on">2</td>
+                                                        <td id="off2"><output id="kgm" readonly="">1.36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">2</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">25</td>
+                                                        <td id="on">2.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">1.64</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">2.5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">25</td>
+                                                        <td id="on">3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">1.89</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">3</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">30</td>
+                                                        <td id="on">2</td>
+                                                        <td id="off2"><output id="kgm" readonly="">1.68</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">2</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">30</td>
+                                                        <td id="on">2.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">2.03</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">2.5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">30</td>
+                                                        <td id="on">3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">2.36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">3</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">40</td>
+                                                        <td id="on">2</td>
+                                                        <td id="off2"><output id="kgm" readonly="">2.31</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">2</output></td>
+                                                </tr>
+                                       
+                                                <tr>
+                                                        <td id="on">40</td>
+                                                        <td id="on">2.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">2.82</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">2.5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">40</td>
+                                                        <td id="on">3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">3.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">3</output></td>
+                                                </tr>
+                                                
+                                                
+                                               
+                                                
+                                                <tr>
+                                                        <td id="on">40</td>
+                                                        <td id="on">4</td>
+                                                        <td id="off2"><output id="kgm" readonly="">4.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                </tr>
+                                                
+                                                
+                                                
+                                                <tr>
+                                                        <td id="on">50</td>
+                                                        <td id="on">2</td>
+                                                        <td id="off2"><output id="kgm" readonly="">2.93</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">2</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">50</td>
+                                                        <td id="on">2.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">3.6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">2.5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">50</td>
+                                                        <td id="on">3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">4.25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">3</output></td>
+                                                </tr>
+                                                
+                                                
+                                                
+                                                <tr>
+                                                        <td id="on">50</td>
+                                                        <td id="on">4</td>
+                                                        <td id="off2"><output id="kgm" readonly="">5.45</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">50</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">6.56</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                                
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">2</td>
+                                                        <td id="off2"><output id="kgm" readonly="">3.56</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">2</output></td>
+                                                </tr>
+                                                
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">2.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">4.39</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">2.5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">5.19</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">3</output></td>
+                                                </tr>
+                                                
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">4</td>
+                                                        <td id="off2"><output id="kgm" readonly="">6.71</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.13</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.55</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">70</td>
+                                                        <td id="on">2.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">5.17</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">2.5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">70</td>
+                                                        <td id="on">3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">6.13</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">3</output></td>
+                                                </tr>
+                                              
+                                                
+                                                <tr>
+                                                        <td id="on">70</td>
+                                                        <td id="on">3.6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">7.24</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">7.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">3.6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">70</td>
+                                                        <td id="on">4</td>
+                                                        <td id="off2"><output id="kgm" readonly="">7.97</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">70</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">70</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">70</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                                
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">7.07</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">3</output></td>
+                                                </tr>
+                                             
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">3.6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.37</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">7.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">3.6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">4</td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.22</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">13.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">13.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">16.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.01</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">3</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">3.6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">7.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">3.6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">4</td>
+                                                        <td id="off2"><output id="kgm" readonly="">10.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.1</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">18.9</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.96</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">3</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">4</td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">14.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">17</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">17.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">10</td>
+                                                        <td id="off2"><output id="kgm" readonly="">25.6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">12</td>
+                                                        <td id="off2"><output id="kgm" readonly="">28.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">12.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">29.1</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                </tr>
+                                                
+                                       <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">10.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">3</output></td>
+                                                </tr>
+                                       
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">4</td>
+                                                        <td id="off2"><output id="kgm" readonly="">14.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">17.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">20.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">26.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">10</td>
+                                                        <td id="off2"><output id="kgm" readonly="">31.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">12</td>
+                                                        <td id="off2"><output id="kgm" readonly="">35.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">12.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">36.9</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                </tr>
+                                                
+                                       <tr>
+                                                        <td id="on">140</td>
+                                                        <td id="on">4</td>
+                                                        <td id="off2"><output id="kgm" readonly="">16.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                </tr>
+                                       
+                                                <tr>
+                                                        <td id="on">140</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">20.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">140</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">24.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">140</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">25.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">140</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">31.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">140</td>
+                                                        <td id="on">10</td>
+                                                        <td id="off2"><output id="kgm" readonly="">38.1</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">140</td>
+                                                        <td id="on">12</td>
+                                                        <td id="off2"><output id="kgm" readonly="">43.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">140</td>
+                                                        <td id="on">12.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">44.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                </tr>
+                                                
+                                       <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">4</td>
+                                                        <td id="off2"><output id="kgm" readonly="">18</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                </tr>
+                                       
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">22.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">26.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">27.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">33.9</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">10</td>
+                                                        <td id="off2"><output id="kgm" readonly="">41.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">12</td>
+                                                        <td id="off2"><output id="kgm" readonly="">47.1</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">12.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">48.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">16</td>
+                                                        <td id="off2"><output id="kgm" readonly="">58.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">48</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">32</output></td>
+                                                </tr>
+                                                
+                                       <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">4</td>
+                                                        <td id="off2"><output id="kgm" readonly="">19.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                </tr>
+                                       
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">23.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">28.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">29.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">36.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">10</td>
+                                                        <td id="off2"><output id="kgm" readonly="">44.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">12</td>
+                                                        <td id="off2"><output id="kgm" readonly="">50.9</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">12.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">52.6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">16</td>
+                                                        <td id="off2"><output id="kgm" readonly="">63.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">47</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">32</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">180</td>
+                                                        <td id="on">4</td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                </tr>
+                                       
+                                       
+                                                <tr>
+                                                        <td id="on">180</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">180</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">32.1</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">180</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">33.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">180</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">41.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">180</td>
+                                                        <td id="on">10</td>
+                                                        <td id="off2"><output id="kgm" readonly="">50.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">180</td>
+                                                        <td id="on">12</td>
+                                                        <td id="off2"><output id="kgm" readonly="">58.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">180</td>
+                                                        <td id="on">12.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">60.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">180</td>
+                                                        <td id="on">16</td>
+                                                        <td id="off2"><output id="kgm" readonly="">73.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">48</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">32</output></td>
+                                                </tr>
+                                                
+                                       <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">4</td>
+                                                        <td id="off2"><output id="kgm" readonly="">24.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4</output></td>
+                                                </tr>
+                                       
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">30.1</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">35.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">46.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">10</td>
+                                                        <td id="off2"><output id="kgm" readonly="">57</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">45</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">12</td>
+                                                        <td id="off2"><output id="kgm" readonly="">66</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">12.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">68.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">16</td>
+                                                        <td id="off2"><output id="kgm" readonly="">83.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">48</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">32</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">220</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">33.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                       
+                                       
+                                                <tr>
+                                                        <td id="on">220</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">39.6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">220</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">41.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">220</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">51.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">220</td>
+                                                        <td id="on">10</td>
+                                                        <td id="off2"><output id="kgm" readonly="">63.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">220</td>
+                                                        <td id="on">12</td>
+                                                        <td id="off2"><output id="kgm" readonly="">73.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">220</td>
+                                                        <td id="on">12.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">76.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">220</td>
+                                                        <td id="on">16</td>
+                                                        <td id="off2"><output id="kgm" readonly="">93.9</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">48</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">32</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">250</td>
+                                                        <td id="on">5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">38</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">250</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">45.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">250</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">47.1</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">250</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">59.1</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">250</td>
+                                                        <td id="on">10</td>
+                                                        <td id="off2"><output id="kgm" readonly="">72.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">250</td>
+                                                        <td id="on">12</td>
+                                                        <td id="off2"><output id="kgm" readonly="">84.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">250</td>
+                                                        <td id="on">12.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">88</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">250</td>
+                                                        <td id="on">16</td>
+                                                        <td id="off2"><output id="kgm" readonly="">109</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">48</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">32</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">260</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">47.1</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">260</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">49.1</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">260</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">61.6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">260</td>
+                                                        <td id="on">10</td>
+                                                        <td id="off2"><output id="kgm" readonly="">75.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">260</td>
+                                                        <td id="on">12</td>
+                                                        <td id="off2"><output id="kgm" readonly="">88.6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">260</td>
+                                                        <td id="on">12.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">91.9</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">260</td>
+                                                        <td id="on">16</td>
+                                                        <td id="off2"><output id="kgm" readonly="">114</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">48</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">32</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">300</td>
+                                                        <td id="on">6</td>
+                                                        <td id="off2"><output id="kgm" readonly="">54.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">300</td>
+                                                        <td id="on">6.3</td>
+                                                        <td id="off2"><output id="kgm" readonly="">57</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.75</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.45</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">300</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">71.6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">300</td>
+                                                        <td id="on">10</td>
+                                                        <td id="off2"><output id="kgm" readonly="">88.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">300</td>
+                                                        <td id="on">12</td>
+                                                        <td id="off2"><output id="kgm" readonly="">104</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">300</td>
+                                                        <td id="on">12.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">108</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">300</td>
+                                                        <td id="on">16</td>
+                                                        <td id="off2"><output id="kgm" readonly="">134</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">48</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">32</output></td>
+                                                </tr>
+                                       
+                                        <tr>
+                                                        <td id="on">350</td>
+                                                        <td id="on">8</td>
+                                                        <td id="off2"><output id="kgm" readonly="">84.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                                
+                                       <tr>
+                                                        <td id="on">350</td>
+                                                        <td id="on">10</td>
+                                                        <td id="off2"><output id="kgm" readonly="">104</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                       <tr>
+                                                        <td id="on">350</td>
+                                                        <td id="on">12</td>
+                                                        <td id="off2"><output id="kgm" readonly="">123</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">350</td>
+                                                        <td id="on">12.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">127</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">350</td>
+                                                        <td id="on">16</td>
+                                                        <td id="off2"><output id="kgm" readonly="">159</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">48</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">32</output></td>
+                                                </tr>
+                                       
+                                       
+                                       <tr>
+                                                        <td id="on">400</td>
+                                                        <td id="on">10</td>
+                                                        <td id="off2"><output id="kgm" readonly="">120</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">400</td>
+                                                        <td id="on">12</td>
+                                                        <td id="off2"><output id="kgm" readonly="">141</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">400</td>
+                                                        <td id="on">12.5</td>
+                                                        <td id="off2"><output id="kgm" readonly="">147</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">37.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25</output></td>
+                                                </tr>
+                                       
+                                       <tr>
+                                                        <td id="on">400</td>
+                                                        <td id="on">16</td>
+                                                        <td id="off2"><output id="kgm" readonly="">184</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">48</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">32</output></td>
+                                                </tr>
+                                       
+                                       
+                                                
+                                                
+                                                
+
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </tbody>
+                                        </table>
+                                  
+                            
+        
+        
+        
+        
+        
+        
+         </div>
+        
+        
+        
+        
+        
+        
+        <!-- BUTTON -->
+        
+      
+        
+        
+        <!--RESULTS-->
+        
+            
+            
+            <script src="popper.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        
+        <script src="bootstrap-tooltip.js"></script>
+        <script src="fontawesome.min.js"></script>
+            
+       
+
+        
+        
+                
+        
+    </body>
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="tr">
+    
+    
+    
+    
+    
+    
+    
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+        
+        <link rel="stylesheet" type="text/css" href="fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        
+<script src="jquery-3.3.1.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      
+        <style>.container {font-size:14px;}
+            .btn-xs {padding:2px; font-size:12px;}</style>
+        
+        
+    </head>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <title>
+        Birim Çevirme - Kuvvet
+    </title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <body>
+        
+        <!-- NAVIGATION BAR -->
+        
+                 <nav id="bg-light" class="mt-0 asdnav navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+                       
+                                  <a class="navbar-brand" id="navbar-brand" href="#" style="font-size:12px;">Birim Çevirme - Kuvvet</a>
+                       
+                                  <button class="navbar-toggler float-right white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span id="log" style="color:white;">&#9776</span>
+                                  </button>
+                       
+                                  <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
+                                      
+                                            <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Rüzgar Yükleri (TS EN 1991-1-4)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="index.html">Yapı Yüzeyine Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="tekegimruzgar.html">Tek Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="ciftegimruzgar.html">Çift Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Kar Yükleri (TS EN 1991-1-3)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item active" href="#">---</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Birim Çevirme
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item active" href="#">Kuvvet</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="basinc.html">Gerilme</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="uzunluk.html">Uzunluk</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="alan.html">Alan</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="hacim.html">Hacim</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="yogunluk.html">Yoğunluk</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Teknik Bilgiler
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog.html">Yapı Malzemelerinin Birim Hacim Ağırlıkları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog2.html">Başlıca Malzeme Yoğunlukları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="beton.html">Beton</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Profil Tabloları
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="h.html">H Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="i.html">I Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="u.html">U Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="dikdortgen.html">Dikdörtgen Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="kare.html">Kare Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="boru.html">Boru Profiller</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                  </div>
+</nav>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--MAIN PAGE CONTENTS -->
+        
+        
+        
+         <div class="container" style="margin-top:65px" id="asikform">
+             <table class="table align-middle text-center">
+                                                                <tbody>
+                                                          
+             <tr><td colspan="2">
+                 
+                 <div class="input-group">
+  <input type="number" min="0" class="form-control" id="degerr" aria-label="Text input with dropdown button" style="color:black; border-radius:0px; border:solid 2px darkred;">
+  <div class="input-group-append">
+     <select id="secim" class="custom-select custom-select-sm" id="mi" style="width:150px; color:black; border-radius:0px; border:solid 2px darkred;">
+                    <option value="0">Kilogram (kgf)</option>
+                    <option value="1">Ton (tf)</option>
+                    <option value="2">Dyne (dyn)</option>
+                    <option value="3">Newton (N)</option>
+                    <option value="4">Kilonewton (kN)</option>
+                    <option value="5">Pound (lb-f)</option>
+                    <option value="6">Kilopound (kips)</option>
+                    </select>
+  </div>
+</div>
+                                                                    
+                                          
+                                                                    </td></tr>
+                                                                                                                 
+             <tr><td colspan="2">
+                 
+                 <div class="input-group">
+                     <output type="number" min="0" class="form-control"  aria-label="Text input with dropdown button" style="color:black; border:none;">Hassasiyet</output>
+  <div class="input-group-append">
+     <select id="hass" class="custom-select custom-select-sm" id="mi" style="width:150px; color:black; border-radius:0px; border:solid 2px darkred;">
+                    <option value="0">0</option>
+                    <option value="1">0.1</option>
+                    <option value="2">0.01</option>
+                    <option value="3">0.001</option>
+                    <option value="4">0.0001</option>
+                    <option value="5">0.00001</option>
+                    <option value="6">0.000001</option>
+                    <option value="7">0.0000001</option>
+                    <option value="8">0.00000001</option>
+                    </select>
+  </div>
+</div>
+                                                                    
+                                          
+                                                                    </td></tr>
+             
+             
+             
+
+           
+             
+                 </tbody></table>
+        
+         </div>
+        
+        
+        
+        
+        
+        
+        <!-- BUTTON -->
+        
+        <div class="container">
+            <div style="text-align:center;" class="row">
+                <div class="col mt-3 mb-4">
+                    <button onclick="hesaplar()" class="btn btn-outline-danger" id="butonasik">Hesapla</button>
+                    </div>
+            </div>
+        </div>
+
+
+        
+        
+         
+        
+        
+        
+        
+        <script language="javascript">
+                function hesaplar(){
+
+
+    
+
+                
+               
+                    
+                    //Deger atamalari	
+                
+                var degerkontrol = document.getElementById('degerr');     
+                var deger=parseFloat(document.getElementById("degerr").value);
+                var secim=parseFloat(document.getElementById("secim").value);
+                var has=parseFloat(document.getElementById("hass").value);
+               
+                
+                    if (degerkontrol.value.length == 0) {
+                        
+                document.getElementById("kgf").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("tonf").value="Lütfen Bir Değer Giriniz!";  
+                document.getElementById("dyn").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("n").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("kn").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("lbf").value="Lütfen Bir Değer Giriniz!";
+                document.getElementById("kips").value="Lütfen Bir Değer Giriniz!";
+         
+                    }
+                    
+                    
+                    else {
+                        
+                        if (secim==0) {
+                            
+                            var kgf=deger;
+                            var tonf=kgf*0.001;
+                            var dyn=kgf*980665;
+                            var n=kgf*9.80665;
+                            var kn=kgf*0.00980665;
+                            var lbf=kgf*2.2046226218488;
+                            var kips=kgf*0.0022046226218488;
+                            
+                            document.getElementById("kgf").value=kgf.toFixed(has);
+                            document.getElementById("tonf").value=tonf.toFixed(has); 
+                            document.getElementById("dyn").value=dyn.toFixed(has);
+                            document.getElementById("n").value=n.toFixed(has);
+                            document.getElementById("kn").value=kn.toFixed(has);
+                            document.getElementById("lbf").value=lbf.toFixed(has);
+                            document.getElementById("kips").value=kips.toFixed(has);
+                            
+                        }
+                        
+                        else if (secim==1) {
+                            
+                            var kgf=deger/0.001;
+                            var tonf=kgf*0.001;
+                            var dyn=kgf*980665;
+                            var n=kgf*9.80665;
+                            var kn=kgf*0.00980665;
+                            var lbf=kgf*2.2046226218488;
+                            var kips=kgf*0.0022046226218488;
+                            
+                            document.getElementById("kgf").value=kgf.toFixed(has);
+                            document.getElementById("tonf").value=tonf.toFixed(has); 
+                            document.getElementById("dyn").value=dyn.toFixed(has);
+                            document.getElementById("n").value=n.toFixed(has);
+                            document.getElementById("kn").value=kn.toFixed(has);
+                            document.getElementById("lbf").value=lbf.toFixed(has);
+                            document.getElementById("kips").value=kips.toFixed(has);
+                            
+                        }
+                        
+                        
+                        else if (secim==2) {
+                            
+                            var kgf=deger/980665;
+                            var tonf=kgf*0.001;
+                            var dyn=kgf*980665;
+                            var n=kgf*9.80665;
+                            var kn=kgf*0.00980665;
+                            var lbf=kgf*2.2046226218488;
+                            var kips=kgf*0.0022046226218488;
+                            
+                            document.getElementById("kgf").value=kgf.toFixed(has);
+                            document.getElementById("tonf").value=tonf.toFixed(has); 
+                            document.getElementById("dyn").value=dyn.toFixed(has);
+                            document.getElementById("n").value=n.toFixed(has);
+                            document.getElementById("kn").value=kn.toFixed(has);
+                            document.getElementById("lbf").value=lbf.toFixed(has);
+                            document.getElementById("kips").value=kips.toFixed(has);
+                            
+                        }
+                        
+                        
+                        else if (secim==3) {
+                            
+                            var kgf=deger/9.80665;
+                            var tonf=kgf*0.001;
+                            var dyn=kgf*980665;
+                            var n=kgf*9.80665;
+                            var kn=kgf*0.00980665;
+                            var lbf=kgf*2.2046226218488;
+                            var kips=kgf*0.0022046226218488;
+                            
+                            document.getElementById("kgf").value=kgf.toFixed(has);
+                            document.getElementById("tonf").value=tonf.toFixed(has); 
+                            document.getElementById("dyn").value=dyn.toFixed(has);
+                            document.getElementById("n").value=n.toFixed(has);
+                            document.getElementById("kn").value=kn.toFixed(has);
+                            document.getElementById("lbf").value=lbf.toFixed(has);
+                            document.getElementById("kips").value=kips.toFixed(has);
+                            
+                        }
+                        
+                        
+                        else if (secim==4) {
+                            
+                            var kgf=deger/0.00980665;
+                            var tonf=kgf*0.001;
+                            var dyn=kgf*980665;
+                            var n=kgf*9.80665;
+                            var kn=kgf*0.00980665;
+                            var lbf=kgf*2.2046226218488;
+                            var kips=kgf*0.0022046226218488;
+                            
+                            document.getElementById("kgf").value=kgf.toFixed(has);
+                            document.getElementById("tonf").value=tonf.toFixed(has); 
+                            document.getElementById("dyn").value=dyn.toFixed(has);
+                            document.getElementById("n").value=n.toFixed(has);
+                            document.getElementById("kn").value=kn.toFixed(has);
+                            document.getElementById("lbf").value=lbf.toFixed(has);
+                            document.getElementById("kips").value=kips.toFixed(has);
+                            
+                        }
+                        
+                        
+                        else if (secim==5) {
+                            
+                            var kgf=deger/2.2046226218488;
+                            var tonf=kgf*0.001;
+                            var dyn=kgf*980665;
+                            var n=kgf*9.80665;
+                            var kn=kgf*0.00980665;
+                            var lbf=kgf*2.2046226218488;
+                            var kips=kgf*0.0022046226218488;
+                            
+                            document.getElementById("kgf").value=kgf.toFixed(has);
+                            document.getElementById("tonf").value=tonf.toFixed(has); 
+                            document.getElementById("dyn").value=dyn.toFixed(has);
+                            document.getElementById("n").value=n.toFixed(has);
+                            document.getElementById("kn").value=kn.toFixed(has);
+                            document.getElementById("lbf").value=lbf.toFixed(has);
+                            document.getElementById("kips").value=kips.toFixed(has);
+                            
+                        }
+                        
+                        else if (secim==6) {
+                            
+                            var kgf=deger/0.0022046226218488;
+                            var tonf=kgf*0.001;
+                            var dyn=kgf*980665;
+                            var n=kgf*9.80665;
+                            var kn=kgf*0.00980665;
+                            var lbf=kgf*2.2046226218488;
+                            var kips=kgf*0.0022046226218488;
+                            
+                            document.getElementById("kgf").value=kgf.toFixed(has);
+                            document.getElementById("tonf").value=tonf.toFixed(has); 
+                            document.getElementById("dyn").value=dyn.toFixed(has);
+                            document.getElementById("n").value=n.toFixed(has);
+                            document.getElementById("kn").value=kn.toFixed(has);
+                            document.getElementById("lbf").value=lbf.toFixed(has);
+                            document.getElementById("kips").value=kips.toFixed(has);
+                            
+                        }
+                        
+                        
+                    
+                        
+                        
+                        
+                        
+                        
+                    }}
+
+                </script>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--RESULTS-->
+        <br>
+        <br>
+        
+      
+        
+        <div class="container">
+            <table class="table  table-striped table-bordered">
+            <tbody>
+                
+                <tr>
+                        <td id="on" style="width:150px;">Kilogram (kgf)</td>
+                        <td id="off2"><output id="kgf" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">Ton (tonf)</td>
+                        <td id="off2"><output id="tonf" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">Dyne (dyn)</td>
+                        <td id="off2"><output id="dyn" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">Newton (N)</td>
+                        <td id="off2"><output id="n" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">Kilonewton (kN)</td>
+                        <td id="off2"><output id="kn" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">Libre (lb-f)</td>
+                        <td id="off2"><output id="lbf" readonly=""></output></td>
+                </tr>
+                
+                <tr>
+                        <td id="on" style="width:150px;">Kilopound (kips)</td>
+                        <td id="off2"><output id="kips" readonly=""></output></td>
+                </tr>
+                
+         
+           
+                </tbody></table>
+             <br>
+            <br>
+            <br>
+            
+            
+            <script src="popper.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+       
+        <script src="bootstrap-tooltip.js"></script>
+        <script src="fontawesome.min.js"></script>
+            
+        </div>
+        
+
+        
+        
+                
+        
+    </body>
+</html>

@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="tr">
+    
+    
+    
+    
+    
+    
+    
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+        
+        <link rel="stylesheet" type="text/css" href="fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        
+<script src="jquery-3.3.1.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      
+        <style>.container {font-size:14px;}
+            .btn-xs {padding:2px; font-size:12px;}</style>
+        
+        
+    </head>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <title>
+        Profil Tabloları - Köşebentler
+    </title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <body>
+        
+        <!-- NAVIGATION BAR -->
+        
+                  <nav id="bg-light" class="mt-0 asdnav navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+                       
+                                  <a class="navbar-brand" id="navbar-brand" href="#" style="font-size:12px;">Profil Tabloları - Köşebentler</a>
+                       
+                                  <button class="navbar-toggler float-right white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span id="log" style="color:white;">&#9776</span>
+                                  </button>
+                       
+                                  <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
+                                      
+                                            <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Rüzgar Yükleri (TS EN 1991-1-4)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="index.html">Yapı Yüzeyine Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="tekegimruzgar.html">Tek Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="ciftegimruzgar.html">Çift Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Kar Yükleri (TS EN 1991-1-3)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Birim Çevirme
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="birim.html">Kuvvet</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="basinc.html">Gerilme</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="uzunluk.html">Uzunluk</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="alan.html">Alan</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="hacim.html">Hacim</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="yogunluk.html">Yoğunluk</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Teknik Bilgiler
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog.html">Yapı Malzemelerinin Birim Hacim Ağırlıkları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog2.html">Başlıca Malzeme Yoğunlukları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="beton.html">Beton</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Profil Tabloları
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="h.html">H Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="i.html">I Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="u.html">U Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="dikdortgen.html">Dikdörtgen Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="kare.html">Kare Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="boru.html">Boru Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item active" href="#">Köşebentler</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                  </div>
+</nav>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--MAIN PAGE CONTENTS -->
+        
+        <div class="container align-middle text-center" style="margin-top:50px">
+            <table class="table align-middle text-center"><tbody>
+                
+                
+               
+                
+            </tbody></table>
+        </div>
+        
+        
+        
+         <div class="container" style="margin-top:20px" id="asikform">
+             
+             
+             
+             
+             <div id="accordion">
+                 
+                 
+                 
+                  <div class="card mb-2">
+                      
+                            <div class="card-header pt-0 pb-0 pl-0 pr-0" id="bas1">
+                              <h5 class="mb-0 text-center">
+                                    <button class="btn collapsed text-center btn-outline-danger" style="width: 100%; height: 100%;" data-toggle="collapse" data-target="#col1" aria-expanded="false" aria-controls="collapseTwo">
+                                        
+                                      Eşit Kollu Köşebentler
+                                        
+                                    </button>
+                              </h5>
+                            </div>
+                      
+                            <div id="col1" class="collapse" aria-labelledby="bas1" data-parent="#accordion">
+                                
+                              <div class="card-body">
+                                  
+                                  <div class="card sticky-top"  style="position: sticky; top:45px;"><table style="table-layout: fixed;" class="table table-striped table-bordered text-center mb-0">
+                                  <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                <tr><img class="img-fluid mx-auto" src="ko1.png" style="height: 50%; width: 50%;"></tr>
+                                                <tr>
+                                                        <td id="on">b (mm)</td>
+                                                        <td id="on">t (mm)</td>
+                                                        <td id="on">G (kg/m)</td>
+                                                        <td id="on">r<sub>1</sub> (mm)</td>
+                                                        <td id="on">r<sub>2</sub> (mm)</td>
+                                                        
+                                                        
+                                                </tr>
+                                                    
+                                                </thead>
+                                  </table></div>
+                                  
+                                  
+                                
+                                  
+                                  
+                                  
+                                        <table style="table-layout: fixed;" class="table align-center table-striped table-bordered text-center">
+                                            
+                                            <tbody>
+
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <tr>
+                                                        <td id="on">15</td>
+                                                        <td id="on">3</td>
+                                                        <td id="on">0.64</td>
+                                                        <td id="on">3.5</td>
+                                                        <td id="on">2</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">20</td>
+                                                        <td id="on">3</td>
+                                                        <td id="on">0.88</td>
+                                                        <td id="on">3.5</td>
+                                                        <td id="on">2</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">25</td>
+                                                        <td id="on">3</td>
+                                                        <td id="on">1.11</td>
+                                                        <td id="on">3.5</td>
+                                                        <td id="on">2</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">25</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">1.45</td>
+                                                        <td id="on">3.5</td>
+                                                        <td id="on">2</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">25</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">1.78</td>
+                                                        <td id="on">3.5</td>
+                                                        <td id="on">2</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">30</td>
+                                                        <td id="on">3</td>
+                                                        <td id="on">1.36</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">2.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">30</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">1.78</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">2.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">30</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">2.18</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">2.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">35</td>
+                                                        <td id="on">3</td>
+                                                        <td id="on">1.6</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">2.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">35</td>
+                                                        <td id="on">3.5</td>
+                                                        <td id="on">1.85</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">2.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">35</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">2.09</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">2.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">35</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">2.57</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">2.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">40</td>
+                                                        <td id="on">3</td>
+                                                        <td id="on">1.84</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">3</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">40</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">2.42</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">3</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">40</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">2.97</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">3</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">40</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">3.52</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">3</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">45</td>
+                                                        <td id="on">3</td>
+                                                        <td id="on">2.09</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">45</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">2.75</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">45</td>
+                                                        <td id="on">4.5</td>
+                                                        <td id="on">3.06</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">45</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">3.39</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">45</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">45</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">4.6</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">50</td>
+                                                        <td id="on">3</td>
+                                                        <td id="on">2.33</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">50</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">3.07</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">50</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">3.77</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">50</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">4.47</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">50</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">5.15</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">50</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">5.82</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">50</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">6.47</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">55</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">4.18</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">4</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">55</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">4.95</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">4</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">55</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">6.45</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">4</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">3.7</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">4</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">4.57</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">4</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">5.42</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">4</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">7.09</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">4</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">8.69</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">4</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">65</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">5.91</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">4.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">65</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">6.83</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">4.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">65</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">7.73</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">4.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">65</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">8.62</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">4.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">70</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">6.39</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">4.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">70</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">7.39</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">4.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">70</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">8.41</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">4.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">70</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">9.34</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">4.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">70</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">10.3</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">4.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">75</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">6.85</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">4.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">75</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">7.94</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">4.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">75</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">9.03</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">4.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">75</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">11.1</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">7.34</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">9.63</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">11.86</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">8.28</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">9.6</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">10.89</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">12.2</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">13.43</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">14.2</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">6</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">90</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">15.9</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">6</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">9.26</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">6</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">12.18</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">6</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">15.04</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">6</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">17.83</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">6</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">21.9</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">6</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">110</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">13.43</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">6</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">110</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">16.61</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">6</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">110</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">19.7</td>
+                                                        <td id="on">13</td>
+                                                        <td id="on">6.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">14.71</td>
+                                                        <td id="on">13</td>
+                                                        <td id="on">6.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">18.2</td>
+                                                        <td id="on">13</td>
+                                                        <td id="on">6.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">19.9</td>
+                                                        <td id="on">13</td>
+                                                        <td id="on">6.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">21.62</td>
+                                                        <td id="on">13</td>
+                                                        <td id="on">6.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">13</td>
+                                                        <td id="on">23.3</td>
+                                                        <td id="on">13</td>
+                                                        <td id="on">6.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">26.6</td>
+                                                        <td id="on">13</td>
+                                                        <td id="on">6.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">130</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">23.53</td>
+                                                        <td id="on">14</td>
+                                                        <td id="on">7</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">130</td>
+                                                        <td id="on">14</td>
+                                                        <td id="on">27.2</td>
+                                                        <td id="on">14</td>
+                                                        <td id="on">7</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">140</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">21.38</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">7.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">140</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">25.44</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">7.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">140</td>
+                                                        <td id="on">13</td>
+                                                        <td id="on">27.4</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">7.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">140</td>
+                                                        <td id="on">14</td>
+                                                        <td id="on">29.42</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">7.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">23</td>
+                                                        <td id="on">16</td>
+                                                        <td id="on">8</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">27.3</td>
+                                                        <td id="on">16</td>
+                                                        <td id="on">8</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">14</td>
+                                                        <td id="on">31.6</td>
+                                                        <td id="on">16</td>
+                                                        <td id="on">8</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">33.8</td>
+                                                        <td id="on">16</td>
+                                                        <td id="on">8</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">40.01</td>
+                                                        <td id="on">16</td>
+                                                        <td id="on">8</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">24.58</td>
+                                                        <td id="on">17</td>
+                                                        <td id="on">8.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">29.26</td>
+                                                        <td id="on">17</td>
+                                                        <td id="on">8.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">14</td>
+                                                        <td id="on">34.87</td>
+                                                        <td id="on">17</td>
+                                                        <td id="on">8.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">36.2</td>
+                                                        <td id="on">17</td>
+                                                        <td id="on">8.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">16</td>
+                                                        <td id="on">38.43</td>
+                                                        <td id="on">17</td>
+                                                        <td id="on">8.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">160</td>
+                                                        <td id="on">17</td>
+                                                        <td id="on">40.7</td>
+                                                        <td id="on">17</td>
+                                                        <td id="on">8.5</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">180</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">33.05</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">9</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">180</td>
+                                                        <td id="on">14</td>
+                                                        <td id="on">38.3</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">9</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">180</td>
+                                                        <td id="on">16</td>
+                                                        <td id="on">43.5</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">9</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">180</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">48.6</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">9</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">14</td>
+                                                        <td id="on">42.69</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">9</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">16</td>
+                                                        <td id="on">48.5</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">9</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">54.2</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">9</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">20</td>
+                                                        <td id="on">59.93</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">9</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">24</td>
+                                                        <td id="on">71.7</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">9</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">250</td>
+                                                        <td id="on">25</td>
+                                                        <td id="on">93.6</td>
+                                                        <td id="on">20</td>
+                                                        <td id="on">10</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">250</td>
+                                                        <td id="on">28</td>
+                                                        <td id="on">104</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">9</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">250</td>
+                                                        <td id="on">32</td>
+                                                        <td id="on">118</td>
+                                                        <td id="on">20</td>
+                                                        <td id="on">10</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">250</td>
+                                                        <td id="on">35</td>
+                                                        <td id="on">228</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">9</td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                
+                                                
+                                               
+                                                
+                                               
+                                                
+                                                
+                                             
+                                                
+                                            </tbody>
+                                        </table>
+                                  
+                                  <br>
+                                  
+                                  
+                                        
+                                  
+                                  
+                                  
+                              </div>
+                                
+                            </div>
+                  </div>
+                 
+                 
+                 <div class="card mb-2">
+                      
+                            <div class="card-header pt-0 pb-0 pl-0 pr-0" id="bas2">
+                              <h5 class="mb-0 text-center">
+                                    <button class="btn collapsed text-center btn-outline-danger" style="width: 100%; height: 100%;" data-toggle="collapse" data-target="#col2" aria-expanded="false" aria-controls="collapseTwo">
+                                        
+                                      Farklı Kollu Köşebentler
+                                        
+                                    </button>
+                              </h5>
+                            </div>
+                     
+                     
+                     
+                      
+                            <div id="col2" class="collapse" aria-labelledby="bas2" data-parent="#accordion">
+                                
+                              <div class="card-body">
+                                  
+                                  
+                                  
+                                  <div class="card sticky-top"  style="position: sticky; top:45px;"><table style="table-layout: fixed;" class="table table-striped table-bordered text-center mb-0">
+                                  <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                 <tr><img class="img-fluid mx-auto" src="ko2.png" style="height: 50%; width: 50%;"></tr>
+                                                <tr>
+                                                        
+                                                        <td id="on">b (mm)</td>
+                                                        <td id="on">h (mm)</td>
+                                                        <td id="on">t (mm)</td>
+                                                        <td id="on">G (kg/m)</td>
+                                                        <td id="on">r<sub>1</sub> (mm)</td>
+                                                        <td id="on">r<sub>2</sub> (mm)</td>
+                                                        
+                                               
+                                                        
+                                                        
+                                                </tr>
+                                                    
+                                      </thead></table></div>
+                                  
+                                  
+                                        <table style="table-layout: fixed;" class="table  table-striped table-bordered text-center center">
+                                            <tbody>
+
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <tr>
+                                                        <td id="on">30</td>
+                                                        <td id="on">20</td>
+                                                        <td id="on">3</td>
+                                                        <td id="on">1.12</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">2</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">30</td>
+                                                        <td id="on">20</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">1.46</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">2</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">40</td>
+                                                        <td id="on">20</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">1.77</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">2</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">40</td>
+                                                        <td id="on">25</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">1.93</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">2.4</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">45</td>
+                                                        <td id="on">30</td>
+                                                        <td id="on">4</td>
+                                                        <td id="on">2.25</td>
+                                                        <td id="on">4.5</td>
+                                                        <td id="on">2.25</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">50</td>
+                                                        <td id="on">30</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">2.96</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">2.5</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">30</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">3.37</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">2.4</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">30</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">3.99</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">2.4</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">40</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">3.76</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">3</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">60</td>
+                                                        <td id="on">40</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">4.46</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">3</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">65</td>
+                                                        <td id="on">50</td>
+                                                        <td id="on">5</td>
+                                                        <td id="on">4.35</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">2.4</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">65</td>
+                                                        <td id="on">50</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">5.116</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">2.4</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">65</td>
+                                                        <td id="on">50</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">6.75</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">2.4</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">70</td>
+                                                        <td id="on">50</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">5.41</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">75</td>
+                                                        <td id="on">50</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">5.65</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">2.4</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">75</td>
+                                                        <td id="on">50</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">7.39</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">2.4</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">40</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">5.41</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">40</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">7.07</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">3.5</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">60</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">6.37</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">60</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">7.36</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">80</td>
+                                                        <td id="on">60</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">8.34</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">50</td>
+                                                        <td id="on">6</td>
+                                                        <td id="on">6.84</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">4</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">50</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">8.97</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">4</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">65</td>
+                                                        <td id="on">7</td>
+                                                        <td id="on">8.77</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">65</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">9.94</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">65</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">12.3</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">75</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">10.6</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">75</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">13</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">100</td>
+                                                        <td id="on">75</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">15.4</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">80</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">12.2</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">5.5</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">80</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">5.5</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">120</td>
+                                                        <td id="on">80</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">17.8</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">5.5</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">125</td>
+                                                        <td id="on">75</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">12.8</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">125</td>
+                                                        <td id="on">75</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">125</td>
+                                                        <td id="on">75</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">17.8</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">135</td>
+                                                        <td id="on">65</td>
+                                                        <td id="on">8</td>
+                                                        <td id="on">12.2</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">5.5</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">135</td>
+                                                        <td id="on">65</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">5.5</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">75</td>
+                                                        <td id="on">9</td>
+                                                        <td id="on">15.4</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">6</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">75</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">17</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">75</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">20.2</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">75</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">24.8</td>
+                                                        <td id="on">11</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">90</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">18.2</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">90</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">21.6</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">90</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">26.6</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">100</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">19</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">6</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">150</td>
+                                                        <td id="on">100</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">22.5</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">6</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">100</td>
+                                                        <td id="on">10</td>
+                                                        <td id="on">23</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">100</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">27.3</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">100</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">33.75</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">150</td>
+                                                        <td id="on">12</td>
+                                                        <td id="on">32</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">150</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">39.6</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">200</td>
+                                                        <td id="on">150</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">47.1</td>
+                                                        <td id="on">15</td>
+                                                        <td id="on">4.8</td>
+                                                </tr>
+                                               
+                                                
+                                                
+                                               
+                                                
+                                                
+                                             
+                                                
+                                            </tbody>
+                                        </table>
+                                  
+                                  <br>
+                                  
+                                  
+                                        
+                                  
+                                  
+                                  
+                              </div>
+                                
+                            </div>
+                  </div>
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+</div>  
+                                  
+                            
+        
+        
+        
+        
+        
+        
+         </div>
+        
+        
+        
+        
+        
+        
+        <!-- BUTTON -->
+        
+      
+        
+        
+        <!--RESULTS-->
+        
+            
+            
+            <script src="popper.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        
+        <script src="bootstrap-tooltip.js"></script>
+        <script src="fontawesome.min.js"></script>
+            
+       
+
+        
+        
+                
+        
+    </body>
+</html>

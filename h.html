@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="tr">
+    
+    
+    
+    
+    
+    
+    
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+        
+        <link rel="stylesheet" type="text/css" href="fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        
+<script src="jquery-3.3.1.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      
+        <style>.container {font-size:14px;}
+            .btn-xs {padding:2px; font-size:12px;}</style>
+        
+        
+    </head>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <title>
+        Profil Tabloları - H Profiller
+    </title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <body>
+        
+        <!-- NAVIGATION BAR -->
+        
+                  <nav id="bg-light" class="mt-0 asdnav navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+                       
+                                  <a class="navbar-brand" id="navbar-brand" href="#" style="font-size:12px;">Profil Tabloları - H Profiller</a>
+                       
+                                  <button class="navbar-toggler float-right white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span id="log" style="color:white;">&#9776</span>
+                                  </button>
+                       
+                                  <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
+                                      
+                                            <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Rüzgar Yükleri (TS EN 1991-1-4)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="index.html">Yapı Yüzeyine Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="tekegimruzgar.html">Tek Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="ciftegimruzgar.html">Çift Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Kar Yükleri (TS EN 1991-1-3)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Birim Çevirme
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="birim.html">Kuvvet</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="basinc.html">Gerilme</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="uzunluk.html">Uzunluk</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="alan.html">Alan</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="hacim.html">Hacim</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="yogunluk.html">Yoğunluk</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Teknik Bilgiler
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog.html">Yapı Malzemelerinin Birim Hacim Ağırlıkları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog2.html">Başlıca Malzeme Yoğunlukları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="beton.html">Beton</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Profil Tabloları
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item active" href="#">H Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="i.html">I Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="u.html">U Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="dikdortgen.html">Dikdörtgen Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="kare.html">Kare Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="boru.html">Boru Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="kosebent.html">Köşebentler</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                  </div>
+</nav>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--MAIN PAGE CONTENTS -->
+        
+        <div class="container align-middle text-center" style="margin-top:65px">
+            <table class="table align-middle text-center"><tbody>
+                <tr><img class="img-fluid mx-auto" src="h.png" style="height: 50%; width: 50%;"></tr>
+               
+                
+            </tbody></table>
+        </div>
+        
+        
+        
+         <div class="container" style="margin-top:20px" id="asikform">
+             
+             
+             
+             
+             <div id="accordion">
+                 
+                 
+                 
+                  <div class="card mb-2">
+                      
+                            <div class="card-header pt-0 pb-0 pl-0 pr-0" id="bas1">
+                              <h5 class="mb-0 text-center">
+                                    <button class="btn collapsed text-center btn-outline-danger" style="width: 100%; height: 100%;" data-toggle="collapse" data-target="#col1" aria-expanded="false" aria-controls="collapseTwo">
+                                        
+                                      HE AA
+                                        
+                                    </button>
+                              </h5>
+                            </div>
+                      
+                            <div id="col1" class="collapse" aria-labelledby="bas1" data-parent="#accordion">
+                                
+                              <div class="card-body">
+                                  
+                                  
+                                  <div class="card sticky-top"  style="position: sticky; top:45px;"><table style="table-layout: fixed;"  class="table table-fixed table-striped table-bordered text-center mb-0">
+                                  <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td class="pl-1 pr-1" id="on">Profil</td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">G (kg/m)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">h (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">b (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">t<sub>w</sub> (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">t<sub>f</sub> (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">r (mm)</output></td>
+                                                        
+                                                </tr>
+                                                    
+                                                </thead></table></div>
+                                  
+                                  
+                                  
+                                        <table class="table  table-striped table-bordered text-center">
+                                            <tbody>
+
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 100</td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">91</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">100</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 120</td>
+                                                        <td id="off2"><output id="kgm" readonly="">14.6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">109</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">120</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 140</td>
+                                                        <td id="off2"><output id="kgm" readonly="">18.1</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">128</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">140</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 160</td>
+                                                        <td id="off2"><output id="kgm" readonly="">23.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">148</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">160</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">4.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 180</td>
+                                                        <td id="off2"><output id="kgm" readonly="">28.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">167</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">180</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">7.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 200</td>
+                                                        <td id="off2"><output id="kgm" readonly="">34.6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">186</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">200</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 220</td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">205</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">220</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 240</td>
+                                                        <td id="off2"><output id="kgm" readonly="">47.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">224</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">240</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 260</td>
+                                                        <td id="off2"><output id="kgm" readonly="">54.1</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">244</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">260</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 280</td>
+                                                        <td id="off2"><output id="kgm" readonly="">61.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">264</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">280</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">7.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24s</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 300</td>
+                                                        <td id="off2"><output id="kgm" readonly="">69.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">283</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">7.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 320</td>
+                                                        <td id="off2"><output id="kgm" readonly="">74.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">301</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 340</td>
+                                                        <td id="off2"><output id="kgm" readonly="">320</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 360</td>
+                                                        <td id="off2"><output id="kgm" readonly="">83.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">339</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 400</td>
+                                                        <td id="off2"><output id="kgm" readonly="">92.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">378</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">13</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 450</td>
+                                                        <td id="off2"><output id="kgm" readonly="">99.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">425</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">13.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 500</td>
+                                                        <td id="off2"><output id="kgm" readonly="">107.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">472</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">14.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 550</td>
+                                                        <td id="off2"><output id="kgm" readonly="">120.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">522</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 600</td>
+                                                        <td id="off2"><output id="kgm" readonly="">129.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">571</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 650</td>
+                                                        <td id="off2"><output id="kgm" readonly="">138.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">620</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">16.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 700</td>
+                                                        <td id="off2"><output id="kgm" readonly="">150.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">670</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">13.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">17.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 800</td>
+                                                        <td id="off2"><output id="kgm" readonly="">172.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">770</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">14.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 900</td>
+                                                        <td id="off2"><output id="kgm" readonly="">198.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">870</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE AA 1000</td>
+                                                        <td id="off2"><output id="kgm" readonly="">222.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">970</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">16.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30</output></td>
+                                                </tr>
+                                                
+                                                
+                                             
+                                                
+                                            </tbody>
+                                        </table>
+                                  
+                                  <br>
+                                  
+                                  
+                                        
+                                  
+                                  
+                                  
+                              </div>
+                                
+                            </div>
+                  </div>
+                 
+                 
+                 <div class="card mb-2">
+                      
+                            <div class="card-header pt-0 pb-0 pl-0 pr-0" id="bas2">
+                              <h5 class="mb-0 text-center">
+                                    <button class="btn collapsed text-center btn-outline-danger" style="width: 100%; height: 100%;" data-toggle="collapse" data-target="#col2" aria-expanded="false" aria-controls="collapseTwo">
+                                        
+                                      HE A
+                                        
+                                    </button>
+                              </h5>
+                            </div>
+                      
+                            <div id="col2" class="collapse" aria-labelledby="bas2" data-parent="#accordion">
+                                
+                              <div class="card-body">
+                                  
+                                  
+                                  
+                                  
+                                  <div class="card sticky-top"  style="position: sticky; top:45px;"><table style="table-layout: fixed;"  class="table table-fixed table-striped table-bordered text-center mb-0">
+                                  <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td class="pl-1 pr-1" id="on">Profil</td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">G (kg/m)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">h (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">b (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">t<sub>w</sub> (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">t<sub>f</sub> (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">r (mm)</output></td>
+                                                        
+                                                </tr>
+                                                    
+                                                </thead></table></div>
+                                  
+                                        <table style="table-layout: fixed;" class="table  table-striped table-bordered text-center">
+                                            <tbody>
+
+                                                
+                                                
+                                             
+                                                
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 100</td>
+                                                        <td id="off2"><output id="kgm" readonly="">16.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">96</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">100</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 120</td>
+                                                        <td id="off2"><output id="kgm" readonly="">19.9</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">114</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">120</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 140</td>
+                                                        <td id="off2"><output id="kgm" readonly="">24.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">133</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">140</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">5.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 160</td>
+                                                        <td id="off2"><output id="kgm" readonly="">30.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">152</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">160</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 180</td>
+                                                        <td id="off2"><output id="kgm" readonly="">35.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">171</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">180</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 200</td>
+                                                        <td id="off2"><output id="kgm" readonly="">42.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">190</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">200</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 220</td>
+                                                        <td id="off2"><output id="kgm" readonly="">50.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">210</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">220</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">7.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 240</td>
+                                                        <td id="off2"><output id="kgm" readonly="">60.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">230</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">240</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">7.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 260</td>
+                                                        <td id="off2"><output id="kgm" readonly="">68.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">250</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">260</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">7.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 280</td>
+                                                        <td id="off2"><output id="kgm" readonly="">76.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">270</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">280</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">13.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 300</td>
+                                                        <td id="off2"><output id="kgm" readonly="">88.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">290</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">14.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 320</td>
+                                                        <td id="off2"><output id="kgm" readonly="">97.6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">310</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 340</td>
+                                                        <td id="off2"><output id="kgm" readonly="">105.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">330</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">16.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 360</td>
+                                                        <td id="off2"><output id="kgm" readonly="">112.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">350</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">17.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 400</td>
+                                                        <td id="off2"><output id="kgm" readonly="">125.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">390</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">19.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 450</td>
+                                                        <td id="off2"><output id="kgm" readonly="">140.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">440</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 500</td>
+                                                        <td id="off2"><output id="kgm" readonly="">155.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">490</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">23.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 550</td>
+                                                        <td id="off2"><output id="kgm" readonly="">166.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">540</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 600</td>
+                                                        <td id="off2"><output id="kgm" readonly="">178.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">590</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">13.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25.0s</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 650</td>
+                                                        <td id="off2"><output id="kgm" readonly="">190.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">640</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">13.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">26.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 700</td>
+                                                        <td id="off2"><output id="kgm" readonly="">204.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">690</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">14.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 800</td>
+                                                        <td id="off2"><output id="kgm" readonly="">224.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">790</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">28.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 900</td>
+                                                        <td id="off2"><output id="kgm" readonly="">252.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">890</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">16.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE A 1000</td>
+                                                        <td id="off2"><output id="kgm" readonly="">272.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">990</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">16.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">31.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30</output></td>
+                                                        
+                                                </tr>
+                                                
+                                               
+                                                
+                                                
+                                             
+                                                
+                                            </tbody>
+                                        </table>
+                                  
+                                  <br>
+                                  
+                                  
+                                        
+                                  
+                                  
+                                  
+                              </div>
+                                
+                            </div>
+                  </div>
+                 
+                 
+                 
+                 <div class="card mb-2">
+                      
+                            <div class="card-header pt-0 pb-0 pl-0 pr-0" id="bas3">
+                              <h5 class="mb-0 text-center">
+                                    <button class="btn collapsed text-center btn-outline-danger" style="width: 100%; height: 100%;" data-toggle="collapse" data-target="#col3" aria-expanded="false" aria-controls="collapseTwo">
+                                        
+                                      HE B
+                                        
+                                    </button>
+                              </h5>
+                            </div>
+                      
+                            <div id="col3" class="collapse" aria-labelledby="bas3" data-parent="#accordion">
+                                
+                              <div class="card-body">
+                                  
+                                  <div class="card sticky-top"  style="position: sticky; top:45px;"><table style="table-layout: fixed;"  class="table table-fixed table-striped table-bordered text-center mb-0">
+                                  <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td class="pl-1 pr-1" id="on">Profil</td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">G (kg/m)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">h (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">b (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">t<sub>w</sub> (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">t<sub>f</sub> (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">r (mm)</output></td>
+                                                        
+                                                </tr>
+                                                    
+                                                </thead></table></div>
+                                  
+                                        <table style="table-layout: fixed;" class="table  table-striped table-bordered text-center">
+                                            <tbody>
+
+                                                
+                                                
+                                               
+                                                
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 100</td>
+                                                        <td id="off2"><output id="kgm" readonly="">20.4</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">100</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">100</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 120</td>
+                                                        <td id="off2"><output id="kgm" readonly="">26.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">120</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">120</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">6.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 140</td>
+                                                        <td id="off2"><output id="kgm" readonly="">33.7</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">140</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">140</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">7.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 160</td>
+                                                        <td id="off2"><output id="kgm" readonly="">42.6</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">160</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">160</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">13.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 180</td>
+                                                        <td id="off2"><output id="kgm" readonly="">51.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">180</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">180</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">8.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">14.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 200</td>
+                                                        <td id="off2"><output id="kgm" readonly="">61.3</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">200</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">200</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 220</td>
+                                                        <td id="off2"><output id="kgm" readonly="">71.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">220</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">220</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">9.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">16.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 240</td>
+                                                        <td id="off2"><output id="kgm" readonly="">83.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">240</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">240</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">17.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 260</td>
+                                                        <td id="off2"><output id="kgm" readonly="">93.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">260</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">260</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">17.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 280</td>
+                                                        <td id="off2"><output id="kgm" readonly="">103</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">280</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">280</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">10.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 300</td>
+                                                        <td id="off2"><output id="kgm" readonly="">117.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">19.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 320</td>
+                                                        <td id="off2"><output id="kgm" readonly="">127.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">320</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">11.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 340</td>
+                                                        <td id="off2"><output id="kgm" readonly="">134.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">340</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 360</td>
+                                                        <td id="off2"><output id="kgm" readonly="">142</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">360</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">22.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 400</td>
+                                                        <td id="off2"><output id="kgm" readonly="">155.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">400</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">13.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 450</td>
+                                                        <td id="off2"><output id="kgm" readonly="">171.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">450</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">14.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">26.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 500</td>
+                                                        <td id="off2"><output id="kgm" readonly="">187.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">500</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">14.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">28.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 550</td>
+                                                        <td id="off2"><output id="kgm" readonly="">199.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">550</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">29.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 600</td>
+                                                        <td id="off2"><output id="kgm" readonly="">212.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">600</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 650</td>
+                                                        <td id="off2"><output id="kgm" readonly="">225.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">650</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">16.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">31.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 700</td>
+                                                        <td id="off2"><output id="kgm" readonly="">241.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">700</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">17.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">32.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 800</td>
+                                                        <td id="off2"><output id="kgm" readonly="">262.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">800</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">17.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">33.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 900</td>
+                                                        <td id="off2"><output id="kgm" readonly="">291.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">900</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">35.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE B 1000</td>
+                                                        <td id="off2"><output id="kgm" readonly="">314.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">1000</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">300</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">19.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">36.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                
+                                                
+                                               
+                                                
+                                                
+                                             
+                                                
+                                            </tbody>
+                                        </table>
+                                  
+                                  <br>
+                                  
+                                  
+                                        
+                                  
+                                  
+                                  
+                              </div>
+                                
+                            </div>
+                  </div>
+                 
+                 
+                 
+                 
+                 <div class="card mb-2">
+                      
+                            <div class="card-header pt-0 pb-0 pl-0 pr-0" id="bas4">
+                              <h5 class="mb-0 text-center">
+                                    <button class="btn collapsed text-center btn-outline-danger" style="width: 100%; height: 100%;" data-toggle="collapse" data-target="#col4" aria-expanded="false" aria-controls="collapseTwo">
+                                        
+                                      HE M
+                                        
+                                    </button>
+                              </h5>
+                            </div>
+                      
+                            <div id="col4" class="collapse" aria-labelledby="bas4" data-parent="#accordion">
+                                
+                              <div class="card-body">
+                                  
+                                  
+                                  <div class="card sticky-top"  style="position: sticky; top:45px;"><table style="table-layout: fixed;"  class="table table-fixed table-striped table-bordered text-center mb-0">
+                                  <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td class="pl-1 pr-1" id="on">Profil</td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">G (kg/m)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">h (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">b (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">t<sub>w</sub> (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">t<sub>f</sub> (mm)</output></td>
+                                                        <td class="pl-1 pr-1" id="off2"><output id="kgm" readonly="">r (mm)</output></td>
+                                                        
+                                                </tr>
+                                                    
+                                                </thead></table></div>
+                                  
+                                        <table style="table-layout: fixed;" class="table  table-striped table-bordered text-center">
+                                            <tbody>
+
+                                                
+                                                
+                                                
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 100</td>
+                                                        <td id="off2"><output id="kgm" readonly="">41.8</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">120</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">106</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">20.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 120</td>
+                                                        <td id="off2"><output id="kgm" readonly="">52.1</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">140</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">126</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 140</td>
+                                                        <td id="off2"><output id="kgm" readonly="">63.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">160</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">146</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">13.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">22.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">12</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 160</td>
+                                                        <td id="off2"><output id="kgm" readonly="">76.2</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">180</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">166</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">14.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">23.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 180</td>
+                                                        <td id="off2"><output id="kgm" readonly="">88.9</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">200</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">186</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">14.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 200</td>
+                                                        <td id="off2"><output id="kgm" readonly="">103.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">220</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">206</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">25.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 220</td>
+                                                        <td id="off2"><output id="kgm" readonly="">117.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">240</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">226</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">15.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">26.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 240</td>
+                                                        <td id="off2"><output id="kgm" readonly="">157.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">270</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">248</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">32.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 260</td>
+                                                        <td id="off2"><output id="kgm" readonly="">172.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">290</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">268</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">32.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 280</td>
+                                                        <td id="off2"><output id="kgm" readonly="">189.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">310</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">288</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">18.5</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">33.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">24</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 300</td>
+                                                        <td id="off2"><output id="kgm" readonly="">238.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">340</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">310</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">39.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 320</td>
+                                                        <td id="off2"><output id="kgm" readonly="">245.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">359</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">309</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 340</td>
+                                                        <td id="off2"><output id="kgm" readonly="">248.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">377</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">309</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 260</td>
+                                                        <td id="off2"><output id="kgm" readonly="">250.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">395</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">308</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 400</td>
+                                                        <td id="off2"><output id="kgm" readonly="">256.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">432</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">307</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 450</td>
+                                                        <td id="off2"><output id="kgm" readonly="">263.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">478</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">307</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 500</td>
+                                                        <td id="off2"><output id="kgm" readonly="">270.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">524</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">306</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 550</td>
+                                                        <td id="off2"><output id="kgm" readonly="">278.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">572</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">306</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 600</td>
+                                                        <td id="off2"><output id="kgm" readonly="">285.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">620</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">305</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 650</td>
+                                                        <td id="off2"><output id="kgm" readonly="">293.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">668</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">305</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 700</td>
+                                                        <td id="off2"><output id="kgm" readonly="">301.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">716</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">304</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">27</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 800</td>
+                                                        <td id="off2"><output id="kgm" readonly="">317.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">814</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">303</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 900</td>
+                                                        <td id="off2"><output id="kgm" readonly="">333.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">910</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">302</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30</output></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">HE M 1000</td>
+                                                        <td id="off2"><output id="kgm" readonly="">349.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">1008</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">302</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">21.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">40.0</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">30</output></td>
+                                                </tr>
+                                                
+                                                
+                                                
+                                                
+                                               
+                                                
+                                                
+                                             
+                                                
+                                            </tbody>
+                                        </table>
+                                  
+                                  <br>
+                                  
+                                  
+                                        
+                                  
+                                  
+                                  
+                              </div>
+                                
+                            </div>
+                  </div>
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+</div>  
+                                  
+                            
+        
+        
+        
+        
+        
+        
+         </div>
+        
+        
+        
+        
+        
+        
+        <!-- BUTTON -->
+        
+      
+        
+        
+        <!--RESULTS-->
+        
+            
+            
+            <script src="popper.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        
+        <script src="bootstrap-tooltip.js"></script>
+        <script src="fontawesome.min.js"></script>
+            
+       
+
+        
+        
+                
+        
+    </body>
+</html>
