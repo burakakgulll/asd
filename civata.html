@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="tr">
+    
+    
+    
+    
+    
+    
+    
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+        
+        <link rel="stylesheet" type="text/css" href="fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        
+<script src="jquery-3.3.1.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      
+        <style>.container {font-size:14px;}
+            .btn-xs {padding:2px; font-size:12px;}</style>
+        
+        
+    </head>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <title>
+        Cıvatalar
+    </title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <body onload="hesaplar()">
+        
+        <!-- NAVIGATION BAR -->
+        
+                  <nav id="bg-light" class="mt-0 asdnav navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+                       
+                                  <a class="navbar-brand" id="navbar-brand" href="#" style="font-size:12px;">Cıvatalar</a>
+                       
+                                  <button class="navbar-toggler float-right white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span id="log" style="color:white;">&#9776</span>
+                                  </button>
+                       
+                                  <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
+                                      
+                                            <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Rüzgar Yükleri (TS EN 1991-1-4)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="index.html">Yapı Yüzeyine Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="tekegimruzgar.html">Tek Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="ciftegimruzgar.html">Çift Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Kar Yükleri (TS EN 1991-1-3)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="#">---</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Birim Çevirme
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="birim.html">Kuvvet</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="basinc.html">Gerilme</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="uzunluk.html">Uzunluk</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="alan.html">Alan</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="hacim.html">Hacim</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="yogunluk.html">Yoğunluk</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Teknik Bilgiler
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog.html">Yapı Malzemelerinin Birim Hacim Ağırlıkları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog2.html">Başlıca Malzeme Yoğunlukları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="beton.html">Beton</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item active" href="#">Cıvatalar</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Profil Tabloları
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="h.html">H Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="i.html">I Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="u.html">U Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="dikdortgen.html">Dikdörtgen Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="kare.html">Kare Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="boru.html">Boru Profiller</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                  </div>
+</nav>
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="modal fade align-middle" id="popup-ydkt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog align-middle" role="document">
+                <div class="modal-content align-middle">
+                    <div class="modal-body align-middle mr-2 ml-2">
+                       
+                                                                        <div class="container align-middle">
+                                                            <p class="text-center">YDKT : Yük ve Dayanım Katsayıları ile Tasarım</p>
+                                                            <p class="text-center">GKT : Güvenlik Katsayıları ile Tasarım</p>
+                                
+                                                            </div>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--MAIN PAGE CONTENTS -->
+        
+        
+        
+         <div class="container" style="margin-top:65px" id="asikform">
+             
+             
+             
+                                  
+                                        <table class="table  table-striped table-bordered text-center">
+                                            <tbody>
+                                                
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on" colspan="3" class="text-center">Cıvataların Karakteristik Dayanımları</td>
+                                                        
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                               
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on">Cıvata Sınıfı</td>
+                                                        <td id="off2"><output id="kgm" readonly="">Çekme Dayanımı (F<sub>ub</sub>) (Mpa)</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">Akma Dayanımı (F<sub>yb</sub>) (Mpa)</output></td>
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                              
+                                                
+                                                <tr>
+                                                        <td id="on">4.6</td>
+                                                        <td id="on">400</td>
+                                                        <td id="on">240</td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">4.8</td>
+                                                        <td id="on">400</td>
+                                                        <td id="on">320</td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">5.6</td>
+                                                        <td id="on">500</td>
+                                                        <td id="on">300</td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">5.8</td>
+                                                        <td id="on">500</td>
+                                                        <td id="on">400</td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">6.8</td>
+                                                        <td id="on">600</td>
+                                                        <td id="on">480</td>
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">8.8</td>
+                                                        <td id="on">800</td>
+                                                        <td id="on">640</td>
+                                                        
+                                                </tr>
+                                                
+                                                
+                                               
+                                                
+                                                <tr>
+                                                        <td id="on">10.9</td>
+                                                        <td id="on">1000</td>
+                                                        <td id="on">900</td>
+                                                        
+                                                </tr>
+                                                
+                                               
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </tbody>
+                                        </table><br>
+             
+             
+             
+             <h5 class="h5 text-center">Cıvataların Çekme ve Kayma Dayanımları</h5>
+             
+             <p class="text-center">
+             
+             F<sub>nt</sub> : Karakteristik Çekme Gerilmesi Dayanımı<br>
+             F<sub>nv</sub> : Karakteristik Kayma Gerilmesi Dayanımı<br><br>
+                 
+                 
+                 F<sub>nt</sub> = 0.75*F<sub>ub</sub><br>
+                 F<sub>nv</sub> = 0.45*F<sub>ub</sub><br>
+                 
+                 
+                 
+             
+             </p>
+                 
+                
+                 
+             <br><br>
+             
+             
+             
+            
+             
+             <table class="table align-middle text-center table-striped table-bordered">
+                                                                <tbody>
+             <tr><div class="row mt-4 mb-4">
+                <div class="col text-center">
+                    <b>Cıvata Sınıfı</b>
+                </div>
+                <div class="col" style="display: flex">
+                    <select id="civatasinif" class="custom-select custom-select-sm" onchange="hesaplar()">
+                    <option value="0">4.6</option>
+                    <option value="1">4.8</option>
+                    <option value="2">5.6</option>
+                    <option value="3">5.8</option>
+                    <option value="4">6.8</option>
+                    <option value="5">8.8</option>
+                    <option value="6">10.9</option>
+                    </select>
+                       
+                </div>
+                 </div></tr>
+                                                                    
+                                                                    
+                                                                    <tr><div class="row mt-4 mb-4">
+                <div class="col text-center">
+                    <b>Tasarım Türü</b>
+                </div>
+                <div class="col" style="display: flex">
+                    <select id="tasarimturu" class="custom-select custom-select-sm" onchange="hesaplar()">
+                    <option value="0.75">YDKT</option>
+                    <option value="0.5">GKT</option>
+                    </select><button 
+                                class="btn btn-outline-secondary info btn-xs" 
+                                type="button" 
+                                data-toggle="modal" 
+                                data-target="#popup-ydkt">?
+                        </button>
+                       
+                </div>
+                 </div></tr>
+                 
+                 
+                 
+                 
+                 
+                 
+                 </tbody></table>
+             
+             
+             
+             
+             
+             <script language="javascript">
+                function hesaplar(){
+
+
+    
+
+                
+               
+                    
+                    //Deger atamalari	
+                
+                 
+                var cs=parseFloat(document.getElementById("civatasinif").value);
+                var gk=parseFloat(document.getElementById("tasarimturu").value);
+                    
+                var fuu=[400,400,500,500,600,800,1000];
+                var fyy=[240,320,300,400,480,640,900];
+                var sinifff=[4.6,4.8,5.6,5.8,6.8,8.8,10.9];
+                    
+                    
+                var fu=parseFloat(fuu[cs]);
+                var fy=parseFloat(fyy[cs]);
+                var siniff=parseFloat(sinifff[cs]);
+                    
+                
+                var a10=0.25*Math.PI*10*10;
+                var a12=0.25*Math.PI*12*12;
+                var a14=0.25*Math.PI*14*14;
+                var a16=0.25*Math.PI*16*16;
+                var a18=0.25*Math.PI*18*18;
+                var a20=0.25*Math.PI*20*20;
+                var a22=0.25*Math.PI*22*22;
+                var a24=0.25*Math.PI*24*24;
+                var a27=0.25*Math.PI*27*27;
+                var a30=0.25*Math.PI*30*30;
+                var a33=0.25*Math.PI*33*33;
+                var a36=0.25*Math.PI*36*36;
+                var a39=0.25*Math.PI*39*39;
+                
+                
+               var c10=gk*0.0001020*0.75*fu*a10;
+               var c12=gk*0.0001020*0.75*fu*a12;
+               var c14=gk*0.0001020*0.75*fu*a14;
+               var c16=gk*0.0001020*0.75*fu*a16;
+               var c18=gk*0.0001020*0.75*fu*a18;
+               var c20=gk*0.0001020*0.75*fu*a20;
+               var c22=gk*0.0001020*0.75*fu*a22;
+               var c24=gk*0.0001020*0.75*fu*a24;
+               var c27=gk*0.0001020*0.75*fu*a27;
+               var c30=gk*0.0001020*0.75*fu*a30;
+               var c33=gk*0.0001020*0.75*fu*a33;
+               var c36=gk*0.0001020*0.75*fu*a36;
+               var c39=gk*0.0001020*0.75*fu*a39;
+                    
+                    
+                    
+               var k10=gk*0.0001020*0.45*fu*a10;
+               var k12=gk*0.0001020*0.45*fu*a12;
+               var k14=gk*0.0001020*0.45*fu*a14;
+               var k16=gk*0.0001020*0.45*fu*a16;
+               var k18=gk*0.0001020*0.45*fu*a18;
+               var k20=gk*0.0001020*0.45*fu*a20;
+               var k22=gk*0.0001020*0.45*fu*a22;
+               var k24=gk*0.0001020*0.45*fu*a24;
+               var k27=gk*0.0001020*0.45*fu*a27;
+               var k30=gk*0.0001020*0.45*fu*a30;
+               var k33=gk*0.0001020*0.45*fu*a33;
+               var k36=gk*0.0001020*0.45*fu*a36;
+               var k39=gk*0.0001020*0.45*fu*a39;
+                    
+                    
+                    document.getElementById("c10").value=c10.toFixed(3);
+                    document.getElementById("c12").value=c12.toFixed(3);
+                    document.getElementById("c14").value=c14.toFixed(3);
+                    document.getElementById("c16").value=c16.toFixed(3);
+                    document.getElementById("c18").value=c18.toFixed(3);
+                    document.getElementById("c20").value=c20.toFixed(3);
+                    document.getElementById("c22").value=c22.toFixed(3);
+                    document.getElementById("c24").value=c24.toFixed(3);
+                    document.getElementById("c27").value=c27.toFixed(3);
+                    document.getElementById("c30").value=c30.toFixed(3);
+                    document.getElementById("c33").value=c33.toFixed(3);
+                    document.getElementById("c36").value=c36.toFixed(3);
+                    document.getElementById("c39").value=c39.toFixed(3);
+               
+                
+                    document.getElementById("k10").value=k10.toFixed(3);
+                    document.getElementById("k12").value=k12.toFixed(3);
+                    document.getElementById("k14").value=k14.toFixed(3);
+                    document.getElementById("k16").value=k16.toFixed(3);
+                    document.getElementById("k18").value=k18.toFixed(3);
+                    document.getElementById("k20").value=k20.toFixed(3);
+                    document.getElementById("k22").value=k22.toFixed(3);
+                    document.getElementById("k24").value=k24.toFixed(3);
+                    document.getElementById("k27").value=k27.toFixed(3);
+                    document.getElementById("k30").value=k30.toFixed(3);
+                    document.getElementById("k33").value=k33.toFixed(3);
+                    document.getElementById("k36").value=k36.toFixed(3);
+                    document.getElementById("k39").value=k39.toFixed(3);
+                    
+                    document.getElementById("sinif").value=siniff.toFixed(1);
+                        
+                    if (gk==0.75) {document.getElementById("ttur").value="YDKT";}
+                    else if (gk==0.5) {document.getElementById("ttur").value="GKT";}
+                    
+                    
+                    
+                    }
+
+                </script>
+             
+             
+             
+             <table class="table  table-striped table-bordered text-center">
+                                            <tbody>
+                                                
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on" colspan="3" class="text-center">Cıvata Sınıfı : <output id="sinif" readonly=""></output> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tasarım Türü : <output id="ttur" readonly=""></output></td>
+                                                        
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                               
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on">Cıvata</td>
+                                                        <td id="off2"><output id="kgm" readonly="">Çekme Dayanımı (R<sub>t</sub>) (ton.f)</output></td>
+                                                        <td id="off2"><output id="kgm" readonly="">Kesme Dayanımı (R<sub>v</sub>) (ton.f)</output></td>
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                              
+                                                
+                                                <tr>
+                                                        <td id="on">M10</td>
+                                                        <td id="on"><output id="c10" readonly="">asdasdasdasdasd</output></td>
+                                                        <td id="on"><output id="k10" readonly="">asdasdasdasdasd</output></td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M12</td>
+                                                        <td id="on"><output id="c12" readonly="">asdasdasdasdasd</output></td>
+                                                        <td id="on"><output id="k12" readonly="">asdasdasdasdasd</output></td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M14</td>
+                                                        <td id="on"><output id="c14" readonly="">asdasdasdasdasd</output></td>
+                                                        <td id="on"><output id="k14" readonly="">asdasdasdasdasd</output></td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M16</td>
+                                                        <td id="on"><output id="c16" readonly="">asdasdasdasdasd</output></td>
+                                                        <td id="on"><output id="k16" readonly="">asdasdasdasdasd</output></td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M18</td>
+                                                        <td id="on"><output id="c18" readonly="">asdasdasdasdasd</output></td>
+                                                        <td id="on"><output id="k18" readonly="">asdasdasdasdasd</output></td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M20</td>
+                                                        <td id="on"><output id="c20" readonly="">asdasdasdasdasd</output></td>
+                                                        <td id="on"><output id="k20" readonly="">asdasdasdasdasd</output></td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M22</td>
+                                                        <td id="on"><output id="c22" readonly="">asdasdasdasdasd</output></td>
+                                                        <td id="on"><output id="k22" readonly="">asdasdasdasdasd</output></td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M24</td>
+                                                        <td id="on"><output id="c24" readonly="">asdasdasdasdasd</output></td>
+                                                        <td id="on"><output id="k24" readonly="">asdasdasdasdasd</output></td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M27</td>
+                                                        <td id="on"><output id="c27" readonly="">asdasdasdasdasd</output></td>
+                                                        <td id="on"><output id="k27" readonly="">asdasdasdasdasd</output></td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M30</td>
+                                                        <td id="on"><output id="c30" readonly="">asdasdasdasdasd</output></td>
+                                                        <td id="on"><output id="k30" readonly="">asdasdasdasdasd</output></td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M33</td>
+                                                        <td id="on"><output id="c33" readonly="">asdasdasdasdasd</output></td>
+                                                        <td id="on"><output id="k33" readonly="">asdasdasdasdasd</output></td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M36</td>
+                                                        <td id="on"><output id="c36" readonly="">asdasdasdasdasd</output></td>
+                                                        <td id="on"><output id="k36" readonly="">asdasdasdasdasd</output></td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M39</td>
+                                                        <td id="on"><output id="c39" readonly="">asdasdasdasdasd</output></td>
+                                                        <td id="on"><output id="k39" readonly="">asdasdasdasdasd</output></td>
+                                                        
+                                                        
+                                                </tr>
+                                                
+                                                
+                                                
+                                              
+                                                
+                                               
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </tbody>
+                                        </table><br>
+             
+             
+             
+             <table class="table  table-striped table-bordered text-center">
+                                            <tbody>
+                                                
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on" colspan="5" class="text-center">Karakteristik Dairesel Delik Boyutları (mm)</td>
+                                                        
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                               
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on">Cıvata</td>
+                                                        <td id="on">Standart Delik Çapları</td>
+                                                        <td id="on">Büyük Delik Çapları</td>
+                                                        
+                                                        
+                                                        
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                              
+                                                
+                                                <tr>
+                                                        <td id="on">M16</td>
+                                                        <td id="on">18</td>
+                                                        <td id="on">20</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M20</td>
+                                                        <td id="on">22</td>
+                                                        <td id="on">24</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M22</td>
+                                                        <td id="on">24</td>
+                                                        <td id="on">28</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M24</td>
+                                                        <td id="on">26</td>
+                                                        <td id="on">30</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M27</td>
+                                                        <td id="on">30</td>
+                                                        <td id="on">35</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M30</td>
+                                                        <td id="on">33</td>
+                                                        <td id="on">38</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">≥ M36</td>
+                                                        <td id="on">d+3</td>
+                                                        <td id="on">d+8</td>
+                                                       
+                                                        
+                                                </tr>
+                                              
+                                                
+                                               
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </tbody>
+                                        </table><br>
+             
+             
+             
+              <table class="table  table-striped table-bordered text-center">
+                                            <tbody>
+                                                
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on" colspan="5" class="text-center">Karakteristik Oval Delik Boyutları (mm)</td>
+                                                        
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                               
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on">Cıvata</td>
+                                                        <td id="on">Kısa Oval Delik (Genişlik * Uzunluk)</td>
+                                                        <td id="on">Uzun Oval Delik (Genişlik * Uzunluk)</td>
+                                                        
+                                                        
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                              
+                                                
+                                                <tr>
+                                                        <td id="on">M16</td>
+                                                        <td id="on">18 * 22</td>
+                                                        <td id="on">18 * 40</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M20</td>
+                                                        <td id="on">22 * 26</td>
+                                                        <td id="on">22 * 50</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M22</td>
+                                                        <td id="on">24 * 30</td>
+                                                        <td id="on">24 * 55</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M24</td>
+                                                        <td id="on">26 * 32</td>
+                                                        <td id="on">26 * 60</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M27</td>
+                                                        <td id="on">30 * 37</td>
+                                                        <td id="on">30 * 67</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M30</td>
+                                                        <td id="on">33 * 40</td>
+                                                        <td id="on">33 * 75</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">≥ M36</td>
+                                                        <td id="on">(d+3) * (d+10)</td>
+                                                        <td id="on">(d+3) * 2.5*d</td>
+                                                       
+                                                        
+                                                </tr>
+                                              
+                                                
+                                               
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </tbody>
+                                        </table><br>
+             
+             
+             
+             <table class="table  table-striped table-bordered text-center">
+                                            <tbody>
+                                                
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on" colspan="5" class="text-center">Standar Dairesel Delik Çapı Merkezinden Parça Kenarına Olan Min. Uzaklık</td>
+                                                        
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                               
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on">Cıvata</td>
+                                                        <td id="on">Kenara Olan Uzaklık (mm)</td>
+                                                    
+                                                        
+                                                        
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                              
+                                                
+                                                <tr>
+                                                        <td id="on">M16</td>
+                                                        <td id="on">22</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M20</td>
+                                                        <td id="on">26</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M22</td>
+                                                        <td id="on">29</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M24</td>
+                                                        <td id="on">32</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M27</td>
+                                                        <td id="on">36</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M30</td>
+                                                        <td id="on">40</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M36</td>
+                                                        <td id="on">48</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                               <tr>
+                                                        <td id="on">≥ M36</td>
+                                                        <td id="on">1.30 * d</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                               
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </tbody>
+                                        </table><br>
+             
+             
+             
+             <table class="table  table-striped table-bordered text-center">
+                                            <tbody>
+                                                
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on" colspan="5" class="text-center">Minimum Cıvata Önçekme Kuvveti (kN)</td>
+                                                        
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                               
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on">Cıvata</td>
+                                                        <td id="on">8.8</td>
+                                                        <td id="on">10.9</td>
+                                                    
+                                                        
+                                                        
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                              
+                                                
+                                                <tr>
+                                                        <td id="on">M16</td>
+                                                        <td id="on">88</td>
+                                                        <td id="on">110</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M20</td>
+                                                        <td id="on">137</td>
+                                                        <td id="on">172</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M22</td>
+                                                        <td id="on">170</td>
+                                                        <td id="on">212</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M24</td>
+                                                        <td id="on">198</td>
+                                                        <td id="on">247</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M27</td>
+                                                        <td id="on">257</td>
+                                                        <td id="on">321</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M30</td>
+                                                        <td id="on">314</td>
+                                                        <td id="on">393</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M36</td>
+                                                        <td id="on">458</td>
+                                                        <td id="on">572</td>
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                             
+                                                
+                                               
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </tbody>
+                                        </table><br>
+             
+             
+           
+             <table class="table  table-striped table-bordered text-center">
+                                            <tbody>
+                                                
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on" colspan="5" class="text-center">Somunlar İçin Anahtar Ağzı Ölçüleri</td>
+                                                        
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                               
+                                                
+                                                <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                
+                                                <tr>
+                                                        <td id="on">Cıvata - Somun</td>
+                                                        <td id="on">Anahtar Ağzı (mm)</td>
+                                                        
+                                                    
+                                                        
+                                                        
+                                                </tr>
+                                                    
+                                                </thead>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                              
+                                                
+                                                <tr>
+                                                        <td id="on">M12</td>
+                                                        <td id="on">19</td>
+                                                    
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M14</td>
+                                                        <td id="on">22</td>
+                                                    
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M16</td>
+                                                        <td id="on">24</td>
+                                                    
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M18</td>
+                                                        <td id="on">27</td>
+                                                    
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M20</td>
+                                                        <td id="on">30</td>
+                                                    
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M22</td>
+                                                        <td id="on">32</td>
+                                                    
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M24</td>
+                                                        <td id="on">36</td>
+                                                    
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M27</td>
+                                                        <td id="on">41</td>
+                                                    
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M30</td>
+                                                        <td id="on">46</td>
+                                                    
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M33</td>
+                                                        <td id="on">50</td>
+                                                    
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M36</td>
+                                                        <td id="on">55</td>
+                                                    
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                <tr>
+                                                        <td id="on">M39</td>
+                                                        <td id="on">60</td>
+                                                    
+                                                       
+                                                        
+                                                </tr>
+                                                
+                                                
+                                                
+                                            
+                                                
+                                             
+                                                
+                                               
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </tbody>
+                                        </table><br>
+             
+             
+            
+             
+             
+             
+                                  
+                           
+        
+        
+        
+        
+        
+        
+        
+         </div>
+        
+        
+        
+        
+        
+        
+        <!-- BUTTON -->
+        
+      
+        
+        
+        <!--RESULTS-->
+        
+            
+            
+            <script src="popper.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        
+        <script src="bootstrap-tooltip.js"></script>
+        <script src="fontawesome.min.js"></script>
+            
+       
+
+        
+        
+                
+        
+    </body>
+</html>
