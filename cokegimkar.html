@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="tr">
+    
+    
+    
+    
+    
+    
+    
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+        
+        <link rel="stylesheet" type="text/css" href="fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        
+<script src="jquery-3.3.1.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      
+        <style>.container {font-size:14px;}
+            .btn-xs {padding:2px; font-size:12px;}</style>
+        
+        
+    </head>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <title>
+        Çok Eğimli Çatılara Etkiyen Kar Yükleri
+    </title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <body>
+        
+        <!-- NAVIGATION BAR -->
+        
+        <nav id="bg-light" class="mt-0 asdnav navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+                       
+                                  <a class="navbar-brand" id="navbar-brand" href="#" style="font-size:12px;">Çok Eğimli Çatılara Etkiyen Kar Yükleri</a>
+                       
+                                  <button class="navbar-toggler float-right white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span id="log" style="color:white;">&#9776</span>
+                                  </button>
+                       
+                                  <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
+                                      
+                                            <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Rüzgar Yükleri (TS EN 1991-1-4)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="index.html">Yapı Yüzeyine Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="tekegimruzgar.html">Tek Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="ciftegimruzgar.html">Çift Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2 active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Kar Yükleri (TS EN 1991-1-3)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="tekegimkar.html">Tek Eğimli Çatılara Etkiyen Kar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="ciftegimkar.html">Çift Eğimli Çatılara Etkiyen Kar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item active" href="#">Çok Eğimli Çatılara Etkiyen Kar Yükleri</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Hesaplar
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="asik.html">Aşık Hesabı</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Birim Çevirme
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="birim.html">Kuvvet</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="basinc.html">Gerilme</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="uzunluk.html">Uzunluk</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="alan.html">Alan</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="hacim.html">Hacim</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="yogunluk.html">Yoğunluk</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Teknik Bilgiler
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog.html">Yapı Malzemelerinin Birim Hacim Ağırlıkları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog2.html">Başlıca Malzeme Yoğunlukları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="beton.html">Beton</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="civata.html">Cıvatalar</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Profil Tabloları
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="h.html">H Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="i.html">I Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="u.html">U Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="dikdortgen.html">Dikdörtgen Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="kare.html">Kare Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="boru.html">Boru Profiller</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                  </div>
+</nav>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- POPUPS -->
+        
+      
+        <div class="modal fade align-middle" id="popup-arazi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog align-middle" role="document">
+                <div class="modal-content align-middle">
+                    <div class="modal-body align-middle">
+                       
+                                                                        <div class="container align-middle">
+                                                                <table class="table align-middle text-center">
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td id="on">Rüzgara Açık</td>
+                                                                    <td id="off2">Rüzgara açık topografik alanlar: her coğrafi yönden etkiye maruz kalan, arazi tarafından korunma
+imkanının olmadığı veya az olduğu daha yüksek yapıların veya ağaçların bulunmadığı engelsiz düz alanlar</td>
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                    <td id="on">Normal</td>
+                                                                    <td id="off2">Normal topografik alanlar: rüzgarın yapı üzerine etkisiyle kar kütlesinin,arazi, diğer yapılar ve ağaçlar
+sebebiyle önemli bir değişime uğramadığı alanlar</td>
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                    <td id="on">Korunmuş</td>
+                                                                    <td id="off2">Korunmuş topografik alanlar: dikkate alınan yapının yüksekliğinin önemli ölçüde çevre arazisinden veya
+çevresindeki yüksek ağaçlardan ve/veya çevresindeki daha yüksek yapılardan düşük olduğu alanlar</td>
+                                                                    </tr>
+                                                                    
+                                                                 
+
+                                                                    
+                                                                    </tbody></table>
+                                                                         
+                                                                  
+                                                                            
+                                                                
+                                                            </div>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="modal fade align-middle" id="popup-buz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog align-middle" role="document">
+                <div class="modal-content align-middle">
+                    <div class="modal-body align-middle">
+                       
+                                                                        <div class="container align-middle">
+                                                                <table class="table align-middle text-center">
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td id="on">Mutlaka buz yükü değeri hesaba katılması gerekiyorsa ve bunun için elde yeterli veri yoksa, buzlanma
+tehlikesine maruz kalacak bölgelerde deniz seviyesinden 400 m ve daha yüksekteki yerler için
+buzlanmaya maruz kalacak yapı elemanlarının bütün yüzeylerinin 3 cm kalınlıkta buz ile kaplı olduğu
+kabul edilir. Buz birim hacim ağırlığı 714 kg/m<sup>3</sup>
+ alınır. </td>
+                                                                    
+                                                                    </tr>
+                                                                
+                                                                    
+                                                                 
+
+                                                                    
+                                                                    </tbody></table>
+                                                                         
+                                                                  
+                                                                            
+                                                                
+                                                            </div>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        <!--MAIN PAGE CONTENTS -->
+        
+        
+        <div class="container align-middle text-center" style="margin-top:65px">
+            <table class="table align-middle text-center"><tbody>
+                <tr><img class="img-fluid mx-auto" src="cokkar.png"></tr>
+                
+                
+            </tbody></table>
+        </div>
+        
+         <div class="container" style="margin-top:80px" id="asikform">
+             <table class="table align-middle text-center">
+                                                                <tbody>
+             <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Eğim1 (%)</b>
+                </div>
+                <div class="col" style="display: flex">
+                    <input type="number" class="form-control-sm form-control" value="" id="egim1" min="0" max="173" oninput="sinir1()">
+                       
+                </div>
+            </div></tr>
+                                                                    
+                                                                    <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Eğim2 (%)</b>
+                </div>
+                <div class="col" style="display: flex">
+                    <input type="number" class="form-control-sm form-control" value="" id="egim2" min="0" max="173" oninput="sinir2()">
+                       
+                </div>
+            </div></tr>
+                                                                    
+                                                                    
+            
+                                                                    
+                                                                    
+             
+<tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>İl - ilçe Seçiniz</b>
+                </div>
+                <div class="col" style="display: flex">
+                    
+                    <select id="bolge" size="1" class="custom-select custom-select-sm" data-live-search="true" >
+                    <option value="3" selected="selected">Samsun - Merkez</option>
+                    <option value="3">Samsun - Alaçam</option>
+                    <option value="3">Samsun - Bafra</option>
+                    <option value="3">Samsun - Çarşamba</option>
+                    <option value="2">Samsun - Havza</option>
+                    <option value="3">Samsun - Kavak</option>
+                    <option value="3">Samsun - Ladik</option>
+                    <option value="3">Samsun - Terme</option>
+                    <option value="3">Samsun - Vezirköprü</option>
+                        
+                    <option value="1">Adana - Merkez</option>
+                    <option value="3">Adana - Bahçe</option>
+                    <option value="1">Adana - Ceyhan</option>
+                    <option value="3">Adana - Düziçi</option>
+                    <option value="3">Adana - Feke</option>
+                    <option value="3">Adana - Kadirli</option>
+                    <option value="3">Adana - Karaisalı</option>
+                    <option value="1">Adana - Karataş</option>
+                    <option value="3">Adana - Kozan</option>
+                    <option value="3">Adana - Mağara</option>
+                    <option value="3">Adana - Osmaniye</option>
+                    <option value="2">Adana - Pozantı</option>
+                    <option value="3">Adana - Saimbeyli</option>
+                    <option value="1">Adana - Yumurtalık</option>
+                        
+                    <option value="3">Adapazarı - Merkez</option>
+                    <option value="3">Adapazarı - Akyazı</option>
+                    <option value="3">Adapazarı - Geyve</option>
+                    <option value="3">Adapazarı - Hendek</option>
+                    <option value="3">Adapazarı - Karasu</option>
+                    <option value="3">Adapazarı - Pamukova</option>
+                    <option value="3">Adapazarı - Sapanca</option>
+                        
+                    <option value="2">Adıyaman - Merkez</option>
+                    <option value="4">Adıyaman - Besni</option>
+                    <option value="3">Adıyaman - Çelikhan</option>
+                    <option value="3">Adıyaman - Gerger</option>
+                    <option value="4">Adıyaman - Gölbaşı</option>
+                    <option value="2">Adıyaman - Rahtaağ</option>
+                    <option value="2">Adıyaman - Samsat</option>
+                        
+                    <option value="3">Afyon - Merkez</option>
+                    <option value="3">Afyon - Bolvadin</option>
+                    <option value="2">Afyon - Çay</option>
+                    <option value="2">Afyon - Dazkırı</option>
+                    <option value="2">Afyon - Dinar</option>
+                    <option value="3">Afyon - Emirdağ</option>
+                    <option value="3">Afyon - İhsaniye</option>
+                    <option value="2">Afyon - Sandıklı</option>
+                    <option value="2">Afyon - Sincanlı</option>
+                    <option value="2">Afyon - Şuhut</option>
+                    <option value="2">Afyon - Sultandağı</option>
+                        
+                    <option value="4">Ağrı - Merkez</option>
+                    <option value="2">Ağrı - Diyadin</option>
+                    <option value="2">Ağrı - Doğubeyazıt</option>
+                    <option value="4">Ağrı - Eleşkirt</option>
+                    <option value="4">Ağrı - Hamur</option>
+                    <option value="4">Ağrı - Patnos</option>
+                    <option value="4">Ağrı - Taşlıçay</option>
+                    <option value="4">Ağrı - Tutak</option>
+                    <option value="4">Ağrı - Tutak</option>
+                        
+                    <option value="3">Amasya - Merkez</option>
+                    <option value="2">Amasya - Göynüçek</option>
+                    <option value="2">Amasya - Gümüşhacıköy</option>
+                    <option value="2">Amasya - Merzifon</option>
+                    <option value="2">Amasya - Suluova</option>
+                    <option value="3">Amasya - Taşova</option>
+                        
+                    <option value="2">Ankara - Merkez</option>
+                    <option value="1">Ankara - Altındağ</option>
+                    <option value="3">Ankara - Ayaş</option>
+                    <option value="1">Ankara - Bala</option>
+                    <option value="4">Ankara - Beypazarı</option>
+                    <option value="3">Ankara - Çamlıdere</option>
+                    <option value="2">Ankara - Çankaya</option>
+                    <option value="3">Ankara - Çubuk</option>
+                    <option value="2">Ankara - Delice</option>
+                    <option value="4">Ankara - Elmadağı</option>
+                    <option value="1">Ankara - Etimesgut</option>
+                    <option value="3">Ankara - Güdül</option>
+                    <option value="2">Ankara - Haymana</option>
+                    <option value="3">Ankara - Kalecik</option>
+                    <option value="1">Ankara - Keskin</option>
+                    <option value="2">Ankara - Kırıkkale</option>
+                    <option value="3">Ankara - Kızılcahamam</option>
+                    <option value="2">Ankara - Nallıhan</option>
+                    <option value="2">Ankara - Polatlı</option>
+                    <option value="1">Ankara - Yenimahalle</option>
+                        
+                    <option value="1">Antalya - Merkez</option>
+                    <option value="3">Antalya - Akseki</option>
+                    <option value="1">Antalya - Alanya</option>
+                    <option value="3">Antalya - Elmalı</option>
+                    <option value="1">Antalya - Finike</option>
+                    <option value="1">Antalya - Gazipaşa</option>
+                    <option value="3">Antalya - Gündoğmuş</option>
+                    <option value="3">Antalya - İbradi</option>
+                    <option value="1">Antalya - Kaş</option>
+                    <option value="3">Antalya - Korkuteli</option>
+                    <option value="1">Antalya - Kumluca</option>
+                    <option value="1">Antalya - Manavgat</option>
+                    <option value="1">Antalya - Serik</option>
+                        
+                    <option value="1">Antakya - Merkez</option>
+                    <option value="1">Antakya - Altınözü</option>
+                    <option value="1">Antakya - Arsuz</option>
+                    <option value="1">Antakya - Belen</option>
+                    <option value="1">Antakya - Dörtyol</option>
+                    <option value="3">Antakya - Erzin</option>
+                    <option value="3">Antakya - Hassa</option>
+                    <option value="1">Antakya - İskenderun</option>
+                    <option value="1">Antakya - Kırıkhan</option>
+                    <option value="1">Antakya - Reyhanlı</option>
+                    <option value="1">Antakya - Samandağı</option>
+                    <option value="1">Antakya - Yayladağı</option>
+                        
+                    <option value="4">Artvin - Merkez</option>
+                    <option value="3">Artvin - Ardanuç</option>
+                    <option value="4">Artvin - Arhavi</option>
+                    <option value="4">Artvin - Borçka</option>
+                    <option value="4">Artvin - Hopa</option>
+                    <option value="4">Artvin - Sarp</option>
+                    <option value="4">Artvin - Şavşat</option>
+                    <option value="3">Artvin - Yusufeli</option>
+                        
+                    <option value="1">Aydın - Merkez</option>
+                    <option value="1">Aydın - Bozdoğan</option>
+                    <option value="1">Aydın - Çine</option>
+                    <option value="1">Aydın - Germencik</option>
+                    <option value="2">Aydın - Karacasu</option>
+                    <option value="1">Aydın - Koçarlı</option>
+                    <option value="1">Aydın - Kuşadası</option>
+                    <option value="1">Aydın - Kuyucak</option>
+                    <option value="1">Aydın - Nazilli</option>
+                    <option value="1">Aydın - Söke</option>
+                    <option value="1">Aydın - Sultanhisar</option>
+                    <option value="1">Aydın - Yenipazar</option>
+                        
+                    <option value="1">Balıkesir - Merkez</option>
+                    <option value="1">Balıkesir - Ayvalık</option>
+                    <option value="1">Balıkesir - Balya</option>
+                    <option value="1">Balıkesir - Bandırma</option>
+                    <option value="1">Balıkesir - Bigadiç</option>
+                    <option value="1">Balıkesir - Burhaniye</option>
+                    <option value="3">Balıkesir - Dursunbey</option>
+                    <option value="1">Balıkesir - Edremit</option>
+                    <option value="1">Balıkesir - Erdek</option>
+                    <option value="1">Balıkesir - Gönen</option>
+                    <option value="1">Balıkesir - Havran</option>
+                    <option value="1">Balıkesir - İvrindi</option>
+                    <option value="3">Balıkesir - Kepsun</option>
+                    <option value="1">Balıkesir - Manyas</option>
+                    <option value="1">Balıkesir - Savaştepe</option>
+                    <option value="3">Balıkesir - Sındırgı</option>
+                    <option value="3">Balıkesir - Susurluk</option>
+                        
+                    <option value="3">Bilecek - Merkez</option>
+                    <option value="3">Bilecek - Bozüyük</option>
+                    <option value="3">Bilecek - Gölpazarı</option>
+                    <option value="3">Bilecek - Osmaneli</option>
+                    <option value="3">Bilecek - Pazaryeri</option>
+                    <option value="3">Bilecek - Söğüt</option>
+                        
+                    <option value="4">Bingöl - Merkez</option>
+                    <option value="2">Bingöl - Genç</option>
+                    <option value="4">Bingöl - Karlıova</option>
+                    <option value="4">Bingöl - Kiğı</option>
+                    <option value="4">Bingöl - Solhan</option>
+                        
+                    <option value="4">Bitlis - Merkez</option>
+                    <option value="4">Bitlis - Adilcevaz</option>
+                    <option value="4">Bitlis - Ahlat</option>
+                    <option value="4">Bitlis - Hizan</option>
+                    <option value="4">Bitlis - Kotum</option>
+                    <option value="2">Bitlis - Mutki</option>
+                    <option value="4">Bitlis - Tatvan</option>
+                        
+                    <option value="3">Bolu - Merkez</option>
+                    <option value="3">Bolu - Akçakoca</option>
+                    <option value="3">Bolu - Düzce</option>
+                    <option value="4">Bolu - Gerede</option>
+                    <option value="3">Bolu - Göynük</option>
+                    <option value="4">Bolu - Kıbrısçık</option>
+                    <option value="4">Bolu - Mengen</option>
+                    <option value="3">Bolu - Mudurnu</option>
+                    <option value="4">Bolu - Seben</option>
+                    <option value="3">Bolu - Yığılça</option>
+                        
+                    <option value="2">Burdur - Merkez</option>
+                    <option value="2">Burdur - Ağlasun</option>
+                    <option value="2">Burdur - Bucak</option>
+                    <option value="2">Burdur - Gölhisar</option>
+                    <option value="2">Burdur - Tefenni</option>
+                    <option value="2">Burdur - Yeşilova</option>
+                        
+                    <option value="4">Bursa - Merkez</option>
+                    <option value="3">Bursa - Armutlu</option>
+                    <option value="3">Bursa - Gemlik</option>
+                    <option value="4">Bursa - İnegöl</option>
+                    <option value="3">Bursa - İznik</option>
+                    <option value="3">Bursa - Karacabey</option>
+                    <option value="4">Bursa - Keles</option>
+                    <option value="3">Bursa - Mudanya</option>
+                    <option value="3">Bursa - M.Kemalpaşa</option>
+                    <option value="4">Bursa - Orhaneli</option>
+                    <option value="3">Bursa - Orhangazi</option>
+                    <option value="3">Bursa - Yalova</option>
+                    <option value="3">Bursa - Yenişehir</option>
+                        
+                    <option value="1">Çanakkale - Merkez</option>
+                    <option value="1">Çanakkale - Ayvacık</option>
+                    <option value="1">Çanakkale - Bayramiç</option>
+                    <option value="3">Çanakkale - Biga</option>
+                    <option value="1">Çanakkale - Çan</option>
+                    <option value="3">Çanakkale - Eceabat</option>
+                    <option value="1">Çanakkale - Ezine</option>
+                    <option value="3">Çanakkale - Gelibolu</option>
+                    <option value="3">Çanakkale - Lapseki</option>
+                    <option value="1">Çanakkale - Yenice</option>
+                        
+                    <option value="3">Çankırı - Merkez</option>
+                    <option value="3">Çankırı - Çerkeş</option>
+                    <option value="3">Çankırı - Eldivan</option>
+                    <option value="4">Çankırı - Eskipazar</option>
+                    <option value="3">Çankırı - Ilgaz</option>
+                    <option value="3">Çankırı - Kurşunlu</option>
+                    <option value="3">Çankırı - Orta</option>
+                    <option value="4">Çankırı - Ovacık</option>
+                    <option value="3">Çankırı - Şabanözü</option>
+                    <option value="3">Çankırı - Yapraklı</option>
+                        
+                    <option value="2">Çorum - Merkez</option>
+                    <option value="2">Çorum - Alaca</option>
+                    <option value="2">Çorum - Bayat</option>
+                    <option value="2">Çorum - İskilip</option>
+                    <option value="2">Çorum - Kargı</option>
+                    <option value="2">Çorum - Mecitözü</option>
+                    <option value="2">Çorum - Ortaköy</option>
+                    <option value="2">Çorum - Osmancık</option>
+                    <option value="2">Çorum - Sungurlu</option>
+                        
+                    <option value="2">Denizli - Merkez</option>
+                    <option value="2">Denizli - Acıpayam</option>
+                    <option value="2">Denizli - Babadağ</option>
+                    <option value="2">Denizli - Buldan</option>
+                    <option value="2">Denizli - Çal</option>
+                    <option value="2">Denizli - Çameli</option>
+                    <option value="2">Denizli - Çardak</option>
+                    <option value="2">Denizli - Çivril</option>
+                    <option value="2">Denizli - Güney</option>
+                    <option value="2">Denizli - Kale</option>
+                    <option value="2">Denizli - Sarayköy</option>
+                    <option value="2">Denizli - Tavas</option>
+                        
+                    <option value="2">Diyarbakır - Merkez</option>
+                    <option value="2">Diyarbakır - Bismil</option>
+                    <option value="3">Diyarbakır - Çermik</option>
+                    <option value="2">Diyarbakır - Çınar</option>
+                    <option value="3">Diyarbakır - Çüngüş</option>
+                    <option value="3">Diyarbakır - Dicle</option>
+                    <option value="3">Diyarbakır - Eğil</option>
+                    <option value="3">Diyarbakır - Ergani</option>
+                    <option value="2">Diyarbakır - Hani</option>
+                    <option value="2">Diyarbakır - Hazro</option>
+                    <option value="2">Diyarbakır - Kulp</option>
+                    <option value="2">Diyarbakır - Lice</option>
+                    <option value="2">Diyarbakır - Silvan</option>
+                        
+                    <option value="3">Edirne - Merkez</option>
+                    <option value="3">Edirne - Enez</option>
+                    <option value="3">Edirne - Havşa</option>
+                    <option value="3">Edirne - İpsala</option>
+                    <option value="3">Edirne - Keşan</option>
+                    <option value="3">Edirne - Lalapaşa</option>
+                    <option value="3">Edirne - Meriç</option>
+                    <option value="3">Edirne - Uzunköprü</option>
+                        
+                    <option value="3">Elazığ - Merkez</option>
+                    <option value="4">Elazığ - Ağın</option>
+                    <option value="3">Elazığ - Başkil</option>
+                    <option value="3">Elazığ - Karakoçan</option>
+                    <option value="4">Elazığ - Keban</option>
+                    <option value="3">Elazığ - Maden</option>
+                    <option value="3">Elazığ - Palu</option>
+                    <option value="3">Elazığ - Sivrice</option>
+                        
+                    <option value="3">Erzincan - Merkez</option>
+                    <option value="3">Erzincan - Çayırlı</option>
+                    <option value="3">Erzincan - Ilıç</option>
+                    <option value="3">Erzincan - Kemah</option>
+                    <option value="4">Erzincan - Kemaliye</option>
+                    <option value="3">Erzincan - Refahiye</option>
+                    <option value="3">Erzincan - Tercan</option>
+                        
+                    <option value="3">Erzurum - Merkez</option>
+                    <option value="3">Erzurum - Aşkale</option>
+                    <option value="3">Erzurum - Çat</option>
+                    <option value="3">Erzurum - İspir</option>
+                    <option value="4">Erzurum - Hınıs</option>
+                    <option value="3">Erzurum - Horasan</option>
+                    <option value="4">Erzurum - Karayazı</option>
+                    <option value="3">Erzurum - Narman</option>
+                    <option value="3">Erzurum - Olur</option>
+                    <option value="3">Erzurum - Oltu</option>
+                    <option value="3">Erzurum - Pasinler</option>
+                    <option value="3">Erzurum - Şenkaya</option>
+                    <option value="3">Erzurum - Tekman</option>
+                    <option value="3">Erzurum - Tortum</option>
+                        
+                    <option value="2">Eskişehir - Merkez</option>
+                    <option value="2">Eskişehir - Çifteler</option>
+                    <option value="2">Eskişehir - Mahmudiye</option>
+                    <option value="2">Eskişehir - Mihalıççık</option>
+                    <option value="2">Eskişehir - Sarıkaya</option>
+                    <option value="2">Eskişehir - Seyitgazi</option>
+                    <option value="2">Eskişehir - Sivrihisar</option>
+                        
+                    <option value="3">Gaziantep - Merkez</option>
+                    <option value="4">Gaziantep - Araban</option>
+                    <option value="3">Gaziantep - Barak</option>
+                    <option value="2">Gaziantep - Çobanbeyi</option>
+                    <option value="3">Gaziantep - Fevzipaşa</option>
+                    <option value="3">Gaziantep - İslahiye</option>
+                    <option value="2">Gaziantep - Kilis</option>
+                    <option value="3">Gaziantep - Nizip</option>
+                    <option value="3">Gaziantep - Oğuzeli</option>
+                    <option value="3">Gaziantep - Yavuzeli</option>
+                        
+                    <option value="4">Giresun - Merkez</option>
+                    <option value="4">Giresun - Alucra</option>
+                    <option value="3">Giresun - Bulancak</option>
+                    <option value="4">Giresun - Dereli</option>
+                    <option value="4">Giresun - Esbiye</option>
+                    <option value="4">Giresun - Eynesil</option>
+                    <option value="4">Giresun - Görele</option>
+                    <option value="4">Giresun - Keşap</option>
+                    <option value="4">Giresun - Şebinkarahisar</option>
+                    <option value="4">Giresun - Tirebolu</option>
+                        
+                    <option value="3">Gümüşhane - Merkez</option>
+                    <option value="3">Gümüşhane - Bayburt</option>
+                    <option value="3">Gümüşhane - Kelkit</option>
+                    <option value="3">Gümüşhane - Şiran</option>
+                    <option value="4">Gümüşhane - Torul</option>
+                        
+                    <option value="4">Hakkari - Merkez</option>
+                    <option value="4">Hakkari - Beytüşşebap</option>
+                    <option value="4">Hakkari - Bacirge</option>
+                    <option value="4">Hakkari - Çukurca</option>
+                    <option value="4">Hakkari - Şemdinli</option>
+                    <option value="4">Hakkari - Şirelan</option>
+                    <option value="4">Hakkari - Uludere</option>
+                    <option value="4">Hakkari - Yüksekova</option>
+                        
+                    <option value="2">Isparta - Merkez</option>
+                    <option value="2">Isparta - Atabey</option>
+                    <option value="2">Isparta - Eğridir</option>
+                    <option value="2">Isparta - Gelendost</option>
+                    <option value="2">Isparta - Keçiborlu</option>
+                    <option value="2">Isparta - Senirkent</option>
+                    <option value="2">Isparta - Sütçüler</option>
+                    <option value="3">Isparta - Şarkikaraağaç</option>
+                    <option value="2">Isparta - Uluborlu</option>
+                    <option value="2">Isparta - Yalvaç</option>
+                        
+                    <option value="2">İstanbul - Merkez</option>
+                    <option value="2">İstanbul - Bakırköy</option>
+                    <option value="2">İstanbul - Beşiktaş</option>
+                    <option value="2">İstanbul - Beykoz</option>
+                    <option value="2">İstanbul - Beyoğlu</option>
+                    <option value="2">İstanbul - Çatalca</option>
+                    <option value="2">İstanbul - Eminönü</option>
+                    <option value="2">İstanbul - Eyüp</option>
+                    <option value="2">İstanbul - Gaziosmanpaşa</option>
+                    <option value="2">İstanbul - Kadıköy</option>
+                    <option value="2">İstanbul - Kartal</option>
+                    <option value="2">İstanbul - Sarıyer</option>
+                    <option value="2">İstanbul - Silivri</option>
+                    <option value="2">İstanbul - Şile</option>
+                    <option value="2">İstanbul - Şişli</option>
+                    <option value="2">İstanbul - Üsküdar</option>
+                    <option value="2">İstanbul - Yalova</option>
+                    <option value="2">İstanbul - Zeytinburnu</option>
+                        
+                    <option value="1">İzmir - Merkez</option>
+                    <option value="1">İzmir - Aliağa</option>
+                    <option value="1">İzmir - Bayındır</option>
+                    <option value="1">İzmir - Bergama</option>
+                    <option value="1">İzmir - Bornova</option>
+                    <option value="1">İzmir - Buca</option>
+                    <option value="1">İzmir - Çeşme</option>
+                    <option value="1">İzmir - Dikili</option>
+                    <option value="1">İzmir - Foça</option>
+                    <option value="1">İzmir - Karaburun</option>
+                    <option value="1">İzmir - Karşıyaka</option>
+                    <option value="1">İzmir - Kemalpaşa</option>
+                    <option value="1">İzmir - Kınık</option>
+                    <option value="1">İzmir - Kozak</option>
+                    <option value="1">İzmir - Menemen</option>
+                    <option value="1">İzmir - Ödemiş</option>
+                    <option value="1">İzmir - Seferihisar</option>
+                    <option value="1">İzmir - Selçuk</option>
+                    <option value="1">İzmir - Tire</option>
+                    <option value="1">İzmir - Torbalı</option>
+                    <option value="1">İzmir - Urla</option>
+                        
+                    <option value="2">İzmit - Merkez</option>
+                    <option value="2">İzmit - Gebze</option>
+                    <option value="2">İzmit - Gölcük</option>
+                    <option value="2">İzmit - Hareke</option>
+                    <option value="3">İzmit - Kandıra</option>
+                    <option value="2">İzmit - Karamürsel</option>
+                    <option value="3">İzmit - Kaynarca</option>
+                        
+                    <option value="4">Kars - Merkez</option>
+                    <option value="2">Kars - Aralık</option>
+                    <option value="4">Kars - Ardahan</option>
+                    <option value="4">Kars - Arpaçay</option>
+                    <option value="4">Kars - Çıldır</option>
+                    <option value="4">Kars - Digar</option>
+                    <option value="4">Kars - Göle</option>
+                    <option value="4">Kars - Hanak</option>
+                    <option value="2">Kars - Iğdır</option>
+                    <option value="2">Kars - Kağızman</option>
+                    <option value="4">Kars - Posof</option>
+                    <option value="4">Kars - Sarıkamış</option>
+                    <option value="4">Kars - Selim</option>
+                    <option value="4">Kars - Susuz</option>
+                    <option value="2">Kars - Tuzluca</option>
+                        
+                    <option value="3">Kastamonu - Merkez</option>
+                    <option value="3">Kastamonu - Abana</option>
+                    <option value="3">Kastamonu - Araç</option>
+                    <option value="3">Kastamonu - Azdavay</option>
+                    <option value="3">Kastamonu - Bozkurt</option>
+                    <option value="3">Kastamonu - Çatalzeytin</option>
+                    <option value="3">Kastamonu - Cide</option>
+                    <option value="3">Kastamonu - Daday</option>
+                    <option value="3">Kastamonu - Devrekani</option>
+                    <option value="3">Kastamonu - İnebolu</option>
+                    <option value="3">Kastamonu - Taşköprü</option>
+                    <option value="3">Kastamonu - Tosya</option>
+                        
+                    <option value="1">Kayseri - Merkez</option>
+                    <option value="1">Kayseri - Bünyan</option>
+                    <option value="3">Kayseri - Develi</option>
+                    <option value="1">Kayseri - Felahiye</option>
+                    <option value="3">Kayseri - Hacılar</option>
+                    <option value="1">Kayseri - İncesu</option>
+                    <option value="3">Kayseri - Pınarbaşı</option>
+                    <option value="3">Kayseri - Sarıoğlan</option>
+                    <option value="3">Kayseri - Sarız</option>
+                    <option value="3">Kayseri - Talas</option>
+                    <option value="3">Kayseri - Tomarza</option>
+                    <option value="3">Kayseri - Viranşehir</option>
+                    <option value="3">Kayseri - Yahyalı</option>
+                    <option value="3">Kayseri - Yeşilhisar</option>
+                        
+                    <option value="2">Kırklareli - Merkez</option>
+                    <option value="2">Kırklareli - Babaeski</option>
+                    <option value="3">Kırklareli - Demirköy</option>
+                    <option value="3">Kırklareli - Kofcaz</option>
+                    <option value="2">Kırklareli - Lüleburgaz</option>
+                    <option value="2">Kırklareli - Midye</option>
+                    <option value="2">Kırklareli - Pehlivanköy</option>
+                    <option value="3">Kırklareli - Pınarhisar</option>
+                        
+                    <option value="1">Kırşehir - Merkez</option>
+                    <option value="1">Kırşehir - Çiçekdağı</option>
+                    <option value="1">Kırşehir - Kaman</option>
+                    <option value="3">Kırşehir - Kozaklı</option>
+                    <option value="1">Kırşehir - Mucur</option>
+                        
+                    <option value="2">Konya - Merkez</option>
+                    <option value="2">Konya - Akşehir</option>
+                    <option value="2">Konya - Beyşehir</option>
+                    <option value="2">Konya - Bozkır</option>
+                    <option value="1">Konya - Cihanbeyli</option>
+                    <option value="2">Konya - Çumra</option>
+                    <option value="2">Konya - Doğanhisar</option>
+                    <option value="2">Konya - Ereğli</option>
+                    <option value="2">Konya - Ermenek</option>
+                    <option value="2">Konya - Hadım</option>
+                    <option value="2">Konya - Ilgın</option>
+                    <option value="2">Konya - Kadınhanı</option>
+                    <option value="2">Konya - Karaman</option>
+                    <option value="1">Konya - Karapınar</option>
+                    <option value="1">Konya - Kulu</option>
+                    <option value="2">Konya - Sarayönü</option>
+                    <option value="2">Konya - Seydişehir</option>
+                    <option value="2">Konya - Yunak</option>
+                    <option value="1">Konya - Zıvarık</option>
+                        
+                    <option value="3">Kütahya - Merkez</option>
+                    <option value="2">Kütahya - Altıntaş</option>
+                    <option value="3">Kütahya - Dağardı</option>
+                    <option value="3">Kütahya - Domaniç</option>
+                    <option value="2">Kütahya - Dumlupınar</option>
+                    <option value="3">Kütahya - Emet</option>
+                    <option value="3">Kütahya - Gediz</option>
+                    <option value="3">Kütahya - Simav</option>
+                    <option value="3">Kütahya - Tavşanlı</option>
+                        
+                    <option value="3">Malatya - Merkez</option>
+                    <option value="4">Malatya - Ağın</option>
+                    <option value="3">Malatya - Akçadağ</option>
+                    <option value="4">Malatya - Arapkir</option>
+                    <option value="4">Malatya - Arguvan</option>
+                    <option value="3">Malatya - Darende</option>
+                    <option value="3">Malatya - Doğanşehir</option>
+                    <option value="3">Malatya - Hekimhan</option>
+                    <option value="3">Malatya - Pötürge</option>
+                    <option value="3">Malatya - Yeşilyurt</option>
+                        
+                    <option value="1">Manisa - Merkez</option>
+                    <option value="1">Manisa - Akhisar</option>
+                    <option value="1">Manisa - Alaşehir</option>
+                    <option value="3">Manisa - Demirci</option>
+                    <option value="1">Manisa - Gölmarmara</option>
+                    <option value="3">Manisa - Gördes</option>
+                    <option value="1">Manisa - Kırkağaç</option>
+                    <option value="2">Manisa - Kula</option>
+                    <option value="1">Manisa - Salihli</option>
+                    <option value="2">Manisa - Sarıgöl</option>
+                    <option value="1">Manisa - Saruhanlı</option>
+                    <option value="2">Manisa - Selendi</option>
+                    <option value="1">Manisa - Soma</option>
+                    <option value="1">Manisa - Turgutlu</option>
+                        
+                    <option value="3">Kahramanmaraş - Merkez</option>
+                    <option value="3">Kahramanmaraş - Afşin</option>
+                    <option value="3">Kahramanmaraş - Andirin</option>
+                    <option value="3">Kahramanmaraş - Elbistan</option>
+                    <option value="3">Kahramanmaraş - Göksun</option>
+                    <option value="3">Kahramanmaraş - Pazarcık</option>
+                    <option value="3">Kahramanmaraş - Türkoğlu</option>
+                        
+                    <option value="2">Mardin - Merkez</option>
+                    <option value="1">Mardin - Cizre</option>
+                    <option value="1">Mardin - Derbesiye</option>
+                    <option value="1">Mardin - Derik</option>
+                    <option value="2">Mardin - Gercüş</option>
+                    <option value="2">Mardin - Hasankeyf</option>
+                    <option value="1">Mardin - İdil</option>
+                    <option value="1">Mardin - Kızıltepe</option>
+                    <option value="1">Mardin - Mazıdağı</option>
+                    <option value="4">Mardin - Midyat</option>
+                    <option value="1">Mardin - Nusaybin</option>
+                    <option value="4">Mardin - Ömerli</option>
+                    <option value="2">Mardin - Savur</option>
+                    <option value="1">Mardin - Silopi</option>
+                        
+                    <option value="1">Muğla - Merkez</option>
+                    <option value="1">Muğla - Bodrum</option>
+                    <option value="1">Muğla - Dalaman</option>
+                    <option value="1">Muğla - Datça</option>
+                    <option value="1">Muğla - Fethiye</option>
+                    <option value="1">Muğla - Güllük</option>
+                    <option value="1">Muğla - Köyceğiz</option>
+                    <option value="1">Muğla - Marmaris</option>
+                    <option value="1">Muğla - Milas</option>
+                    <option value="1">Muğla - Ula</option>
+                    <option value="1">Muğla - Yatağan</option>
+                        
+                    <option value="3">Muş - Merkez</option>
+                    <option value="4">Muş - Bulanık</option>
+                    <option value="4">Muş - Malazgirt</option>
+                    <option value="4">Muş - Varto</option>
+                        
+                    <option value="1">Nevşehir - Merkez</option>
+                    <option value="1">Nevşehir - Avanos</option>
+                    <option value="1">Nevşehir - Derinkuyu</option>
+                    <option value="1">Nevşehir - Gülşehir</option>
+                    <option value="1">Nevşehir - Hacıbektaş</option>
+                    <option value="1">Nevşehir - Ürgüp</option>
+                        
+                    <option value="2">Niğde - Merkez</option>
+                    <option value="1">Niğde - Aksaray</option>
+                    <option value="2">Niğde - Bor</option>
+                    <option value="2">Niğde - Çamardı</option>
+                    <option value="2">Niğde - Ortaköy</option>
+                    <option value="2">Niğde - Ulukışla</option>
+                        
+                    <option value="3">Ordu - Merkez</option>
+                    <option value="3">Ordu - Akkuş</option>
+                    <option value="3">Ordu - Aybastı</option>
+                    <option value="3">Ordu - Fatsa</option>
+                    <option value="3">Ordu - Gölköy</option>
+                    <option value="3">Ordu - Korgan</option>
+                    <option value="3">Ordu - Kumru</option>
+                    <option value="3">Ordu - Mesudiye</option>
+                    <option value="3">Ordu - Perşembe</option>
+                    <option value="3">Ordu - Ulubey</option>
+                    <option value="3">Ordu - Ünye</option>
+                        
+                    <option value="4">Rize - Merkez</option>
+                    <option value="4">Rize - Ardeşen</option>
+                    <option value="4">Rize - Çamlıhemşin</option>
+                    <option value="4">Rize - Çayeli</option>
+                    <option value="4">Rize - Fındıklı</option>
+                    <option value="3">Rize - İkizdere</option>
+                    <option value="4">Rize - Pazar</option>
+                        
+                    <option value="2">Siirt - Merkez</option>
+                    <option value="2">Siirt - Batman</option>
+                    <option value="2">Siirt - Baykan</option>
+                    <option value="2">Siirt - Beşiri</option>
+                    <option value="4">Siirt - Eruh</option>
+                    <option value="2">Siirt - Kozluk</option>
+                    <option value="2">Siirt - Kurtalan</option>
+                    <option value="4">Siirt - Pervari</option>
+                    <option value="2">Siirt - Sason</option>
+                    <option value="4">Siirt - Şırnak</option>
+                    <option value="2">Siirt - Şirvan</option>
+                        
+                    <option value="3">Sinop - Merkez</option>
+                    <option value="3">Sinop - Ayancık</option>
+                    <option value="3">Sinop - Boyabat</option>
+                    <option value="3">Sinop - Durağan</option>
+                    <option value="3">Sinop - Gerze</option>
+                    <option value="3">Sinop - Türkeli</option>
+                        
+                    <option value="3">Sivas - Merkez</option>
+                    <option value="4">Sivas - Divriği</option>
+                    <option value="3">Sivas - Gemerek</option>
+                    <option value="3">Sivas - Gürün</option>
+                    <option value="3">Sivas - Hafik</option>
+                    <option value="3">Sivas - İmranlı</option>
+                    <option value="4">Sivas - Kangal</option>
+                    <option value="3">Sivas - Koyulhisar</option>
+                    <option value="3">Sivas - Suşehri</option>
+                    <option value="3">Sivas - Şarkışla</option>
+                    <option value="3">Sivas - Yıldızeli</option>
+                    <option value="3">Sivas - Zara</option>
+                        
+                    <option value="2">Tekirdağ - Merkez</option>
+                    <option value="2">Tekirdağ - Alpullu</option>
+                    <option value="2">Tekirdağ - Çorlu</option>
+                    <option value="2">Tekirdağ - Ganos</option>
+                    <option value="3">Tekirdağ - Hayrabolu</option>
+                    <option value="3">Tekirdağ - Malkara</option>
+                    <option value="2">Tekirdağ - Muratlı</option>
+                    <option value="2">Tekirdağ - Mürefte</option>
+                    <option value="2">Tekirdağ - Saray</option>
+                    <option value="2">Tekirdağ - Şarköy</option>
+                        
+                    <option value="3">Tokat - Merkez</option>
+                    <option value="3">Tokat - Almus</option>
+                    <option value="3">Tokat - Artova</option>
+                    <option value="3">Tokat - Erbaa</option>
+                    <option value="3">Tokat - Niksar</option>
+                    <option value="3">Tokat - Reşadiye</option>
+                    <option value="3">Tokat - Turhal</option>
+                    <option value="3">Tokat - Zile</option>
+                        
+                    <option value="4">Trabzon - Merkez</option>
+                    <option value="4">Trabzon - Akçaabat</option>
+                    <option value="4">Trabzon - Araklı</option>
+                    <option value="4">Trabzon - Arsin</option>
+                    <option value="3">Trabzon - Çaykara</option>
+                    <option value="4">Trabzon - Maçka</option>
+                    <option value="4">Trabzon - Of</option>
+                    <option value="4">Trabzon - Sürmene</option>
+                    <option value="4">Trabzon - Tonya</option>
+                    <option value="4">Trabzon - Vakfıkebir</option>
+                    <option value="4">Trabzon - Yomra</option>
+                        
+                    <option value="4">Tunceli - Merkez</option>
+                    <option value="4">Tunceli - Çemişgezek</option>
+                    <option value="4">Tunceli - Hozat</option>
+                    <option value="4">Tunceli - Kalan</option>
+                    <option value="4">Tunceli - Malazgirt</option>
+                    <option value="4">Tunceli - Nazimiye</option>
+                    <option value="4">Tunceli - Ovacık</option>
+                    <option value="4">Tunceli - Pertek</option>
+                    <option value="4">Tunceli - Pülümür</option>
+                        
+                    <option value="1">Şanlıurfa - Merkez</option>
+                    <option value="1">Şanlıurfa - Akçakale</option>
+                    <option value="1">Şanlıurfa - Birecik</option>
+                    <option value="1">Şanlıurfa - Bozova</option>
+                    <option value="1">Şanlıurfa - Ceylanpınar</option>
+                    <option value="2">Şanlıurfa - Hilvan</option>
+                    <option value="2">Şanlıurfa - Siverek</option>
+                    <option value="1">Şanlıurfa - Sürüç</option>
+                    <option value="1">Şanlıurfa - Viranşehir</option>
+                        
+                    <option value="2">Uşak - Merkez</option>
+                    <option value="2">Uşak - Banaz</option>
+                    <option value="2">Uşak - Eşme</option>
+                    <option value="2">Uşak - Karahallı</option>
+                    <option value="2">Uşak - Sivaslı</option>
+                    <option value="2">Uşak - Ulubey</option>
+                        
+                    <option value="4">Van - Merkez</option>
+                    <option value="4">Van - Başkale</option>
+                    <option value="4">Van - Çatak</option>
+                    <option value="4">Van - Gevaş</option>
+                    <option value="4">Van - Gürpınar</option>
+                    <option value="2">Van - Muradiye</option>
+                    <option value="2">Van - Özalp</option>
+                        
+                    <option value="3">Yozgat - Merkez</option>
+                    <option value="3">Yozgat - Akdağmadeni</option>
+                    <option value="1">Yozgat - Boğazköy</option>
+                    <option value="3">Yozgat - Boğazlıyan</option>
+                    <option value="3">Yozgat - Çayıralan</option>
+                    <option value="3">Yozgat - Çekerek</option>
+                    <option value="3">Yozgat - Sarıkaya</option>
+                    <option value="3">Yozgat - Sorgun</option>
+                    <option value="3">Yozgat - Şefaatli</option>
+                    <option value="3">Yozgat - Yerköy</option>
+                        
+                    <option value="3">Zonguldak - Merkez</option>
+                    <option value="3">Zonguldak - Amasra</option>
+                    <option value="3">Zonguldak - Bartın</option>
+                    <option value="3">Zonguldak - Çaycuma</option>
+                    <option value="3">Zonguldak - Devrek</option>
+                    <option value="4">Zonguldak - Eflani</option>
+                    <option value="3">Zonguldak - Ereğli</option>
+                    <option value="3">Zonguldak - Karabük</option>
+                    <option value="3">Zonguldak - Kilimli</option>
+                    <option value="3">Zonguldak - Kozlu</option>
+                    <option value="3">Zonguldak - Kurucaşile</option>
+                    <option value="4">Zonguldak - Safranbolu</option>
+                    <option value="3">Zonguldak - Ulus</option>
+                  
+                  
+                    </select>
+                   
+                </div>
+             </div></tr>
+                                                                    
+                                                                    
+                                                              
+                                                                    
+                          <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Rakım</b>
+                </div>
+                <div class="col" style="display: flex">
+                    
+                    <select id="rakim" size="1" class="custom-select custom-select-sm" data-live-search="true">
+                    <option value="0" selected="selected">≤ 200 m</option>
+                    <option value="1">300 m</option>
+                    <option value="2">400 m</option>
+                    <option value="3">500 m</option>
+                    <option value="4">600 m</option>
+                    <option value="5">700 m</option>
+                    <option value="6">800 m</option>
+                    <option value="7">900 m</option>
+                    <option value="8">1000 m</option>
+                    <option value="9">1500 m</option>
+                    <option value="10">≥ 1500 m</option>
+                        
+                  
+                  
+                    </select>
+                   
+                </div>
+             </div></tr>                            
+                  
+                                                                    
+                                                                    
+                                                                    
+                                                                    <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Arazi Durumu</b>
+                </div>
+                <div class="col" style="display: flex">
+                    
+                    <select id="ce" size="1" class="custom-select custom-select-sm" data-live-search="true">
+                    <option value="0.8">Rüzgara Açık</option>
+                    <option value="1">Normal</option>
+                    <option value="1.2" selected="selected">Korunmuş</option>
+                  
+                        
+                  
+                  
+                    </select><button 
+                                class="btn btn-outline-secondary info" 
+                                type="button" 
+                                data-toggle="modal" 
+                                data-target="#popup-arazi">?
+                        </button>
+                       
+                   
+                </div>
+             </div></tr>  
+                                          
+                                                                    
+                                                                    
+                                                                    
+                                                                    <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Buz Yükü</b>
+                </div>
+                <div class="col" style="display: flex">
+                    
+                    <select id="buzz" size="1" class="custom-select custom-select-sm" data-live-search="true">
+                    <option value="21.42" selected="selected">Dikkate Alınsın</option>
+                    <option value="0">Dikkate Alınmasın</option>
+                   
+                  
+                        
+                  
+                  
+                    </select><button 
+                                class="btn btn-outline-secondary info" 
+                                type="button" 
+                                data-toggle="modal" 
+                                data-target="#popup-buz">?
+                        </button>
+                       
+                   
+                </div>
+             </div></tr>  
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+<script>
+    
+    
+    
+    
+    function sinir1() {
+        
+        if (parseFloat(document.getElementById("egim1").value)>=173) {
+            
+            document.getElementById("egim1").value=173;
+        }
+        
+        else if (parseFloat(document.getElementById("egim1").value)<=0) {
+            
+            document.getElementById("egim1").value=1;
+        }
+        
+    }
+    
+    function sinir2() {
+        
+        if (parseFloat(document.getElementById("egim2").value)>=173) {
+            
+            document.getElementById("egim2").value=173;
+        }
+        
+        else if (parseFloat(document.getElementById("egim2").value)<=0) {
+            
+            document.getElementById("egim2").value=1;
+        }
+        
+    }
+    
+
+
+function hesaplar(){
+   
+   
+                  var bolgee=parseFloat(document.getElementById("bolge").value);
+                  var rakim=parseFloat(document.getElementById("rakim").value);
+                  var egim1=parseFloat(document.getElementById("egim1").value);
+                  var egim2=parseFloat(document.getElementById("egim2").value);
+                  var ce=parseFloat(document.getElementById("ce").value);
+                  var buzz=parseFloat(document.getElementById("buzz").value);
+                  
+                            var egim1kontrol = document.getElementById('egim1');  
+                            var egim2kontrol = document.getElementById('egim2');  
+    
+    if (egim1kontrol.value.length == 0 || egim2kontrol.value.length == 0) {
+        
+        document.getElementById("y11").value="LÜTFEN EĞİM DEĞERLERİNİ GİRİNİZ!";
+        document.getElementById("y12").value="LÜTFEN EĞİM DEĞERLERİNİ GİRİNİZ!";
+        document.getElementById("y13").value="LÜTFEN EĞİM DEĞERLERİNİ GİRİNİZ!";
+        document.getElementById("y21").value="LÜTFEN EĞİM DEĞERLERİNİ GİRİNİZ!";
+        document.getElementById("y22").value="LÜTFEN EĞİM DEĞERLERİNİ GİRİNİZ!";
+        document.getElementById("y23").value="LÜTFEN EĞİM DEĞERLERİNİ GİRİNİZ!";}
+    
+    
+    else  {
+                    
+                    var bolge11=[75,75,75,75,75,75,80,80,80,90,95];
+                    var	bolge22=[75,75,75,75,75,75,85,95,105,116,121];
+                    var	bolge33=[75,75,75,75,80,85,125,130,135,150,156];
+                    var	bolge44=[75,80,80,85,90,95,140,150,160,180,185];
+    
+    
+    
+                        if (bolgee==1) {
+                                
+                                bolge=bolge11;
+                            }
+    
+                            else if (bolgee==2) {
+                                
+                                bolge=bolge22;
+                            }
+                            
+                            else if (bolgee==3) {
+                                
+                                bolge=bolge33;
+                            }
+    
+                            else if (bolgee==4) {
+                                
+                                bolge=bolge44;
+                            }
+    
+    
+    
+    
+    
+    
+                    var alfa1=Math.atan(egim1/100);
+                    var alfad1=alfa1*(180/Math.PI);
+        
+                    var alfa2=Math.atan(egim2/100);
+                    var alfad2=alfa2*(180/Math.PI);
+        
+        
+    
+                    var sk=(bolge[rakim])*1.019716213;
+    
+    
+    
+    
+                    if (alfad1>=0 && alfad1<=30) {
+                        
+                        m1=0.8;
+                       
+                    }
+    
+                    else if (alfad1>30 && alfad1<60) {
+                        
+                        m1=0.8*((60-alfad1)/30);
+                    }
+    
+                    else if (alfad1>=60) {
+                        
+                        m1=0;
+                    }
+        
+        
+                    if (alfad2>=0 && alfad2<=30) {
+                        
+                       m2=0.8;
+                       
+                    }
+    
+                    else if (alfad2>30 && alfad2<60) {
+                        
+                        m2=0.8*((60-alfad2)/30);
+                    }
+    
+                    else if (alfad2>=60) {
+                        
+                        m2=0;
+                    }
+        
+        
+        
+                    var alfad3=0.5*(alfad1+alfad2);
+        
+                    if (alfad3>=0 && alfad3<=30) {
+                        
+                       m3=0.8+0.8*((alfad3/30));
+                       
+                    }
+    
+                    else if (alfad3>30 && alfad3<60) {
+                        
+                        m3=1.6;
+                    }
+    
+                    else if (alfad3>=60) {
+                        
+                        m3=31313131;
+                    }
+        
+        
+                    
+    
+    
+      
+        
+                    var s11=ce*sk*m1;
+                    var s12=ce*sk*m2;
+                    var s13=ce*sk*m3;
+        
+                    var yuk11=s11+buzz;
+                    var yuk12=s12+buzz;
+                    var yuk13=s13+buzz;
+        
+        
+       
+        
+        
+        
+        
+        
+    if (m3!=31313131) { 
+        
+        
+        document.getElementById("y11").value=yuk11.toFixed(2);
+        document.getElementById("y12").value=yuk12.toFixed(2);
+        document.getElementById("y13").value="-";
+
+        document.getElementById("y21").value=yuk11.toFixed(2);
+        document.getElementById("y22").value=yuk12.toFixed(2);
+        document.getElementById("y23").value=yuk13.toFixed(2);
+
+    
+                      
+                      }
+        
+        
+        else if (m3==31313131) {
+            
+            
+            document.getElementById("y11").value=yuk11.toFixed(2);
+        document.getElementById("y12").value=yuk12.toFixed(2);
+        document.getElementById("y13").value="-";
+
+        document.getElementById("y21").value=yuk11.toFixed(2);
+        document.getElementById("y22").value=yuk12.toFixed(2);
+        document.getElementById("y23").value="ÖZEL TASARIM GEREKLİDİR!";
+            
+            
+            
+            
+            
+        }
+    
+    
+   
+               
+                   
+                  
+              }}
+
+</script>
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                               
+
+                                                                                            
+
+
+                                                                                         
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                   
+             
+                 </tbody></table>
+        
+         </div>
+        
+        
+        
+        
+        
+        
+        <!-- BUTTON -->
+        
+        <div class="container">
+            <div style="text-align:center;" class="row">
+                <div class="col mt-3 mb-4">
+                    <button onclick="hesaplar()" class="btn btn-outline-danger" id="butonasik">Hesapla</button>
+                    </div>
+            </div>
+        </div>
+
+
+        
+       
+        
+         
+        
+        
+     
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--RESULTS-->
+        <br>
+        <div class="container">
+            <div class="row" mt-4 mb-3>
+                <b class="h4" style="margin-left: auto; margin-right: auto;" style="color:darkred">SONUÇ</b>
+            </div>
+        </div>
+        <br>
+        <br>
+        
+      
+        
+        <div class="container">
+            <table class="table table-striped table-bordered table-fixed text-center">
+            <thead class="thead-dark" style="background-color: black !important; color:white;">
+          <tr>
+        
+              
+              <td id="on">Durum</td>
+              <td id="on">YÜK 1 (kg/m<sup>2</sup>)</td>
+              <td id="on">YÜK 2 (kg/m<sup>2</sup>)</td>
+              <td id="on">YÜK 3 (kg/m<sup>2</sup>)</td>
+        
+        </tr></thead><tbody>
+                
+                <tr>
+        <td id="on">Durum 1</td>
+              <td id="on"><output id="y11" readonly=""></output></td>
+              <td id="on"><output id="y12" readonly=""></output></td>
+              <td id="on"><output id="y13" readonly=""></output></td>
+        
+        </tr>
+                
+                <tr>
+        <td id="on">Durum 2</td>
+              <td id="on"><output id="y21" readonly=""></output></td>
+              <td id="on"><output id="y22" readonly=""></output></td>
+              <td id="on"><output id="y23" readonly=""></output></td>
+        
+        </tr>
+                
+             
+                         
+                </tbody></table>
+             <br>
+            <br>
+            <br>
+        </div>
+        
+
+        
+   <script src="popper.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        
+        <script src="bootstrap-tooltip.js"></script>
+        <script src="fontawesome.min.js"></script>
+      
+                
+        
+    </body>
+</html>
