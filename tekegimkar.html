@@ -196,22 +196,38 @@
                                                                 <table class="table align-middle text-center">
                                                                 <tbody>
                                                                     <tr>
-                                                                    <td id="on">Rüzgara Açık</td>
+                                                                    <td id="on">Rüzgara AçıkNormal (C<sub>e</sub>) = 0.8</td>
                                                                     <td id="off2">Rüzgara açık topografik alanlar: her coğrafi yönden etkiye maruz kalan, arazi tarafından korunma
 imkanının olmadığı veya az olduğu daha yüksek yapıların veya ağaçların bulunmadığı engelsiz düz alanlar</td>
                                                                     </tr>
                                                                     
                                                                     <tr>
-                                                                    <td id="on">Normal</td>
+                                                                    <td id="on">Normal (C<sub>e</sub>) = 1.0</td>
                                                                     <td id="off2">Normal topografik alanlar: rüzgarın yapı üzerine etkisiyle kar kütlesinin,arazi, diğer yapılar ve ağaçlar
 sebebiyle önemli bir değişime uğramadığı alanlar</td>
                                                                     </tr>
                                                                     
                                                                     <tr>
-                                                                    <td id="on">Korunmuş</td>
+                                                                    <td id="on">Korunmuş (C<sub>e</sub>) = 1.2</td>
                                                                     <td id="off2">Korunmuş topografik alanlar: dikkate alınan yapının yüksekliğinin önemli ölçüde çevre arazisinden veya
 çevresindeki yüksek ağaçlardan ve/veya çevresindeki daha yüksek yapılardan düşük olduğu alanlar</td>
                                                                     </tr>
+                                                                    
+                                                                 
+
+                                                                    
+                                                                    </tbody></table>
+                                                                            
+                                                                            
+                                                                            <table class="table align-middle text-center">
+                                                                <tbody>
+                                                                    <tr>
+                                                                    <td id="on">Maruz kalma katsayısı Ce çatı kar yükünün belirlenmesinde kullanılmalıdır. Ce değerini seçerken bölgede
+daha ileride olabilecek değişimler göz önünde bulundurulmalıdır. Farklı topografik bölgeler için özel değerler
+ifade edilmedikçe Ce değeri 1.0 alınmalıdır.</td>
+                                                                  
+                                                                    </tr>
+                                                                
                                                                     
                                                                  
 
@@ -246,7 +262,7 @@ sebebiyle önemli bir değişime uğramadığı alanlar</td>
                                                                     <td id="on">Mutlaka buz yükü değeri hesaba katılması gerekiyorsa ve bunun için elde yeterli veri yoksa, buzlanma
 tehlikesine maruz kalacak bölgelerde deniz seviyesinden 400 m ve daha yüksekteki yerler için
 buzlanmaya maruz kalacak yapı elemanlarının bütün yüzeylerinin 3 cm kalınlıkta buz ile kaplı olduğu
-kabul edilir. Buz birim hacim ağırlığı 714 kg/m<sup>3</sup>
+kabul edilir. Buz birim hacim ağırlığı 900 kg/m<sup>3</sup>
  alınır. </td>
                                                                     
                                                                     </tr>
@@ -728,6 +744,14 @@ kabul edilir. Buz birim hacim ağırlığı 714 kg/m<sup>3</sup>
                     <option value="2">İzmit - Karamürsel</option>
                     <option value="3">İzmit - Kaynarca</option>
                         
+                    <option value="3">Kahramanmaraş - Merkez</option>
+                    <option value="3">Kahramanmaraş - Afşin</option>
+                    <option value="3">Kahramanmaraş - Andirin</option>
+                    <option value="3">Kahramanmaraş - Elbistan</option>
+                    <option value="3">Kahramanmaraş - Göksun</option>
+                    <option value="3">Kahramanmaraş - Pazarcık</option>
+                    <option value="3">Kahramanmaraş - Türkoğlu</option>
+                        
                     <option value="4">Kars - Merkez</option>
                     <option value="2">Kars - Aralık</option>
                     <option value="4">Kars - Ardahan</option>
@@ -843,13 +867,7 @@ kabul edilir. Buz birim hacim ağırlığı 714 kg/m<sup>3</sup>
                     <option value="1">Manisa - Soma</option>
                     <option value="1">Manisa - Turgutlu</option>
                         
-                    <option value="3">Kahramanmaraş - Merkez</option>
-                    <option value="3">Kahramanmaraş - Afşin</option>
-                    <option value="3">Kahramanmaraş - Andirin</option>
-                    <option value="3">Kahramanmaraş - Elbistan</option>
-                    <option value="3">Kahramanmaraş - Göksun</option>
-                    <option value="3">Kahramanmaraş - Pazarcık</option>
-                    <option value="3">Kahramanmaraş - Türkoğlu</option>
+                    
                         
                     <option value="2">Mardin - Merkez</option>
                     <option value="1">Mardin - Cizre</option>
@@ -949,6 +967,16 @@ kabul edilir. Buz birim hacim ağırlığı 714 kg/m<sup>3</sup>
                     <option value="3">Sivas - Yıldızeli</option>
                     <option value="3">Sivas - Zara</option>
                         
+                    <option value="1">Şanlıurfa - Merkez</option>
+                    <option value="1">Şanlıurfa - Akçakale</option>
+                    <option value="1">Şanlıurfa - Birecik</option>
+                    <option value="1">Şanlıurfa - Bozova</option>
+                    <option value="1">Şanlıurfa - Ceylanpınar</option>
+                    <option value="2">Şanlıurfa - Hilvan</option>
+                    <option value="2">Şanlıurfa - Siverek</option>
+                    <option value="1">Şanlıurfa - Sürüç</option>
+                    <option value="1">Şanlıurfa - Viranşehir</option>
+                        
                     <option value="2">Tekirdağ - Merkez</option>
                     <option value="2">Tekirdağ - Alpullu</option>
                     <option value="2">Tekirdağ - Çorlu</option>
@@ -991,15 +1019,7 @@ kabul edilir. Buz birim hacim ağırlığı 714 kg/m<sup>3</sup>
                     <option value="4">Tunceli - Pertek</option>
                     <option value="4">Tunceli - Pülümür</option>
                         
-                    <option value="1">Şanlıurfa - Merkez</option>
-                    <option value="1">Şanlıurfa - Akçakale</option>
-                    <option value="1">Şanlıurfa - Birecik</option>
-                    <option value="1">Şanlıurfa - Bozova</option>
-                    <option value="1">Şanlıurfa - Ceylanpınar</option>
-                    <option value="2">Şanlıurfa - Hilvan</option>
-                    <option value="2">Şanlıurfa - Siverek</option>
-                    <option value="1">Şanlıurfa - Sürüç</option>
-                    <option value="1">Şanlıurfa - Viranşehir</option>
+                   
                         
                     <option value="2">Uşak - Merkez</option>
                     <option value="2">Uşak - Banaz</option>
@@ -1114,7 +1134,7 @@ kabul edilir. Buz birim hacim ağırlığı 714 kg/m<sup>3</sup>
                 <div class="col" style="display: flex">
                     
                     <select id="buzz" size="1" class="custom-select custom-select-sm" data-live-search="true">
-                    <option value="21.42" selected="selected">Dikkate Alınsın</option>
+                    <option value="27" selected="selected">Dikkate Alınsın</option>
                     <option value="0">Dikkate Alınmasın</option>
                    
                   
