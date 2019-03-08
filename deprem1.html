@@ -1,0 +1,2925 @@
+<!DOCTYPE html>
+<html lang="tr">
+    
+    
+    
+    
+    
+    
+    
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+        
+        <link rel="stylesheet" type="text/css" href="fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        
+<script src="jquery-3.3.1.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      
+        <style>.container {font-size:14px;}
+            .btn-xs {padding:2px; font-size:12px;}</style>
+        
+        
+    </head>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <title>
+        TBDY 2019 - Temel Bilgiler
+    </title>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <body>
+        
+        <!-- NAVIGATION BAR -->
+        
+        <nav id="bg-light" class="mt-0 asdnav navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+                       
+                                  <a class="navbar-brand" id="navbar-brand" href="#" style="font-size:12px;">TBDY 2019 - Temel Bilgiler</a>
+                       
+                                  <button class="navbar-toggler float-right white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span id="log" style="color:white;">&#9776</span>
+                                  </button>
+                       
+                                  <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
+                                      
+                                            <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Rüzgar Yükleri (TS EN 1991-1-4)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="index.html">Yapı Yüzeyine Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="tekegimruzgar.html">Tek Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="ciftegimruzgar.html">Çift Eğimli Çatılara Etkiyen Rüzgar Yükleri</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Kar Yükleri (TS EN 1991-1-3)
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="tekegimkar.html">Tek Eğimli Çatılara Etkiyen Kar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="ciftegimkar.html">Çift Eğimli Çatılara Etkiyen Kar Yükleri</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="cokegimkar.html">Çok Eğimli Çatılara Etkiyen Kar Yükleri</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2 active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Hesaplar
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="asik.html">Aşık Hesabı</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item active" href="#">TBDY 2019 - Temel Bilgiler</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Birim Çevirme
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="birim.html">Kuvvet</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="basinc.html">Gerilme</a>
+                                                  <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="uzunluk.html">Uzunluk</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="alan.html">Alan</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="hacim.html">Hacim</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="yogunluk.html">Yoğunluk</a>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Teknik Bilgiler
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog.html">Yapı Malzemelerinin Birim Hacim Ağırlıkları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="malyog2.html">Başlıca Malzeme Yoğunlukları</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="beton.html">Beton</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="civata.html">Cıvatalar</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                      
+                                      <ul class="navbar-nav" style="font-size:12px;">
+                                              
+                                                
+                                              <li class="nav-item dropdown" style="font-size:12px;">
+                                                <a id="navbeyaz"  class="nav-link dropdown-toggle pl-2" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Profil Tabloları
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="h.html">H Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="i.html">I Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="u.html">U Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="dikdortgen.html">Dikdörtgen Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="kare.html">Kare Kutu Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="boru.html">Boru Profiller</a>
+                                                    <a style="font-size:12px;" id="navbeyaz"  class="dropdown-item" href="kosebent.html">Köşebentler</a>
+                                                  
+                                                </div>
+                                              </li>
+                                            </ul>
+                                  </div>
+</nav>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- POPUPS -->
+        
+      
+        <div class="modal fade align-middle" id="popup-hn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog align-middle" role="document">
+                <div class="modal-content align-middle">
+                    <div class="modal-body align-middle">
+                       
+                                                                      <div class="container align-middle">
+                                                                <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    <tr><td>
+                                                                    3.3.1. Bina Tabanı ve Bina Yüksekliği</td>
+                                                                    </tr>
+                                                                    
+                                                                    <tr><td>
+                                                                    3.3.1.1 – Aşağıda (a) ve (b)’de verilen koşulların her ikisini de sağlayan bodrumlu binalar’da
+bina tabanı, bodrum perdelerinin üst kotundaki kat döşemesi seviyesinde tanımlanır.
+                                                                   </td> </tr>
+                                                                    
+                                                                    <tr><td>
+                                                                    (a) Rijit bodrum perdelerinin binayı her taraftan veya en az üç taraftan çevrelemesi,
+                                                                   </td> </tr>
+                                                                    
+                                                                    <tr><td>
+                                                                    (b) Birbirine dik bina eksenlerinin herbirinin doğrultusundaki hakim titreşim modunda, bodrum
+katlar dahil binanın tümü için hesaplanan doğal titreşim periyodu’nun, aynı taşıyıcı sistemde
+zemin kat döşemesi dahil tüm bodrum kütleleri hesaba katılmaksızın aynı doğrultuda
+hesaplanan doğal titreşim periyodu’na oranının 1.1’den küçük olması (T<sub>p,tüm</sub> ≤1.1 T<sub>p,üst</sub> ).
+                                                                   </td> </tr>
+                                                                    
+                                                                    <tr><td>
+                                                                    3.3.1.2 – 3.3.1.1’de verilen koşullardan herhangi birini sağlamayan bodrumlu binalar ve
+bodrumsuz binalar’da bina tabanı temel üst kotunda tanımlanır.
+                                                                  </td>  </tr>
+                                                                    
+                                                                    <tr><td>
+                                                                        3.3.1.3 – Deprem hesabı bakımından bina yüksekliği H<sub>N</sub> , 3.3.1.1 veya 3.3.1.2’ye göre
+tanımlanan bina tabanı’ndan itibaren ölçülen yükseklik olarak tanımlanır. Bu tanımda, çatı
+döşemesinin üzerinde yer alan asansör makine dairesi ve benzeri küçük kütleli uzantılar dikkate
+alınmayabilir.
+                                                                 </td>   </tr>
+                                                                    
+                                                                 
+
+                                                                    
+                                                                    </tbody></table>
+                                                                            
+                                                                            
+                                                               
+                                                                  
+                                                                            
+                                                                
+                                                            </div>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="modal fade align-middle" id="popup-n" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog align-middle" role="document">
+                <div class="modal-content align-middle">
+                    <div class="modal-body align-middle">
+                       
+                                                                      <div class="container align-middle">
+                                                                          
+                                                                          
+                                                                          <table class="table table-fixed align-middle text-center table-bordered table-striped">
+                                                                              <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                              <tr><td>
+                                                                    Binanın Kullanım Amacı</td>
+                                                                                  <td>
+                                                                    n</td>
+                                                                    </tr>
+                                                                              </thead>
+                                                                              
+                                                                          
+                                                                
+                                                                <tbody>
+                                                                    <tr><td>
+                                                                    Depo, antrepo, vb.</td>
+                                                                        <td>
+                                                                    0.8</td>
+                                                                    </tr>
+                                                                    <tr><td>
+                                                                    Okul, öğrenci yurdu, spor tesisi, sinema, tiyatro, konser
+salonu, ibadethane, lokanta, mağaza, vb.</td>
+                                                                        <td>
+                                                                    0.6</td>
+                                                                    </tr>
+                                                                     <tr><td>
+                                                                    Konut, işyeri, otel, hastane, otopark, vb.</td>
+                                                                        <td>
+                                                                    0.3</td>
+                                                                    </tr>
+                                                                    
+                                                             
+                                                                    
+                                                                 
+
+                                                                    
+                                                                    </tbody></table>
+                                                                            
+                                                                            
+                                                               
+                                                                  
+                                                                            
+                                                                
+                                                            </div>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+         <div class="modal fade align-middle" id="popup-bks" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog align-middle" role="document">
+                <div class="modal-content align-middle">
+                    <div class="modal-body align-middle">
+                       
+                                                                      <div class="container align-middle">
+                                                                <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;"><tr><td>
+                                                                   Bina Kullanım Sınıfı
+                                                                        </td>
+                                                                        <td>
+                                                                    Binanın Kullanım Amacı
+                                                                        </td>
+                                                                        <td>
+                                                                    Bina Önem Katsayısı (I)
+                                                                        </td>
+                                                                    </tr></thead>
+                                                                    
+                                                                    
+                                                                    <tr><td>
+                                                                   BKS=1
+                                                                        </td>
+                                                                        <td>
+                                                                    Deprem sonrası kullanımı gereken binalar,
+insanların uzun süreli ve yoğun olarak
+bulunduğu binalar, değerli eşyanın saklandığı
+binalar ve tehlikeli madde içeren binalar
+a) Deprem sonrasında hemen kullanılması gerekli
+binalar (Hastaneler, dispanserler, sağlık ocakları,
+itfaiye bina ve tesisleri, PTT ve diğer haberleşme
+tesisleri, ulaşım istasyonları ve terminalleri, enerji
+üretim ve dağıtım tesisleri, vilayet, kaymakamlık
+ve belediye yönetim binaları, ilk yardım ve afet
+planlama istasyonları)
+b) Okullar, diğer eğitim bina ve tesisleri, yurt ve
+yatakhaneler, askeri kışlalar, cezaevleri, vb.
+c) Müzeler
+d) Toksik, patlayıcı, parlayıcı, vb. özellikleri olan
+maddelerin bulunduğu veya depolandığı binalar
+                                                                        </td>
+                                                                        <td>
+                                                                    1.5
+                                                                        </td>
+                                                                    </tr>
+                                                                    
+                                                                    
+                                                                    <tr><td>
+                                                                   BKS=2
+                                                                        </td>
+                                                                        <td>
+                                                                   İnsanların kısa süreli ve yoğun olarak
+bulunduğu binalar
+Alışveriş merkezleri, spor tesisleri, sinema, tiyatro,
+konser salonları, ibadethaneler, vb.
+                                                                        </td>
+                                                                        <td>
+                                                                    1.2
+                                                                        </td>
+                                                                    </tr>
+                                                                    
+                                                                    
+                                                                    <tr><td>
+                                                                   BKS=3
+                                                                        </td>
+                                                                        <td>
+                                                                   Diğer binalar
+BKS=1 ve BKS=2 için verilen tanımlara girmeyen
+diğer binalar (Konutlar, işyerleri, oteller, bina türü
+endüstri yapıları, vb.)
+                                                                        </td>
+                                                                        <td>
+                                                                    1.0
+                                                                        </td>
+                                                                    </tr>
+                                                               
+                                                                    
+                                                                 
+
+                                                                    
+                                                                    </tbody></table>
+                                                                            
+                                                                            
+                                                               
+                                                                  
+                                                                            
+                                                                
+                                                            </div>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <div class="modal fade align-middle" id="popup-zemin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog align-middle" role="document">
+                <div class="modal-content align-middle">
+                    <div class="modal-body align-middle">
+                       
+                                                                      <div class="container align-middle">
+                                                                <table class="table align-middle text-center table-bordered table-striped" style="font-size: 1.8vh !important;">
+                                                                <tbody>
+                                                                    
+                                                                    
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;"><tr><td rowspan="2">
+                                                                   Yerel Zemin Sınıfı
+                                                                        </td>
+                                                                        <td rowspan="2">
+                                                                    Zemin Cinsi
+                                                                        </td>
+                                                                        <td colspan="3">
+                                                                    Üst 30 metrede ortalama
+                                                                        </td>
+                                                                    </tr>
+                                                                    
+                                                                    <tr><td>
+                                                                        (V<sub>S</sub>)<sub>30</sub> [m/s]
+                                                                        </td>
+                                                                        <td>
+                                                                    (N<sub>60</sub>)<sub>30</sub> [darbe/30 cm]
+                                                                        </td>
+                                                                        <td>
+                                                                    (c<sub>u</sub>)<sub>30</sub> [kPa]
+                                                                        </td>
+                                                                        </tr></thead>
+                                                                    
+                                                                    
+                                                                    <tr><td>
+                                                                        ZA
+                                                                        </td>
+                                                                        <td>
+                                                                    Sağlam, sert kayalar
+                                                                        </td>
+                                                                        <td>
+                                                                    > 1500
+                                                                        </td>
+                                                                        <td>
+                                                                    –
+                                                                        </td> 
+                                                                        <td>
+                                                                    –
+                                                                        </td>
+                                                                    </tr>
+                                                                    
+                                                                    
+                                                                    <tr><td>
+                                                                        ZB
+                                                                        </td>
+                                                                        <td>
+                                                                    Az ayrışmış, orta sağlam kayalar
+                                                                        </td>
+                                                                        <td>
+                                                                    760 – 1500
+                                                                        </td>
+                                                                        <td>
+                                                                    –
+                                                                        </td> 
+                                                                        <td>
+                                                                    –
+                                                                        </td>
+                                                                    </tr>
+                                                                    
+                                                                    
+                                                                    <tr><td>
+                                                                        ZC
+                                                                        </td>
+                                                                        <td>
+                                                                    Çok sıkı kum, çakıl ve sert kil tabakaları veya
+ayrışmış, çok çatlaklı zayıf kayalar
+                                                                        </td>
+                                                                        <td>
+                                                                    360 – 760
+                                                                        </td>
+                                                                        <td>
+                                                                    > 50
+                                                                        </td> 
+                                                                        <td>
+                                                                    > 250
+                                                                        </td>
+                                                                    </tr>
+                                                                    
+                                                                    <tr><td>
+                                                                        ZD
+                                                                        </td>
+                                                                        <td>
+                                                                    Orta sıkı – sıkı kum, çakıl veya çok katı kil
+tabakaları
+                                                                        </td>
+                                                                        <td>
+                                                                    180 – 360
+                                                                        </td>
+                                                                        <td>
+                                                                    15 - 50
+                                                                        </td> 
+                                                                        <td>
+                                                                    70 - 250
+                                                                        </td>
+                                                                    </tr>
+                                                                    
+                                                                    <tr><td>
+                                                                        ZE
+                                                                        </td>
+                                                                        <td>
+                                                                    Gevşek kum, çakıl veya yumuşak – katı kil
+tabakaları veya
+PI > 20 ve w > % 40 koşullarını sağlayan
+toplamda 3 metreden daha kalın yumuşak kil
+tabakası (c<sub>u</sub> &lt; 25 kPa) içeren profiller
+                                                                        </td>
+                                                                        <td>
+                                                                    &lt; 180
+                                                                        </td>
+                                                                        <td>
+                                                                    &lt; 15
+                                                                        </td> 
+                                                                        <td>
+                                                                    &lt; 70
+                                                                        </td>
+                                                                    </tr>
+                                                                    
+                                                                    
+                                                                    <tr><td>
+                                                                        ZF
+                                                                        </td>
+                                                                        <td colspan="4">
+                                                               Sahaya özel araştırma ve değerlendirme gerektiren zeminler:
+<p>1) Deprem etkisi altında çökme ve potansiyel göçme riskine sahip zeminler (sıvılaşabilir zeminler,
+yüksek derecede hassas killer, göçebilir zayıf çimentolu zeminler vb.),</p>
+<p>2) Toplam kalınlığı 3 metreden fazla turba ve/veya organik içeriği yüksek killer,</p>
+<p>3) Toplam kalınlığı 8 metreden fazla olan yüksek plastisiteli (PI >50) killer,</p>
+<p>4) Çok kalın (> 35 m) yumuşak veya orta katı killer.</p>
+                                                                        </td>
+                                                                                                                                          </tr>
+                                                                    
+                                                                    
+                                                                   
+                                                               
+                                                                    
+                                                                 
+
+                                                                    
+                                                                    </tbody></table>
+                                                                            
+                                                                            
+                                                               
+                                                                  
+                                                                            
+                                                                
+                                                            </div>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="modal fade align-middle" id="popup-r" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog align-middle" role="document">
+                <div class="modal-content align-middle">
+                    <div class="modal-body align-middle">
+                       
+                                                                      <div class="container align-middle">
+                                                                
+                                                                    <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;"><tr><td>A. YERİNDE DÖKME BETONARME BİNA TAŞIYICI SİSTEMLERİ</td></tr>
+                                                                        
+                                                                        <tr><td>A1. Süneklik Düzeyi Yüksek Taşıyıcı Sistemler</td></tr></thead></table>
+                                                                    
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    
+                                                                    <tr>
+                                                                        <td>A11. Deprem etkilerinin tamamının moment aktaran süneklik düzeyi
+yüksek betonarme çerçevelerle karşılandığı binalar</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>A12. Deprem etkilerinin tamamının süneklik düzeyi yüksek bağ kirişli
+(boşluklu) betonarme perdelerle karşılandığı binalar</td>
+                                                                       
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>A13. Deprem etkilerinin tamamının süneklik düzeyi yüksek boşluksuz
+betonarme perdelerle karşılandığı binalar</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>A14. Deprem etkilerinin moment aktaran süneklik düzeyi yüksek
+betonarme çerçeveler ile süneklik düzeyi yüksek bağ kirişli (boşluklu)
+betonarme perdeler tarafından birlikte karşılandığı binalar</td>
+                                                                       
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>A15. Deprem etkilerinin moment aktaran süneklik düzeyi yüksek
+betonarme çerçeveler ile süneklik düzeyi yüksek boşluksuz betonarme
+perdeler tarafından birlikte karşılandığı binalar</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>A16. Deprem etkilerinin tamamının çatı düzeyindeki bağlantıları
+mafsallı olan ve yüksekliği 12 m’yi geçmeyen süneklik düzeyi yüksek
+betonarme kolonlar tarafından karşılandığı tek katlı binalar</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    </tbody></table>
+                                                                          
+                                                                           <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>A2. Süneklik Düzeyi Karma Taşıyıcı Sistemler</td></tr></thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>A21. Deprem etkilerinin moment aktaran süneklik düzeyi sınırlı
+betonarme çerçeveler ile süneklik düzeyi yüksek bağ kirişli (boşluklu)
+betonarme perdeler tarafından birlikte karşılandığı binalar</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>A22. Deprem etkilerinin moment aktaran süneklik düzeyi sınırlı
+betonarme çerçeveler ile süneklik düzeyi yüksek boşluksuz betonarme
+perdeler tarafından birlikte karşılandığı binalar</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>A23. Deprem etkilerinin moment aktaran süneklik düzeyi sınırlı
+dolgulu (asmolen) veya dolgusuz tek doğrultulu dişli döşemeli
+betonarme çerçeveler ile süneklik düzeyi yüksek bağ kirişli (boşluklu)
+betonarme perdeler tarafından birlikte karşılandığı binalar</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>A24. Deprem etkilerinin moment aktaran süneklik düzeyi sınırlı
+dolgulu (asmolen) veya dolgusuz tek doğrultulu dişli döşemeli
+betonarme çerçeveler ile süneklik düzeyi yüksek boşluksuz betonarme
+perdeler tarafından birlikte karşılandığı binalar</td>
+                                                                       
+                                                                    </tr>
+                                                                    
+                                                                   </tbody></table>
+                                                               
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>A3. Süneklik Düzeyi Sınırlı Taşıyıcı Sistemler</td></tr></thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>A31. Deprem etkilerinin tamamının moment aktaran süneklik düzeyi
+sınırlı betonarme çerçevelerle karşılandığı binalar</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>A32. Deprem etkilerinin tamamının süneklik düzeyi sınırlı boşluksuz
+betonarme perdelerle karşılandığı binalar</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>A33. Deprem etkilerinin moment aktaran süneklik düzeyi sınırlı
+betonarme çerçeveler ile süneklik düzeyi sınırlı boşluksuz betonarme
+perdeler tarafından birlikte karşılandığı binalar</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    
+                                                                    
+                                                                   </tbody></table>
+                                                               
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>B. ÖNÜRETİMLİ BETONARME BİNA TAŞIYICI SİSTEMLERİ</td></tr> 
+                                                                        <tr><td>B1. Süneklik Düzeyi Yüksek Taşıyıcı Sistemler</td></tr></thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>B111. Deprem etkilerinin tamamının bağlantıları moment aktaran
+süneklik düzeyi yüksek önüretimli çerçevelerle karşılandığı binalar.
+MAB1, MAB2 tipi moment aktaran bağlantılar:</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>B112. Deprem etkilerinin tamamının bağlantıları moment aktaran
+süneklik düzeyi yüksek önüretimli çerçevelerle karşılandığı binalar.
+MAB3, MAB4 tipi moment aktaran bağlantılar:</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>B121. Deprem etkilerinin bağlantıları moment aktaran süneklik düzeyi
+yüksek önüretimli çerçeveler ile, süneklik düzeyi yüksek yerinde dökme
+bağ kirişli (boşluklu) betonarme perdeler tarafından birlikte
+karşılandığı binalar.
+MAB1, MAB2 tipi moment aktaran bağlantılar:</td>
+                                                                       
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>B122. Deprem etkilerinin bağlantıları moment aktaran süneklik düzeyi
+yüksek önüretimli çerçeveler ile, süneklik düzeyi yüksek yerinde dökme
+bağ kirişli (boşluklu) betonarme perdeler tarafından birlikte
+karşılandığı binalar.
+MAB3, MAB4 tipi moment aktaran bağlantılar:</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                    
+                                                                     <tr>
+                                                                        <td>B131. Deprem etkilerinin bağlantıları moment aktaran süneklik düzeyi
+yüksek önüretimli çerçeveler ile, süneklik düzeyi yüksek yerinde dökme
+boşluksuz betonarme perdeler tarafından birlikte karşılandığı binalar.
+MAB1, MAB2 tipi moment aktaran bağlantılar:</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>B132. Deprem etkilerinin bağlantıları moment aktaran süneklik düzeyi
+yüksek önüretimli çerçeveler ile, süneklik düzeyi yüksek yerinde dökme
+boşluksuz betonarme perdeler tarafından birlikte karşılandığı binalar.
+MAB3, MAB4 tipi moment aktaran bağlantılar:</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>B14. Düşey yüklerin bağlantıları mafsallı önüretimli ve iki doğrultulu
+çerçeveler ile, deprem etkilerinin tamamının ise süneklik düzeyi yüksek
+yerinde dökme boşluksuz ve/veya bağ kirişli (boşluklu) betonarme
+perdelerle karşılandığı binalar</td>
+                                                                       
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>B15. Deprem etkilerinin tamamının çatı düzeyindeki bağlantıları
+mafsallı olan ve yüksekliği 12 m’yi geçmeyen süneklik düzeyi yüksek
+kolonlar tarafından karşılandığı tek katlı binalar</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                   </tbody></table>
+                                                               
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>B2. Süneklik Düzeyi Karma Taşıyıcı Sistemler</td></tr></thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>B211. Deprem etkilerinin bağlantıları moment aktaran süneklik düzeyi
+sınırlı önüretimli çerçeveler ile, süneklik düzeyi yüksek yerinde dökme
+bağ kirişli (boşluklu) veya boşluksuz betonarme perdeler tarafından
+birlikte karşılandığı binalar.
+MAB1, MAB2 tipi moment aktaran bağlantılar:</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>B212. Deprem etkilerinin bağlantıları moment aktaran süneklik düzeyi
+sınırlı önüretimli çerçeveler ile, süneklik düzeyi yüksek yerinde dökme
+bağ kirişli (boşluklu) veya boşluksuz betonarme perdeler tarafından
+birlikte karşılandığı binalar.
+MAB3, MAB4 tipi moment aktaran bağlantılar:</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                   
+                                                                    
+                                                                   </tbody></table>
+                                                               
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>B3. Süneklik Düzeyi Sınırlı Taşıyıcı Sistemler</td></tr></thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>B31. Deprem etkilerinin tamamının bağlantıları moment aktaran
+süneklik düzeyi sınırlı önüretimli çerçevelerle karşılandığı binalar</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>B32. Deprem etkilerinin bağlantıları moment aktaran süneklik düzeyi
+sınırlı önüretimli çerçeveler ile, yerinde dökme süneklik düzeyi sınırlı
+boşluksuz betonarme perdeler tarafından birlikte karşılandığı binalar</td>
+                                                                       
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>B33. Deprem yüklerinin tamamının önüretimli betonarme düşey çift
+cidarlı paneller tarafından karşılandığı süneklik düzeyi sınırlı binalar</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>B34. Deprem yüklerinin tamamının önüretimli betonarme düşey tek
+cidarlı paneller tarafından karşılandığı süneklik düzeyi sınırlı binalar</td>
+                                                                     
+                                                                    </tr>
+                                                                    
+                                                                   </tbody></table>
+                                                               
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>C. ÇELİK BİNA TAŞIYICI SİSTEMLERİ</td></tr>
+                                                                            <tr><td>C1. Süneklik Düzeyi Yüksek Taşıyıcı Sistemler</td></tr>  </thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>C11. Deprem etkilerinin tamamının moment aktaran süneklik düzeyi
+yüksek çelik çerçevelerle karşılandığı binalar</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>C12. Deprem etkilerinin tamamının süneklik düzeyi yüksek dışmerkez
+veya burkulması önlenmiş merkezi çaprazlı çelik çerçeveler tarafından
+karşılandığı binalar</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>C13. Deprem etkilerinin tamamının süneklik düzeyi yüksek merkezi
+çaprazlı çelik çerçeveler tarafından karşılandığı binalar</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>C14. Deprem etkilerinin moment aktaran süneklik düzeyi yüksek çelik
+çerçeveler ile süneklik düzeyi yüksek dışmerkez veya burkulması
+önlenmiş merkezi çaprazlı çelik çerçeveler veya süneklik düzeyi
+yüksek bağ kirişli (boşluklu) betonarme perdeler tarafından birlikte
+karşılandığı binalar</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>C15. Deprem etkilerinin moment aktaran süneklik düzeyi yüksek çelik
+çerçeveler ile süneklik düzeyi yüksek merkezi çaprazlı çelik çerçeveler
+veya süneklik düzeyi yüksek boşluksuz betonarme perdeler tarafından
+birlikte karşılandığı binalar</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>C16. Deprem etkilerinin tamamının çatı düzeyindeki bağlantıları
+mafsallı olan ve yüksekliği 12 m’yi geçmeyen süneklik düzeyi yüksek
+çelik kolonlar tarafından karşılandığı tek katlı binalar</td>
+                                                                     
+                                                                    </tr>
+                                                                    
+                                                                 
+                                                                    
+                                                                   </tbody></table>
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>C2. Süneklik Düzeyi Karma Taşıyıcı Sistemler</td></tr></thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>C21. Deprem etkilerinin moment aktaran süneklik düzeyi sınırlı çelik
+çerçeveler ile süneklik düzeyi yüksek dışmerkez veya burkulması
+önlenmiş merkezi çaprazlı çelik çerçeveler veya süneklik düzeyi
+yüksek bağ kirişli (boşluklu) betonarme perdeler tarafından birlikte
+karşılandığı binalar</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>C22. Deprem etkilerinin moment aktaran süneklik düzeyi sınırlı çelik
+çerçeveler ile süneklik düzeyi yüksek merkezi çaprazlı çelik çerçeveler
+veya süneklik düzeyi yüksek boşluksuz betonarme perdeler tarafından
+birlikte karşılandığı binalar</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                
+                                                                    
+                                                                   </tbody></table>
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>C3. Süneklik Düzeyi Sınırlı Taşıyıcı Sistemler</td></tr></thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>C31. Deprem etkilerinin tamamının moment aktaran süneklik düzeyi
+sınırlı çelik çerçevelerle karşılandığı binalar</td>
+                                                                    
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>C32. Deprem etkilerinin tamamının süneklik düzeyi sınırlı merkezi
+çaprazlı çelik çerçevelerle karşılandığı binalar</td>
+                                                                    
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>C33. Deprem etkilerinin moment aktaran süneklik düzeyi sınırlı çelik
+çerçeveler ile süneklik düzeyi sınırlı merkezi çaprazlı çelik çerçeveler
+tarafından birlikte karşılandığı binalar</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                
+                                                                    
+                                                                   </tbody></table>
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>D. HAFİF ÇELİK BİNA TAŞIYICI SİSTEMLERİ</td></tr>
+                                                                           <tr><td>D1. Süneklik Düzeyi Yüksek Taşıyıcı Sistemler</td></tr>   </thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>D11. Deprem etkilerinin tamamının vidalı, bulonlu sac, OSB veya kontrplak
+(plywood) duvar panelleri ile karşılandığı süneklik düzeyi yüksek hafif
+çelik binalar</td>
+                                                                        
+                                                                    </tr>
+                                                                    
+                                                                
+                                                                    
+                                                                   </tbody></table>
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>D2. Süneklik Düzeyi Sınırlı Taşıyıcı Sistemler</td></tr></thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>D21. Deprem etkilerinin tamamının alçı levhalar içeren kaplamalı veya
+çaprazlı panellerle karşılandığı süneklik düzeyi sınırlı hafif çelik
+binalar</td>
+                                                                       
+                                                                    </tr>
+                                                                    
+                                                                  
+                                                                    
+                                                                   </tbody></table>
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>E. YIĞMA BİNA TAŞIYICI SİSTEMLERİ</td></tr><tr><td>E1. Süneklik Düzeyi Yüksek Taşıyıcı Sistemler</td></tr></thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>E11. Donatılı yığma binalar</td>
+                                                                       
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>E12. Donatılı gazbeton panel binalar</td>
+                                                                     
+                                                                    </tr>
+                                                                    
+                                                           
+                                                                    
+                                                                   </tbody></table>
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>E2. Süneklik Düzeyi Sınırlı Taşıyıcı Sistemler</td></tr></thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>E21. Kuşatılmış yığma binalar</td>
+                                                                       
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td>E22. Donatısız yığma binalar</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                 
+                                                                    
+                                                                   </tbody></table>
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>F. AHŞAP BİNA TAŞIYICI SİSTEMLERİ</td></tr><tr><td>F1. Süneklik Düzeyi Yüksek Taşıyıcı Sistemler</td></tr></thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>F11. Deprem etkilerinin tamamının çivili veya vidalı OSB veya kontrplak
+(plywood) duvar panelleri ile karşılandığı süneklik düzeyi yüksek
+ahşap binalar</td>
+                                                                      
+                                                                    </tr>
+                                                                    
+                                                                   
+                                                                    
+                                                                   </tbody></table>
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          <table class="table table-striped table-bordered text-center mb-0">
+                                                                    <thead class="thead-dark" style="background-color: black !important; color:white;">
+                                                                        
+                                                                        <tr><td>F2. Süneklik Düzeyi Sınırlı Taşıyıcı Sistemler</td></tr></thead></table>
+                                                                          
+                                                                    <table class="table align-middle text-center table-bordered table-striped">
+                                                                <tbody>
+                                                                    
+                                                                    <tr>
+                                                                        <td>F21. Deprem etkilerinin tamamının çivi, vida ve bulon ile birleştirilen
+tutkallı duvar panelleri ile veya ahşap çaprazlarla karşılandığı süneklik
+düzeyi sınırlı ahşap binalar</td>
+                                                                       
+                                                                    </tr>
+                                                                    
+                                                               
+                                                                   </tbody></table>
+                                                               
+                                                                    
+                                                                 
+
+                                                                    
+                                                                    
+                                                                            
+                                                                            
+                                                               
+                                                                  
+                                                                            
+                                                                
+                                                            </div>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        
+        
+        
+        
+        
+        <!--MAIN PAGE CONTENTS -->
+        
+    
+        
+         <div class="container" style="margin-top:80px" id="asikform">
+             <table class="table align-middle text-center">
+                                                                <tbody>
+                                                                    
+                        <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Bina Yüksekliği (H<sub>N</sub>)</b>
+                </div>
+                <div class="col" style="display: flex">
+                    <input type="number" class="form-control-sm form-control" value="" id="hn" min="0" oninput="sinirhn()"><button 
+                                class="btn btn-outline-secondary info" 
+                                type="button" 
+                                data-toggle="modal" 
+                                data-target="#popup-hn">?
+                        </button>
+                       
+                </div>
+            </div></tr>                                             
+                                                                    
+                                                                    
+                                                                    
+                <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Yapı Periyotu (sn)</b>
+                </div>
+                <div class="col" style="display: flex">
+                    <input type="number" class="form-control-sm form-control" value="" id="t" min="0" oninput="sinirt()">
+                       
+                </div>
+            </div></tr>                                                    
+                                                                    
+                                                                    
+                                                                    
+             <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Kısa Periyot Harita Spektral İvme Katsayısı (S<sub>s</sub>)</b>
+                </div>
+                <div class="col" style="display: flex">
+                    <input type="number" class="form-control-sm form-control" value="" id="ss" min="0"oninput="sinirss()">
+                       
+                </div>
+            </div></tr>
+                                                                    
+                                                                    <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>1.0 Saniye Periyot İçin Harita Spektral İvme Katsayısı (S<sub>1</sub>)</b>
+                </div>
+                <div class="col" style="display: flex">
+                    <input type="number" class="form-control-sm form-control" value="" id="s1" min="0"oninput="sinirs1()">
+                       
+                </div>
+            </div></tr>
+                                        
+                                                                    
+                           <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Yapıya Etkiyen Toplam Ölü Yük (G) (ton.f)</b>
+                </div>
+                <div class="col" style="display: flex">
+                    <input type="number" class="form-control-sm form-control" value="" id="g" min="0" oninput="sinirg()">
+                       
+                </div>
+            </div></tr>                                         
+                                                                    
+                          <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Yapıya Etkiyen Toplam Hareketli Yük (Q) (ton.f)</b>
+                </div>
+                <div class="col" style="display: flex">
+                    <input type="number" class="form-control-sm form-control" value="" id="q" min="0" oninput="sinirq()">
+                       
+                </div>
+            </div></tr>                                           
+                                                                    
+                                                                    
+            
+                                                                    
+                                     <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Taşıyıcı Sistem Tipi</b>
+                </div>
+                <div class="col" style="display: flex">
+                    
+                    <select id="tk" size="1" class="custom-select custom-select-sm" data-live-search="true">
+                    <option value="A11" selected="selected">A11</option>
+                    <option value="A12">A12</option>
+                    <option value="A13">A13</option>
+                    <option value="A14">A14</option>
+                    <option value="A15">A15</option>
+                    <option value="A16">A16</option>
+                    <option value="A21">A21</option>
+                    <option value="A22">A22</option>
+                    <option value="A23">A23</option>
+                    <option value="A24">A24</option>
+                    <option value="A31">A31</option>
+                    <option value="A32">A32</option>
+                    <option value="A33">A33</option>
+                    <option value="B111">B111</option>
+                    <option value="B112">B112</option>
+                    <option value="B121">B121</option>
+                    <option value="B122">B122</option>
+                    <option value="B131">B131</option>
+                    <option value="B132">B132</option>
+                    <option value="B14">B14</option>
+                    <option value="B15">B15</option>
+                    <option value="B211">B211</option>
+                    <option value="B212">B212</option>
+                    <option value="B31">B31</option>
+                    <option value="B32">B32</option>
+                    <option value="B33">B33</option>
+                    <option value="B34">B34</option>
+                    <option value="C11">C11</option>
+                    <option value="C12">C12</option>
+                    <option value="C13">C13</option>
+                    <option value="C14">C14</option>
+                    <option value="C15">C15</option>
+                    <option value="C16">C16</option>
+                    <option value="C21">C21</option>
+                    <option value="C22">C22</option>
+                    <option value="C31">C31</option>
+                    <option value="C32">C32</option>
+                    <option value="C33">C33</option>
+                    <option value="D11">D11</option>
+                    <option value="D21">D21</option>
+                    <option value="E11">E11</option>
+                    <option value="E12">E12</option>
+                    <option value="E21">E21</option>
+                    <option value="E22">E22</option>
+                    <option value="F11">F11</option>
+                    <option value="F21">F21</option>
+                   
+                
+                        
+                  
+                  
+                    </select><button 
+                                class="btn btn-outline-secondary info" 
+                                type="button" 
+                                data-toggle="modal" 
+                                data-target="#popup-r">?
+                        </button>
+                   
+                </div>
+             </div></tr>      
+                                                                    
+                                                                    
+                                                       
+                                                                    
+                                                                    
+                                                                    <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Hareketli Yük Katılım Katsayısı (n)</b>
+                </div>
+                <div class="col" style="display: flex">
+                    
+                    <select id="n" size="1" class="custom-select custom-select-sm" data-live-search="true">
+                    <option value="0.8" selected="selected">0.8</option>
+                    <option value="0.6">0.6</option>
+                    <option value="0.3">0.3</option>
+                  
+                    
+                
+                        
+                  
+                  
+                    </select><button 
+                                class="btn btn-outline-secondary info" 
+                                type="button" 
+                                data-toggle="modal" 
+                                data-target="#popup-n">?
+                        </button>
+                   
+                </div>
+             </div></tr> 
+     
+                                                                    
+                                                                    
+                                                              
+                                                                    
+                          <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Bina Kullanım Sınıfı</b>
+                </div>
+                <div class="col" style="display: flex">
+                    
+                    <select id="bks" size="1" class="custom-select custom-select-sm" data-live-search="true">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                
+                        
+                  
+                  
+                    </select><button 
+                                class="btn btn-outline-secondary info" 
+                                type="button" 
+                                data-toggle="modal" 
+                                data-target="#popup-bks">?
+                        </button>
+                   
+                </div>
+             </div></tr>                            
+                  
+                                                                    
+                                                                    
+                                                                    
+                                                                    <tr><div class="row mt-4 mb-4">
+                <div class="col text-left">
+                    <b>Yerel Zemin Sınıfı</b>
+                </div>
+                <div class="col" style="display: flex">
+                    
+                    <select id="zemin" size="1" class="custom-select custom-select-sm" data-live-search="true">
+                    <option value="1">ZA</option>
+                    <option value="2">ZB</option>
+                    <option value="3">ZC</option>
+                    <option value="4">ZD</option>
+                    <option value="5" selected="selected">ZE</option>
+                  
+                        
+                  
+                  
+                    </select><button 
+                                class="btn btn-outline-secondary info" 
+                                type="button" 
+                                data-toggle="modal" 
+                                data-target="#popup-zemin">?
+                        </button>
+                       
+                   
+                </div>
+             </div></tr>  
+                                          
+                                                                    
+                                                                    
+                                                                    
+          
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+<script>
+    
+    function sinirt() {
+        
+        
+    }
+    
+    function sinirss() {
+        
+        
+    }
+    
+    function sinirs1() {
+        
+        
+    }
+    
+    function sinirhn() {
+        
+        
+    }
+    
+    function sinirg() {
+        
+        
+    }
+    
+    function sinirq() {
+        
+        
+    }
+    
+    
+    
+    function hesaplar() {
+        
+        var ss=parseFloat(document.getElementById("ss").value);
+        var s1=parseFloat(document.getElementById("s1").value);
+        var zemin=parseFloat(document.getElementById("zemin").value);
+        var bks=parseFloat(document.getElementById("bks").value);
+        var t=parseFloat(document.getElementById("t").value);
+        var hn=parseFloat(document.getElementById("hn").value);
+        
+        var tk=document.getElementById("tk").value;
+        
+        var n=parseFloat(document.getElementById("n").value);
+        var g=parseFloat(document.getElementById("g").value);
+        var q=parseFloat(document.getElementById("q").value);
+        
+        
+        if (zemin==1) {
+            
+            var fs=0.8;
+        }
+        
+        else if (zemin==2) {
+            
+            
+            var fs=0.9;
+            
+        }
+        
+        else if (zemin==3) {
+            
+            if (ss<=0.5) {
+                
+                var fs=1.3;
+            }
+            
+            else if (ss>0.5 && ss<0.75) {
+                
+                var fs=1.2-(((ss-0.75)*0.1)/0.25);
+                
+            }
+            
+            else if (ss>=0.75) {
+                
+                var fs=1.2;
+            }
+            
+            
+        }
+        
+        else if (zemin==4) {
+            
+            if (ss<=0.25) {
+                
+                var fs=1.6;
+            }
+            
+            else if (ss>0.25 && ss<=0.5) {
+                
+                var fs=1.4-(((ss-0.5)*0.2)/0.25);
+            }
+            
+            else if (ss>0.5 && ss<=0.75) {
+                
+                var fs=1.2-(((ss-0.75)*0.2)/0.25);
+                
+            }
+            
+            else if (ss>0.75 && ss<=1) {
+                
+                var fs=1.1-(((ss-1)*0.1)/0.25);
+                
+            }
+            
+            else if (ss>1 && ss<=1.25) {
+                
+                var fs=1-(((ss-1.25)*0.1)/0.25);
+                
+            }
+            
+            else if (ss>1.25) {
+                
+                var fs=1;
+            }
+            
+        }
+        
+        else if (zemin==5) {
+            
+            if (ss<=0.25) {
+                
+                
+                var fs=2.4;
+                
+            }
+            
+            else if (ss>0.25 && ss<=0.5) {
+                
+                var fs=1.7-(((ss-0.5)*0.7)/0.25);
+                
+            }
+            
+            else if (ss>0.5 && ss<=0.75) {
+                
+                var fs=1.3-(((ss-0.75)*0.4)/0.25);
+                
+            }
+            
+            else if (ss>0.75 && ss<=1) {
+                
+                var fs=1.1-(((ss-1)*0.2)/0.25);
+                
+            }
+            
+            else if (ss>1 && ss<=1.25) {
+                
+                var fs=0.9-(((ss-1.25)*0.2)/0.25);
+                
+            }
+            
+            else if (ss>1.25 && ss<=1.5) {
+                
+                var fs=0.8-(((ss-1.5)*0.1)/0.25);
+                
+            }
+            
+            else if (ss>1.5) {
+                
+                var fs=0.8;
+            }
+       
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        if (zemin==1 || zemin==2) {
+            
+            var f1=0.8;
+            
+        }
+        
+        else if (zemin==3) {
+            
+            if (s1<=0.5) {
+                
+                var f1=1.5;
+            }
+            
+            else if (s1>0.5 && s1<=0.6) {
+                
+                var f1=1.4-(((s1-0.6)*0.1)/0.1);
+                
+            }
+            
+            else if (s1>0.6) {
+                
+                var f1=1.4;
+            }
+            
+            
+            
+        }
+        
+        
+        else if (zemin==4) {
+            
+            if (s1<=0.1) {
+                
+                var f1=2.4;
+                
+            }
+            
+            else if (s1>0.1 && s1<=0.2) {
+                
+                var f1=2.2-(((s1-0.2)*0.2)/0.1);
+                
+            }
+            
+            else if (s1>0.2 && s1<=0.3) {
+                
+                var f1=2-(((s1-0.3)*0.2)/0.1);
+                
+            }
+            
+            else if (s1>0.3 && s1<=0.4) {
+                
+                var f1=1.9-(((s1-0.4)*0.1)/0.1);
+                
+            }
+            
+            else if (s1>0.4 && s1<=0.5) {
+                
+                var f1=1.8-(((s1-0.5)*0.1)/0.1);
+                
+            }
+            
+            else if (s1>0.5 && s1<=0.6) {
+                
+                var f1=1.7-(((s1-0.6)*0.1)/0.1);
+                
+            }
+            
+            else if (s1>0.6) {
+                
+                var f1=1.7;
+                
+            }
+            
+            
+            
+        }
+        
+        
+        else if (zemin==5) {
+            
+            if (s1<=0.1) {
+                
+                var f1=4.2;
+                
+            }
+            
+            else if (s1>0.1 && s1<=0.2) {
+                
+                var f1=3.3-(((s1-0.2)*0.9)/0.1);
+                
+            }
+            
+            else if (s1>0.2 && s1<=0.3) {
+                
+                var f1=2.8-(((s1-0.3)*0.5)/0.1);
+                
+            }
+            
+            else if (s1>0.3 && s1<=0.4) {
+                
+                var f1=2.4-(((s1-0.4)*0.4)/0.1);
+                
+            }
+            
+            else if (s1>0.4 && s1<=0.5) {
+                
+                var f1=2.2-(((s1-0.5)*0.2)/0.1);
+                
+            }
+            
+            else if (s1>0.5 && s1<=0.6) {
+                
+                var f1=2-(((s1-0.6)*0.2)/0.1);
+                
+            }
+            
+            else if (s1>0.6) {
+                
+                var f1=2;
+                
+            }
+            
+            
+        }
+        
+        
+        
+        var sds=ss*fs;
+        var sd1=s1*f1;
+        
+        var ta=0.2*(sd1/sds);
+        var tb=sd1/sds;
+        var tl=6;
+    
+        if (t>=0 && t<=ta) {
+            
+            var saet=(0.4+0.6*(t/ta))*sds;
+            
+        }
+        
+        else if (t>ta && t<=tb) {
+            
+            var saet=sds;
+            
+        }
+        
+        
+        else if (t>tb && t<=tl) {
+            
+            var saet=sd1/t;
+            
+        }
+        
+        
+        else if (t>tl) {
+            
+            var saet=(sd1*tl)/(t*t);
+            
+        }
+        
+        
+        
+        var tad=ta/3;
+        var tbd=tb/3;
+        var tld=tl/2;
+        
+        
+        if (t>=0 && t<=tad) {
+            
+            var saedt=(0.32+0.48*(t/tad))*sds;
+            
+        }
+        
+        else if (t>tad && t<=tbd) {
+            
+            var saedt=0.8*sds;
+            
+        }
+        
+        else if (t>tbd) {
+            
+            var saedt=(0.8*sds*tbd)/t;
+            
+        }
+        
+        
+        
+        
+        
+        if (bks==1) {
+            
+            if (sds<0.333) {
+                
+                var dts=41;
+            }
+            
+            else if (sds>=0.333 && sds<0.5) {
+                
+                var dts=31;
+            }
+            
+            else if (sds>=0.5 && sds<0.75) {
+                
+                var dts=21;
+            }
+            
+            else if (sds>=0.75) {
+                
+                var dts=11;
+                
+            }
+        }
+        
+        
+        else if (bks==2 || bks==3) {
+            
+            if (sds<0.333) {
+                
+                var dts=4;
+            }
+            
+            else if (sds>=0.333 && sds<0.5) {
+                
+                var dts=3;
+            }
+            
+            else if (sds>=0.5 && sds<0.75) {
+                
+                var dts=2;
+            }
+            
+            else if (sds>=0.75) {
+                
+                var dts=1;
+                
+            }
+            
+            
+            
+        }
+        
+        
+        
+        if (dts==10 || dts==11 || dts==20 || dts==21) {
+            
+                        if (hn>70) {
+                            
+                            var bys=1;
+
+                        }
+            
+                        
+                        else if (hn<=70 && hn>56) {
+                            
+                            var bys=2;
+                            
+                        }
+            
+                        
+                        else if (hn<=56 && hn>42) {
+                            
+                            var bys=3;
+                            
+                        }
+            
+                        else if (hn<=42 && hn>28) {
+                            
+                            var bys=4;
+                        }
+            
+                        else if (hn<=28 && hn>17.5) {
+                            
+                            var bys=5;
+                        }
+            
+                        else if (hn<=17.5 && hn>10.5) {
+                            
+                            var bys=6;
+                        }
+            
+                        else if (hn<=10.5 && hn>7) {
+                            
+                            var bys=7;
+                        }
+            
+                        else if (hn<=7) {
+                            
+                            var bys=8;
+                        }
+            
+        }
+        
+        
+        
+        if (dts==30 || dts==31) {
+            
+                        if (hn>91) {
+                            
+                            var bys=1;
+
+                        }
+            
+                        
+                        else if (hn<=91 && hn>70) {
+                            
+                            var bys=2;
+                            
+                        }
+            
+                        
+                        else if (hn<=70 && hn>56) {
+                            
+                            var bys=3;
+                            
+                        }
+            
+                        else if (hn<=56 && hn>42) {
+                            
+                            var bys=4;
+                        }
+            
+                        else if (hn<=42 && hn>28) {
+                            
+                            var bys=5;
+                        }
+            
+                        else if (hn<=28 && hn>17.5) {
+                            
+                            var bys=6;
+                        }
+            
+                        else if (hn<=17.5 && hn>10.5) {
+                            
+                            var bys=7;
+                        }
+            
+                        else if (hn<=10.5) {
+                            
+                            var bys=8;
+                        }
+            
+        }
+        
+        
+        
+        if (dts==30 || dts==31) {
+            
+                        if (hn>105) {
+                            
+                            var bys=1;
+
+                        }
+            
+                        
+                        else if (hn<=105 && hn>91) {
+                            
+                            var bys=2;
+                            
+                        }
+            
+                        
+                        else if (hn<=91 && hn>56) {
+                            
+                            var bys=3;
+                            
+                        }
+            
+                        else if (hn<=56 && hn>42) {
+                            
+                            var bys=4;
+                        }
+            
+                        else if (hn<=42 && hn>28) {
+                            
+                            var bys=5;
+                        }
+            
+                        else if (hn<=28 && hn>17.5) {
+                            
+                            var bys=6;
+                        }
+            
+                        else if (hn<=17.5 && hn>10.5) {
+                            
+                            var bys=7;
+                        }
+            
+                        else if (hn<=10.5) {
+                            
+                            var bys=8;
+                        }
+            
+        }
+        
+        
+        
+        if (bks==1) {
+            
+            var i=1.5;
+        }
+        
+        else if (bks==2) {
+            
+            var i=1.2;
+        }
+        
+        else if (bks==3) {
+            
+            var i=1;
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                                                                                        if (tk=="A11") {
+                                                                                            
+                                                                                            var r=8;
+                                                                                            var d=3;
+                                                                                            var byslim=3;
+                                                                                            
+                                                                                        }
+        
+        
+        
+        
+                                                                                        else if (tk=="A12") {
+                                                                                            
+                                                                                            var r=7;
+                                                                                            var d=2.5;
+                                                                                            var byslim=2;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="A13") {
+                                                                                            
+                                                                                            var r=6;
+                                                                                            var d=2.5;
+                                                                                            var byslim=2;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="A14") {
+                                                                                            
+                                                                                            var r=8;
+                                                                                            var d=2.5;
+                                                                                            var byslim=2;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="A15") {
+                                                                                            
+                                                                                            var r=7;
+                                                                                            var d=2.5;
+                                                                                            var byslim=2;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="A16") {
+                                                                                            
+                                                                                            var r=3;
+                                                                                            var d=2;
+                                                                                            var byslim=0;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="A21") {
+                                                                                            
+                                                                                            var r=6;
+                                                                                            var d=2.5;
+                                                                                            var byslim=4;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="A22") {
+                                                                                            
+                                                                                            var r=5;
+                                                                                            var d=2.5;
+                                                                                            var byslim=4;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="A23") {
+                                                                                            
+                                                                                            var r=6;
+                                                                                            var d=2.5;
+                                                                                            var byslim=6;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="A24") {
+                                                                                            
+                                                                                            var r=5;
+                                                                                            var d=2.5;
+                                                                                            var byslim=6;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="A31") {
+                                                                                            
+                                                                                            var r=4;
+                                                                                            var d=2.5;
+                                                                                            var byslim=7;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="A32") {
+                                                                                            
+                                                                                            var r=4;
+                                                                                            var d=2;
+                                                                                            var byslim=6;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="A33") {
+                                                                                            
+                                                                                            var r=4;
+                                                                                            var d=2;
+                                                                                            var byslim=6;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="B111") {
+                                                                                            
+                                                                                            var r=7;
+                                                                                            var d=2.5;
+                                                                                            var byslim=4;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="B112") {
+                                                                                            
+                                                                                            var r=5;
+                                                                                            var d=2.5;
+                                                                                            var byslim=6;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="B121") {
+                                                                                            
+                                                                                            var r=7;
+                                                                                            var d=2.5;
+                                                                                            var byslim=2;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="B122") {
+                                                                                            
+                                                                                            var r=5;
+                                                                                            var d=2.5;
+                                                                                            var byslim=6;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="B131") {
+                                                                                            
+                                                                                            var r=6;
+                                                                                            var d=2.5;
+                                                                                            var byslim=2;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="B132") {
+                                                                                            
+                                                                                            var r=5;
+                                                                                            var d=2.5;
+                                                                                            var byslim=6;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="B14") {
+                                                                                            
+                                                                                            var r=4;
+                                                                                            var d=2;
+                                                                                            var byslim=7;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="B15") {
+                                                                                            
+                                                                                            var r=3;
+                                                                                            var d=2;
+                                                                                            var byslim=0;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="B211") {
+                                                                                            
+                                                                                            var r=5;
+                                                                                            var d=2.5;
+                                                                                            var byslim=5;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="B212") {
+                                                                                            
+                                                                                            var r=4;
+                                                                                            var d=2.5;
+                                                                                            var byslim=6;
+                                                                                            
+                                                                                        }
+        
+                                                                                                else if (tk=="B31") {
+                                                                                            
+                                                                                            var r=3;
+                                                                                            var d=2;
+                                                                                            var byslim=8;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="B32") {
+                                                                                            
+                                                                                            var r=3;
+                                                                                            var d=2;
+                                                                                            var byslim=7;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="B33") {
+                                                                                            
+                                                                                            var r=4;
+                                                                                            var d=2;
+                                                                                            var byslim=6;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="B34") {
+                                                                                            
+                                                                                            var r=3;
+                                                                                            var d=2;
+                                                                                            var byslim=7;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="C11") {
+                                                                                            
+                                                                                            var r=8;
+                                                                                            var d=3;
+                                                                                            var byslim=3;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="C12") {
+                                                                                            
+                                                                                            var r=8;
+                                                                                            var d=2.5;
+                                                                                            var byslim=2;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="C13") {
+                                                                                            
+                                                                                            var r=5;
+                                                                                            var d=2;
+                                                                                            var byslim=4;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="C14") {
+                                                                                            
+                                                                                            var r=8;
+                                                                                            var d=3;
+                                                                                            var byslim=2;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="C15") {
+                                                                                            
+                                                                                            var r=6;
+                                                                                            var d=2.5;
+                                                                                            var byslim=2;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="C16") {
+                                                                                            
+                                                                                            var r=4;
+                                                                                            var d=2;
+                                                                                            var byslim=0;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="C21") {
+                                                                                            
+                                                                                            var r=6;
+                                                                                            var d=2.5;
+                                                                                            var byslim=4;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="C22") {
+                                                                                            
+                                                                                            var r=5;
+                                                                                            var d=2;
+                                                                                            var byslim=4;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="C31") {
+                                                                                            
+                                                                                            var r=4;
+                                                                                            var d=2.5;
+                                                                                            var byslim=7;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="C32") {
+                                                                                            
+                                                                                            var r=3;
+                                                                                            var d=2;
+                                                                                            var byslim=8;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="C33") {
+                                                                                            
+                                                                                            var r=4;
+                                                                                            var d=2;
+                                                                                            var byslim=7;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="D11") {
+                                                                                            
+                                                                                            var r=4;
+                                                                                            var d=2;
+                                                                                            var byslim=8;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="D21") {
+                                                                                            
+                                                                                            var r=3;
+                                                                                            var d=2;
+                                                                                            var byslim=8;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="E11") {
+                                                                                            
+                                                                                            var r=4;
+                                                                                            var d=2;
+                                                                                            var byslim=7;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="E12") {
+                                                                                            
+                                                                                            var r=4;
+                                                                                            var d=2;
+                                                                                            var byslim=7;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="E21") {
+                                                                                            
+                                                                                            var r=3;
+                                                                                            var d=2;
+                                                                                            var byslim=8;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="E22") {
+                                                                                            
+                                                                                            var r=2.5;
+                                                                                            var d=1.5;
+                                                                                            var byslim=8;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="F11") {
+                                                                                            
+                                                                                            var r=4;
+                                                                                            var d=2;
+                                                                                            var byslim=7;
+                                                                                            
+                                                                                        }
+        
+                                                                                                        else if (tk=="F21") {
+                                                                                            
+                                                                                            var r=3;
+                                                                                            var d=2;
+                                                                                            var byslim=8;
+                                                                                            
+                                                                                        }
+        
+                                                                                   
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        if (t>tb) {
+            
+            var rat=r/i;
+        }
+        
+        else if (t<=tb) {
+            
+            var rat=d+((r/i)-d)*(t/tb);
+        }
+        
+        var sart=saet/rat;
+        
+        
+        var mt=g+n*q;
+        var vte1=mt*sart;
+        var vte2=0.04*mt*i*sds*9.8065;
+        var vte=Math.max(vte1,vte2);
+        
+        var tw=mt;
+        var oran=100*(vte/tw);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        if (dts==10 || dts==11 || dts==20 || dts==21)  {
+            
+            if (bys<4) {
+            
+                document.getElementById("vtee").value="Bu Yükseklik Sınıfnda Eşdeğer Dep. Yükü Yönt. ile Hesap Yapılamaz!";
+                
+            }
+            
+            else if (bys>=4) {
+                
+               document.getElementById("vtee").value=vte.toFixed(2); 
+            }
+        }
+        
+        
+        if (dts==31 || dts==31 || dts==40 || dts==41)  {
+            
+            if (bys<5) {
+            
+                document.getElementById("vtee").value="Bu Yükseklik Sınıfnda Eşdeğer Dep. Yükü Yönt. ile Hesap Yapılamaz!";
+                
+            }
+            
+            else if (bys>=5) {
+                
+               document.getElementById("vtee").value=vte.toFixed(2); 
+            }
+        }
+        
+        
+        
+                            var hnkontrol = document.getElementById('hn');  
+                            var gkontrol = document.getElementById('g');
+                            var qkontrol = document.getElementById('q');
+                            var s1kontrol = document.getElementById('s1');
+                            var sskontrol = document.getElementById('ss');
+                            var tkontrol = document.getElementById('t');
+        
+        if (hnkontrol.value.length == 0 || gkontrol.value.length == 0 || qkontrol.value.length == 0 || s1kontrol.value.length == 0 || sskontrol.value.length == 0 || tkontrol.value.length == 0) {
+            
+        document.getElementById("sdss").value="Boş Yerleri Doldurunuz!";
+        document.getElementById("sd11").value="Boş Yerleri Doldurunuz!";
+        document.getElementById("fss").value="Boş Yerleri Doldurunuz!";
+        document.getElementById("f11").value="Boş Yerleri Doldurunuz!";
+        document.getElementById("taa").value="Boş Yerleri Doldurunuz!";
+        document.getElementById("tbb").value="Boş Yerleri Doldurunuz!";
+        document.getElementById("saett").value="Boş Yerleri Doldurunuz!";
+        document.getElementById("byss").value="Boş Yerleri Doldurunuz!";
+        document.getElementById("dtss").value="Boş Yerleri Doldurunuz!";
+        document.getElementById("vtee").value="Boş Yerleri Doldurunuz!";
+        document.getElementById("tw").value="Boş Yerleri Doldurunuz!";
+        document.getElementById("oran").value="Boş Yerleri Doldurunuz!";
+            
+            
+        }
+        
+        
+        
+        
+        
+        else  {
+            
+            document.getElementById("byss").value=bys.toFixed(0);
+            
+            if (dts==10) {
+        document.getElementById("dtss").value="1";
+                }
+            else if (dts==11) {
+                
+                document.getElementById("dtss").value="1a";
+            }
+            
+            else if (dts==20) {
+                
+                document.getElementById("dtss").value="2";
+            }
+            
+            else if (dts==21) {
+                
+                document.getElementById("dtss").value="2a";
+            }
+            
+            else if (dts==30) {
+                
+                document.getElementById("dtss").value="3";
+            }
+            
+            else if (dts==31) {
+                
+                document.getElementById("dtss").value="3a";
+            }
+            
+            else if (dts==40) {
+                
+                document.getElementById("dtss").value="4";
+            }
+            
+            else if (dts==41) {
+                
+                document.getElementById("dtss").value="4a";
+            }
+            
+            
+            
+         if (byslim==0 && hn>12) {
+             
+             
+             document.getElementById("sdss").value="Seçili Taşıyıcı Sistem Tipinde 12m'den Yüksek Yapı Yapılamaz!";
+        document.getElementById("sd11").value="Seçili Taşıyıcı Sistem Tipinde 12m'den Yüksek Yapı Yapılamaz!";
+        document.getElementById("fss").value="Seçili Taşıyıcı Sistem Tipinde 12m'den Yüksek Yapı Yapılamaz!";
+        document.getElementById("f11").value="Seçili Taşıyıcı Sistem Tipinde 12m'den Yüksek Yapı Yapılamaz!";
+        document.getElementById("taa").value="Seçili Taşıyıcı Sistem Tipinde 12m'den Yüksek Yapı Yapılamaz!";
+        document.getElementById("tbb").value="Seçili Taşıyıcı Sistem Tipinde 12m'den Yüksek Yapı Yapılamaz!";
+        document.getElementById("saett").value="Seçili Taşıyıcı Sistem Tipinde 12m'den Yüksek Yapı Yapılamaz!";
+        
+        document.getElementById("vtee").value="Seçili Taşıyıcı Sistem Tipinde 12m'den Yüksek Yapı Yapılamaz!";
+        document.getElementById("tw").value="Seçili Taşıyıcı Sistem Tipinde 12m'den Yüksek Yapı Yapılamaz!";
+        document.getElementById("oran").value="Seçili Taşıyıcı Sistem Tipinde 12m'den Yüksek Yapı Yapılamaz!";
+             
+             
+         }  
+            
+        
+        else if (bys<byslim) {
+            
+        document.getElementById("sdss").value="Seçili Özelliklerde Bu Yükseklikte Bina Yapılamaz!";
+        document.getElementById("sd11").value="Seçili Özelliklerde Bu Yükseklikte Bina Yapılamaz!";
+        document.getElementById("fss").value="Seçili Özelliklerde Bu Yükseklikte Bina Yapılamaz!";
+        document.getElementById("f11").value="Seçili Özelliklerde Bu Yükseklikte Bina Yapılamaz!";
+        document.getElementById("taa").value="Seçili Özelliklerde Bu Yükseklikte Bina Yapılamaz!";
+        document.getElementById("tbb").value="Seçili Özelliklerde Bu Yükseklikte Bina Yapılamaz!";
+        document.getElementById("saett").value="Seçili Özelliklerde Bu Yükseklikte Bina Yapılamaz!";
+     
+        document.getElementById("vtee").value="Seçili Özelliklerde Bu Yükseklikte Bina Yapılamaz!";
+        document.getElementById("tw").value="Seçili Özelliklerde Bu Yükseklikte Bina Yapılamaz!";
+        document.getElementById("oran").value="Seçili Özelliklerde Bu Yükseklikte Bina Yapılamaz!";
+            
+        }
+            
+        
+        else if (bys>=byslim) {
+        
+        document.getElementById("sdss").value=sds.toFixed(3);
+        document.getElementById("sd11").value=sd1.toFixed(3);
+        document.getElementById("fss").value=fs.toFixed(3);
+        document.getElementById("f11").value=f1.toFixed(3);
+        document.getElementById("taa").value=ta.toFixed(3);
+        document.getElementById("tbb").value=tb.toFixed(3);
+        document.getElementById("saett").value=saet.toFixed(3);
+        document.getElementById("tw").value=tw.toFixed(3);
+        document.getElementById("oran").value=oran.toFixed(1);
+       
+            
+            
+        
+        
+        }
+        
+        
+        }
+        
+        
+        
+        
+        }
+
+</script>
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                               
+
+                                                                                            
+
+
+                                                                                         
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                   
+             
+                 </tbody></table>
+        
+         </div>
+        
+        
+        
+        
+        
+        
+        <!-- BUTTON -->
+        
+        <div class="container">
+            <div style="text-align:center;" class="row">
+                <div class="col mt-3 mb-4">
+                    <button onclick="hesaplar()" class="btn btn-outline-danger" id="butonasik">Hesapla</button>
+                    </div>
+            </div>
+        </div>
+
+
+        
+       
+        
+         
+        
+        
+     
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--RESULTS-->
+        <br>
+        <div class="container">
+            <div class="row" mt-4 mb-3>
+                <b class="h4" style="margin-left: auto; margin-right: auto;" style="color:darkred">SONUÇLAR</b>
+            </div>
+        </div>
+        <br>
+        <br>
+        
+      
+        
+        <div class="container">
+            <table class="table table-striped table-bordered table-fixed text-center" style="font-size: 1.8vh !important;">
+            <tbody>
+                
+                <tr>
+        <td id="on">S<sub>DS</sub></td>
+              <td id="on"><output id="sdss" readonly=""></output></td>
+             
+              
+        
+        </tr>
+                <tr>
+        <td id="on">S<sub>D1</sub></td>
+              <td id="on"><output id="sd11" readonly=""></output></td>
+             
+              
+        
+        </tr>
+                
+                
+                <tr>
+        <td id="on">F<sub>S</sub></td>
+              <td id="on"><output id="fss" readonly=""></output></td>
+             
+              
+        
+        </tr>
+                
+                <tr>
+        <td id="on">F<sub>1</sub></td>
+              <td id="on"><output id="f11" readonly=""></output></td>
+             
+              
+        
+        </tr>
+                
+                <tr>
+        <td id="on">T<sub>A</sub></td>
+              <td id="on"><output id="taa" readonly=""></output></td>
+             
+              
+        
+        </tr>
+                
+                <tr>
+        <td id="on">T<sub>B</sub></td>
+              <td id="on"><output id="tbb" readonly=""></output></td>
+             
+              
+        
+        </tr>
+                
+                <tr>
+        <td id="on">S<sub>aeT</sub></td>
+              <td id="on"><output id="saett" readonly=""></output></td>
+             
+              
+        
+        </tr>
+                
+                
+                <tr>
+        <td id="on">Deprem Tasarım Sınıfı</td>
+              <td id="on"><output id="dtss" readonly=""></output></td>
+             
+              
+        
+        </tr>
+                
+                <tr>
+        <td id="on">Bina Yükseklik Sınıfı</td>
+              <td id="on"><output id="byss" readonly=""></output></td>
+              
+           
+        
+        </tr>
+                
+                
+                <tr>
+        <td id="on">Toplam Taban Kesme Kuvveti (Eşdeğer Dep. Yükü Yönt. Göre) (V<sub>te</sub>) (ton.f)</td>
+              <td id="on" ><output id="vtee" readonly=""></output></td>
+              
+           
+        
+        </tr>
+                
+                <tr>
+        <td id="on">G + nQ (ton.f)</td>
+              <td id="on"><output id="tw" readonly=""></output></td>
+              
+           
+        
+        </tr>
+                
+                <tr>
+        <td id="on">V<sub>te</sub> / (G + nQ) (%)</td>
+              <td id="on"><output id="oran" readonly=""></output></td>
+              
+           
+        
+        </tr>
+                
+             
+                         
+                </tbody></table>
+             <br>
+            <br>
+            <br>
+        </div>
+        
+        <div class="container">
+            <table class="table text-center">
+
+        <tbody>
+            
+            <tr>
+        <td id="on">Taban Kesme Kuvveti Hesabında Yapıda B2 Türü Düzensizliğinin Olmadığı ve Burulma Düzensizliği Katsayısının (n<sub>bi</sub>) 2'ye eşit veya daha küçük olduğu kabulü yapılmıştır.</td>
+
+        </tr>
+<tr>
+        <td id="on"> Kaynak : Türkiye Bina Deprem Yönetmeliği 2019</td>
+
+        </tr>
+     
+
+        
+
+
+        </tbody></table>
+            <br><br></div>
+        
+
+        
+   <script src="popper.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        
+        <script src="bootstrap-tooltip.js"></script>
+        <script src="fontawesome.min.js"></script>
+      
+                
+        
+    </body>
+</html>
